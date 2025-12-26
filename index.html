@@ -1,87 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AdsWelly</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: radial-gradient(circle at top, #0b0f1a, #020617);
-      color: #ffffff;
-    }
+<title>AdsWelly</title>
 
-    /* HERO SECTION */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 0 10%;
-    }
+<style>
+/* ===== GLOBAL STYLE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
 
-    .hero h1 {
-      font-size: 52px;
-      font-weight: 800;
-      line-height: 1.2;
-    }
+body {
+  background: radial-gradient(circle at top, #0b0f1a, #020617);
+  color: white;
+}
 
-    .hero span {
-      background: linear-gradient(90deg, #3b82f6, #22d3ee);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+/* ===== TOP HEADER ===== */
+.top-header {
+  width: 100%;
+  padding: 45px 10%;
+  text-align: center;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
 
-    .hero p {
-      margin-top: 20px;
-      font-size: 18px;
-      color: #cbd5e1;
-      max-width: 700px;
-    }
+.top-header h1 {
+  font-siz
 
-    .hero-btn {
-      margin-top: 35px;
-      padding: 14px 36px;
-      border-radius: 50px;
-      background: linear-gradient(135deg, #3b82f6, #06b6d4);
-      color: #fff;
-      font-weight: 600;
-      text-decoration: none;
-      transition: 0.3s ease;
-    }
-
-    .hero-btn:hover {
-      transform: scale(1.08);
-      box-shadow: 0 0 25px rgba(59, 130, 246, 0.6);
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 36px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <h1>
-      Meta Ads That Drive Results <br />
-      <span>Starting at Just ₹59/Day</span>
-    </h1>
-
-    <p>
-      We help businesses scale faster using data-driven Meta advertising strategies.
-    </p>
-
-    <a href="#services" class="hero-btn">Start Ads Now</a>
-  </section>
-
-</body>
-</html>
