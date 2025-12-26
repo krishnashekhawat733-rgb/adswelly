@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AdsWelly – Growth Agency</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter}
+body{
+  min-height:100vh;
+  background:linear-gradient(135deg,#6a5cff,#00ffd5);
+  color:#fff;
+}
+.glass{
+  background:rgba(255,255,255,.18);
+  backdrop-filter:blur(14px);
+  border-radius:18px;
+}
+nav{
+  display:flex;justify-content:space-between;
+  padding:20px 8%;
+}
+nav h1{font-size:26px}
+button{
+  padding:12px 22px;
+  border:none;border-radius:12px;
+  cursor:pointer;font-weight:600;
+}
+.hero{
+  display:flex;justify-content:center;
+  padding:80px 8%;
+}
+.hero-box{
+  max-width:700px;
+  padding:50px;
+  text-align:center;
+  animation:up .9s ease;
+}
+.hero h2{font-size:42px;margin-bottom:15px}
+.hero span{color:#000}
+.hero p{opacity:.9}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:25px;
+  padding:80px 8%;
+}
+.card{
+  padding:30px;
+  text-align:center;
+  transition:.3s;
+}
+.card:hover{transform:translateY(-8px)}
+footer{text-align:center;padding:25px;opacity:.8}
+
+@keyframes up{
+  from{opacity:0;transform:translateY(40px)}
+  to{opacity:1;transform:translateY(0)}
+}
+</style>
+</head>
+
+<body>
+
+<nav class="glass">
+  <h1>AdsWelly</h1>
+  <button onclick="alert('Demo Contact Clicked')">Contact</button>
+</nav>
+
+<section class="hero">
+  <div class="hero-box glass">
+    <h2>We Scale Brands with <span>Paid Ads</span></h2>
+    <p>Performance marketing agency helping businesses grow faster.</p>
+    <br>
+    <button onclick="alert('Free Audit Clicked')">Get Free Audit</button>
+  </div>
+</section>
+
+<section class="cards">
+  <div class="card glass">
+    <h3>Meta Ads</h3>
+    <p>Facebook & Instagram growth campaigns</p>
+  </div>
+  <div class="card glass">
+    <h3>Google Ads</h3>
+    <p>Search, Display & YouTube ads</p>
+  </div>
+  <div class="card glass">
+    <h3>Scaling</h3>
+    <p>ROAS based scaling strategies</p>
+  </div>
+</section>
+
+<footer>© 2025 AdsWelly</footer>
+
+</body>
+</html>
