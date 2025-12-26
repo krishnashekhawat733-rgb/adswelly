@@ -7,55 +7,94 @@
 <title>AdsWelly</title>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
-
 body {
-  background: radial-gradient(circle at top, #0b0f1a 10%, #020617 70%);
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at top, #0b0f1a, #020617);
   color: white;
-  overflow-x: hidden;
 }
 
-/* ===== HERO SECTION ===== */
+/* HERO SECTION */
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0 8%;
-  position: relative;
-  overflow: hidden;
+  padding: 40px 20px;
 }
 
-/* GLOW BACKGROUND */
-.hero::before {
-  content: "";
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(59,130,246,0.35), transparent 70%);
-  top: -150px;
-  left: 50%;
-  transform: translateX(-50%);
-  filter: blur(120px);
-  z-index: 0;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
+.hero-box {
   max-width: 900px;
 }
 
+.badge {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #22d3ee, #3b82f6);
+  color: #000;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
 .hero h1 {
-  font-size: 54px;
+  font-size: 48px;
   font-weight: 800;
   line-height: 1.2;
 }
 
-.hero h1
+.hero h1 span {
+  background: linear-gradient(90deg, #3b82f6, #22d3ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #cbd5e1;
+  margin-top: 15px;
+}
+
+.hero-btn {
+  margin-top: 30px;
+  padding: 15px 40px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(59,130,246,0.6);
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+  <div class="hero-box">
+
+    <div class="badge">🔥 Starting at just ₹59/day</div>
+
+    <h1>
+      Scale Your Business with <span>Meta Ads</span>
+    </h1>
+
+    <p>
+      High-converting ad campaigns built to drive leads, sales & growth for your business.
+    </p>
+
+    <button class="hero-btn">Start Ads Now</button>
+
+  </div>
+</section>
+
+</body>
+</html>
