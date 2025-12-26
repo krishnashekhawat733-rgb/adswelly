@@ -98,3 +98,112 @@ body {
 
 </body>
 </html>
+<!-- SERVICES SECTION -->
+<style>
+.services {
+  padding: 100px 8%;
+  background: radial-gradient(circle at top, #020617, #000);
+  color: #fff;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 42px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.services p.subtext {
+  color: #9ca3af;
+  max-width: 650px;
+  margin: 0 auto 60px;
+  font-size: 18px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 35px 25px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.12);
+  position: relative;
+  transition: 0.4s ease;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(135deg, #3b82f6, #22d3ee, #9333ea);
+  opacity: 0;
+  z-index: -1;
+  transition: 0.4s;
+  border-radius: 18px;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-card:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 35px rgba(59,130,246,0.6);
+}
+
+.service-card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #38bdf8;
+}
+
+.service-card p {
+  font-size: 15px;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+</style>
+
+<section class="services">
+  <h2>Our Services</h2>
+  <p class="subtext">
+    Performance-driven marketing solutions designed to scale your brand faster.
+  </p>
+
+  <div class="services-grid">
+
+    <div class="service-card">
+      <h3>Meta Ads (Facebook & Instagram)</h3>
+      <p>
+        High-converting Meta ad campaigns focused on leads, sales & ROI using smart targeting.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <h3>Google Ads</h3>
+      <p>
+        Search, Display & YouTube ads to capture high-intent customers at the right time.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <h3>Snapchat Ads</h3>
+      <p>
+        Engage Gen-Z & young audiences with creative Snapchat ad strategies.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <h3>Funnels & Landing Pages</h3>
+      <p>
+        Conversion-optimized funnels and landing pages that turn visitors into buyers.
+      </p>
+    </div>
+
+  </div>
+</section>
