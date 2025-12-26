@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>AdsWelly – Growth Marketing Agency</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AdsWelly – Performance Marketing</title>
 
-<!-- LUCIDE ICONS -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/lucide@latest"></script>
 
 <style>
@@ -13,141 +13,140 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
-  background: radial-gradient(circle at top, #0f172a, #020617);
-  color: #fff;
+  background: radial-gradient(circle at top, #0b0f1a, #020617);
+  color: #ffffff;
   overflow-x: hidden;
 }
 
-section {
-  padding: 90px 8%;
-}
-
-/* Glass Effect */
-.glass {
-  background: rgba(255,255,255,0.05);
-  border-radius: 16px;
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.15);
-}
-
-/* Hero */
+/* HERO */
 .hero {
+  min-height: 100vh;
+  padding: 120px 10%;
   text-align: center;
-  padding: 130px 10%;
-  animation: fadeUp 1s ease;
+  background: linear-gradient(145deg, #020617, #0f172a);
 }
 
 .hero h1 {
-  font-size: 52px;
-  font-weight: 700;
+  font-size: 58px;
+  font-weight: 800;
+  line-height: 1.1;
 }
 
 .hero span {
-  color: #38bdf8;
+  background: linear-gradient(90deg, #3b82f6, #22d3ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero p {
-  margin-top: 12px;
+  margin-top: 20px;
+  font-size: 18px;
   color: #cbd5e1;
 }
 
-.btn {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 14px 34px;
+.hero .btn {
+  margin-top: 35px;
+  padding: 16px 36px;
+  border-radius: 50px;
   background: linear-gradient(135deg,#3b82f6,#06b6d4);
-  border-radius: 30px;
   color: white;
   font-weight: 600;
+  border: none;
+  cursor: pointer;
   transition: 0.3s;
 }
 
-.btn:hover {
+.hero .btn:hover {
   transform: scale(1.05);
 }
 
-/* Grid */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  gap: 30px;
-  margin-top: 40px;
+/* SECTIONS */
+section {
+  padding: 100px 10%;
 }
 
-/* Card */
+.section-title {
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* GLASS CARD */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 30px;
+}
+
 .card {
-  padding: 30px;
-  border-radius: 16px;
-  background: rgba(255,255,255,0.04);
-  backdrop-filter: blur(10px);
-  transition: 0.4s;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 20px;
+  padding: 35px;
+  backdrop-filter: blur(20px);
+  transition: .4s;
 }
 
 .card:hover {
   transform: translateY(-10px);
-  border-color: #38bdf8;
+  border-color: #3b82f6;
 }
 
-/* Icon */
+/* ICON */
 .icon {
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   color: #38bdf8;
   margin-bottom: 15px;
 }
 
-/* Pricing */
+/* PRICING */
 .price {
-  font-size: 36px;
+  font-size: 42px;
   color: #38bdf8;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
-/* Testimonials */
+/* TESTIMONIAL */
 .testimonial {
   border-left: 4px solid #38bdf8;
-  padding: 20px;
-  background: rgba(255,255,255,0.03);
+  padding: 25px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
 }
 
-/* Contact */
+/* CONTACT */
 input, textarea {
   width: 100%;
   padding: 14px;
-  background: rgba(255,255,255,0.05);
+  margin-top: 10px;
+  background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.2);
   color: white;
-  border-radius: 8px;
-  margin-top: 10px;
+  border-radius: 10px;
 }
 
-/* WhatsApp */
+/* WHATSAPP */
 .whatsapp {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 25px;
+  right: 25px;
   background: #25d366;
   padding: 16px;
   border-radius: 50%;
   font-size: 22px;
   color: white;
-  z-index: 999;
+  z-index: 99;
 }
 
-/* Footer */
 footer {
   text-align: center;
-  padding: 30px;
+  padding: 40px;
   color: #94a3b8;
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 </style>
 </head>
@@ -156,102 +155,11 @@ footer {
 
 <!-- HERO -->
 <section class="hero">
-  <h1>Grow Faster With <span>AdsWelly</span></h1>
-  <p>High ROI Advertising • Smart Strategy • Real Results</p>
-  <a href="#contact" class="btn">Start Ads @ ₹59/day</a>
+  <h1>Scale Your Business With <span>AdsWelly</span></h1>
+  <p>Performance-driven marketing that converts clicks into customers.</p>
+  <button class="btn">Start Ads @ ₹59/day</button>
 </section>
 
 <!-- SERVICES -->
 <section>
-  <h2>Our Services</h2>
-  <div class="grid">
-    <div class="card">
-      <i data-lucide="megaphone" class="icon"></i>
-      <h3>Meta Ads</h3>
-      <p>High converting Facebook & Instagram campaigns.</p>
-    </div>
-    <div class="card">
-      <i data-lucide="search" class="icon"></i>
-      <h3>Google Ads</h3>
-      <p>Search, Display & YouTube ads.</p>
-    </div>
-    <div class="card">
-      <i data-lucide="bar-chart-3" class="icon"></i>
-      <h3>Lead Generation</h3>
-      <p>High quality leads at low cost.</p>
-    </div>
-  </div>
-</section>
 
-<!-- WHY -->
-<section>
-  <h2>Why Choose Us</h2>
-  <div class="grid">
-    <div class="card">✔ ROI Focused Campaigns</div>
-    <div class="card">✔ Daily Optimization</div>
-    <div class="card">✔ Transparent Reporting</div>
-    <div class="card">✔ 24/7 Support</div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section>
-  <h2>Pricing Plans</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Starter</h3>
-      <div class="price">₹59/day</div>
-      <p>Perfect for beginners</p>
-    </div>
-    <div class="card">
-      <h3>Growth</h3>
-      <div class="price">₹199/day</div>
-      <p>Scale your business</p>
-    </div>
-    <div class="card">
-      <h3>Pro</h3>
-      <div class="price">₹499/day</div>
-      <p>High performance ads</p>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIAL -->
-<section>
-  <h2>Client Results</h2>
-  <div class="grid">
-    <div class="testimonial">"Leads doubled in 5 days!" – Rohit</div>
-    <div class="testimonial">"Best ROI agency ever." – Neha</div>
-    <div class="testimonial">"Sales increased 3x." – Aman</div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section>
-  <h2>About Us</h2>
-  <p>AdsWelly helps businesses grow using smart advertising strategies, creative content and data-driven decisions.</p>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Contact Us</h2>
-  <form>
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea rows="4" placeholder="Your Message"></textarea>
-    <button class="btn">Send Message</button>
-  </form>
-</section>
-
-<footer>
-  © 2025 AdsWelly. All Rights Reserved.
-</footer>
-
-<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">💬</a>
-
-<script>
-  lucide.createIcons();
-</script>
-
-</body>
-</html>
