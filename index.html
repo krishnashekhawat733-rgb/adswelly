@@ -1,165 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AdsWelly – Performance Marketing</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AdsWelly</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-<script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at top, #0b0f1a, #020617);
+      color: #ffffff;
+    }
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
-}
+    /* HERO SECTION */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 10%;
+    }
 
-body {
-  background: radial-gradient(circle at top, #0b0f1a, #020617);
-  color: #ffffff;
-  overflow-x: hidden;
-}
+    .hero h1 {
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
 
-/* HERO */
-.hero {
-  min-height: 100vh;
-  padding: 120px 10%;
-  text-align: center;
-  background: linear-gradient(145deg, #020617, #0f172a);
-}
+    .hero span {
+      background: linear-gradient(90deg, #3b82f6, #22d3ee);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
-.hero h1 {
-  font-size: 58px;
-  font-weight: 800;
-  line-height: 1.1;
-}
+    .hero p {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #cbd5e1;
+      max-width: 700px;
+    }
 
-.hero span {
-  background: linear-gradient(90deg, #3b82f6, #22d3ee);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+    .hero-btn {
+      margin-top: 35px;
+      padding: 14px 36px;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #3b82f6, #06b6d4);
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
 
-.hero p {
-  margin-top: 20px;
-  font-size: 18px;
-  color: #cbd5e1;
-}
+    .hero-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 25px rgba(59, 130, 246, 0.6);
+    }
 
-.hero .btn {
-  margin-top: 35px;
-  padding: 16px 36px;
-  border-radius: 50px;
-  background: linear-gradient(135deg,#3b82f6,#06b6d4);
-  color: white;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.hero .btn:hover {
-  transform: scale(1.05);
-}
-
-/* SECTIONS */
-section {
-  padding: 100px 10%;
-}
-
-.section-title {
-  font-size: 42px;
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-/* GLASS CARD */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-  gap: 30px;
-}
-
-.card {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 20px;
-  padding: 35px;
-  backdrop-filter: blur(20px);
-  transition: .4s;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  border-color: #3b82f6;
-}
-
-/* ICON */
-.icon {
-  width: 42px;
-  height: 42px;
-  color: #38bdf8;
-  margin-bottom: 15px;
-}
-
-/* PRICING */
-.price {
-  font-size: 42px;
-  color: #38bdf8;
-  margin: 20px 0;
-}
-
-/* TESTIMONIAL */
-.testimonial {
-  border-left: 4px solid #38bdf8;
-  padding: 25px;
-  background: rgba(255,255,255,0.05);
-  border-radius: 12px;
-}
-
-/* CONTACT */
-input, textarea {
-  width: 100%;
-  padding: 14px;
-  margin-top: 10px;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.2);
-  color: white;
-  border-radius: 10px;
-}
-
-/* WHATSAPP */
-.whatsapp {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background: #25d366;
-  padding: 16px;
-  border-radius: 50%;
-  font-size: 22px;
-  color: white;
-  z-index: 99;
-}
-
-footer {
-  text-align: center;
-  padding: 40px;
-  color: #94a3b8;
-}
-</style>
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 36px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <h1>Scale Your Business With <span>AdsWelly</span></h1>
-  <p>Performance-driven marketing that converts clicks into customers.</p>
-  <button class="btn">Start Ads @ ₹59/day</button>
-</section>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h1>
+      Meta Ads That Drive Results <br />
+      <span>Starting at Just ₹59/Day</span>
+    </h1>
 
-<!-- SERVICES -->
-<section>
+    <p>
+      We help businesses scale faster using data-driven Meta advertising strategies.
+    </p>
 
+    <a href="#services" class="hero-btn">Start Ads Now</a>
+  </section>
+
+</body>
+</html>
