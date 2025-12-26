@@ -1,47 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>AdsWelly</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: #020617;
-      color: white;
-      font-family: Arial, sans-serif;
-    }
+<title>AdsWelly</title>
 
-    .header {
-      padding: 60px 20px;
-      text-align: center;
-      background: #020617;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
 
-    .header h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
+body {
+  background: radial-gradient(circle at top, #0b0f1a 10%, #020617 70%);
+  color: white;
+  overflow-x: hidden;
+}
 
-    .header span {
-      color: #3b82f6;
-    }
+/* ===== HERO SECTION ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 8%;
+  position: relative;
+  overflow: hidden;
+}
 
-    .header p {
-      font-size: 18px;
-      color: #cbd5e1;
-    }
-  </style>
-</head>
+/* GLOW BACKGROUND */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(59,130,246,0.35), transparent 70%);
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: blur(120px);
+  z-index: 0;
+}
 
-<body>
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
 
-  <div class="header">
-    <h1>Scale Your Business With <span>Meta Ads</span></h1>
-    <p>Starting at just ₹59/day • High Converting Ad Campaigns</p>
-  </div>
+.hero h1 {
+  font-size: 54px;
+  font-weight: 800;
+  line-height: 1.2;
+}
 
-</body>
-</html>
+.hero h1
