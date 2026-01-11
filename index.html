@@ -246,61 +246,59 @@ body {
 }
 
 .trap-title span{
-  background: linear-gradient(90deg, #3b82f6, #22d3ee);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+  color:#60a5fa;
 }
 
 .trap-subtitle{
   font-size:34px;
   font-weight:700;
   margin-top:6px;
-  background: linear-gradient(90deg, #3b82f6, #22d3ee);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-/* STATS – SIMPLE GRID */
-.trap-stats{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:30px;
-  margin:60px 0 40px;
-}
-
-.trap-box{
-  background: rgba(255,255,255,0.04);
-  border:1px solid rgba(255,255,255,0.08);
-  border-radius:20px;
-  padding:28px 20px;
-}
-
-.trap-box h3{
-  font-size:36px;
-  font-weight:800;
   color:#60a5fa;
 }
 
+/* FORCE ONE LINE STATS */
+.trap-stats{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  margin:60px 0 30px;
+  flex-wrap:nowrap; /* 🔥 FORCE SINGLE LINE */
+}
+
+.trap-box{
+  flex:1;
+  background: rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:16px;
+  padding:18px 10px;
+}
+
+.trap-box h3{
+  font-size:30px;
+  font-weight:800;
+  color:#60a5fa;
+  margin-bottom:2px;
+}
+
 .trap-box p{
-  font-size:14px;
+  font-size:13px;
   color:#94a3b8;
 }
 
-/* SUCCESS RATE */
+/* SUCCESS RATE TEXT */
 .client-success{
-  margin-top:20px;
-  font-size:20px;
-  font-weight:700;
-  background: linear-gradient(90deg, #3b82f6, #22d3ee);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+  margin-top:18px;
+  font-size:18px;
+  font-weight:600;
+  color:#60a5fa;
 }
 
 /* SUCCESS BAR */
 .success-bar{
   max-width:600px;
-  height:10px;
-  margin:14px auto 0;
+  height:8px;
+  margin:10px auto 0;
   background:#1e293b;
   border-radius:20px;
   overflow:hidden;
@@ -309,15 +307,20 @@ body {
 .success-fill{
   width:98%;
   height:100%;
-  background: linear-gradient(90deg, #3b82f6, #22d3ee);
+  background:#60a5fa;
 }
 
-/* MOBILE FIX */
+/* MOBILE ADJUST (STILL ONE LINE) */
 @media(max-width:768px){
-  .trap-title{font-size:36px;}
-  .trap-subtitle{font-size:26px;}
-  .trap-stats{
-    grid-template-columns:repeat(2,1fr);
+  .trap-title{font-size:34px;}
+  .trap-subtitle{font-size:24px;}
+
+  .trap-box h3{
+    font-size:22px;
+  }
+
+  .trap-box p{
+    font-size:11px;
   }
 }
 </style>
@@ -332,17 +335,17 @@ body {
   <div class="trap-stats">
     <div class="trap-box">
       <h3>10+</h3>
-      <p>Years Scaling Ads</p>
+      <p>Years Ads</p>
     </div>
 
     <div class="trap-box">
       <h3>96%</h3>
-      <p>Campaign Accuracy</p>
+      <p>Accuracy</p>
     </div>
 
     <div class="trap-box">
       <h3>50K+</h3>
-      <p>Leads Generated</p>
+      <p>Leads</p>
     </div>
   </div>
 
