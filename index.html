@@ -498,104 +498,124 @@ body {
   </div>
 
 </section> 
-<!-- MOBILE TESTIMONIALS (ORIGINAL • PREMIUM) -->
+<!-- BIG MOBILE TESTIMONIALS -->
 <style>
 #proof-gallery{
-  max-width:1300px;
+  max-width:1400px;
   margin:0 auto;
-  padding:90px 14px 40px;
+  padding:100px 14px 50px;
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
 }
 
 /* HEADING */
 .pg-head{
   text-align:center;
-  margin-bottom:18px;
+  margin-bottom:28px;
 }
 .pg-head h2{
   margin:0;
-  font-size:32px;
-  font-weight:800;
-  color:#020617;
+  font-size:40px;
+  font-weight:900;
+  background:linear-gradient(135deg,#020617,#2563eb);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  letter-spacing:-0.5px;
 }
 .pg-head p{
-  margin-top:6px;
+  margin-top:8px;
   color:#475569;
-  font-size:15px;
+  font-size:16px;
 }
 
-/* HORIZONTAL TRACK */
+/* TRACK */
 #proof-track{
   display:flex;
-  gap:16px;
+  gap:26px;
   overflow-x:auto;
-  padding:12px 6px;
+  padding:20px 10px;
   scroll-snap-type:x mandatory;
   -webkit-overflow-scrolling:touch;
 }
 #proof-track::-webkit-scrollbar{display:none;}
 #proof-track{scrollbar-width:none;}
 
-/* ITEM SIZE */
+/* ITEM SIZE — BIG PHONE */
 .pg-item{
-  flex:0 0 220px;
-  scroll-snap-align:start;
+  flex:0 0 300px; /* BIG */
+  scroll-snap-align:center;
   display:flex;
   flex-direction:column;
-  gap:8px;
+  gap:12px;
 }
-@media(min-width:900px){.pg-item{flex:0 0 260px;}}
-@media(min-width:1200px){.pg-item{flex:0 0 300px;}}
+@media(min-width:900px){.pg-item{flex:0 0 340px;}}
+@media(min-width:1200px){.pg-item{flex:0 0 380px;}}
 
 /* PHONE FRAME */
 .pg-phone{
   width:100%;
-  height:180px;
-  background:#ffffff;
-  border-radius:18px;
-  overflow:hidden;
-  border:1px solid #e5e7eb;
-  box-shadow:0 10px 30px rgba(0,0,0,.10);
-  transition:.35s ease;
+  height:620px;   /* 🔥 REAL PHONE SCREEN HEIGHT */
+  background:linear-gradient(180deg,#ffffff,#f1f5f9);
+  border-radius:32px;
+  padding:10px;
+  border:1px solid #dbeafe;
+  box-shadow:
+    inset 0 2px 0 rgba(255,255,255,.9),
+    0 30px 70px rgba(37,99,235,.35);
+  transition:.4s ease;
   position:relative;
 }
 
-/* IMAGE */
+/* SCREEN */
+.pg-phone::before{
+  content:"";
+  position:absolute;
+  top:8px;
+  left:50%;
+  transform:translateX(-50%);
+  width:70px;
+  height:6px;
+  background:#020617;
+  border-radius:20px;
+  opacity:.25;
+  z-index:2;
+}
+
 .pg-phone img{
   width:100%;
   height:100%;
+  border-radius:22px;
   object-fit:cover;
-  transition:.45s cubic-bezier(.2,.8,.2,1);
+  transition:.5s cubic-bezier(.2,.8,.2,1);
 }
 
-/* HOVER / TAP */
+/* HOVER */
 .pg-item:hover .pg-phone{
-  transform:translateY(-6px);
-  box-shadow:0 18px 45px rgba(37,99,235,.25);
+  transform:translateY(-10px) scale(1.04);
+  box-shadow:0 40px 90px rgba(37,99,235,.45);
 }
-.pg-item:hover img{transform:scale(1.06);}
+.pg-item:hover img{transform:scale(1.05);}
 
 /* CAPTION */
 .pg-cap{
-  font-size:13px;
+  font-size:14px;
   color:#334155;
   text-align:center;
-  min-height:34px;
+  min-height:38px;
 }
 
 /* MOBILE */
-@media(max-width:420px){
-  .pg-phone{height:150px;}
-  .pg-item{flex:0 0 180px;}
-  .pg-cap{font-size:12px;}
+@media(max-width:480px){
+  .pg-item{flex:0 0 260px;}
+  .pg-phone{height:520px;}
+  .pg-head h2{font-size:32px;}
 }
 </style>
 
 <section id="proof-gallery">
 
   <div class="pg-head">
-    <h2>Real Results. Real Screens.</h2>
-    <p>Unfiltered proof shared by our ad & affiliate partners</p>
+    <h2>Proof That Actually Converts</h2>
+    <p>Live mobile screenshots shared by our growth partners</p>
   </div>
 
   <div id="proof-track"></div>
@@ -628,7 +648,7 @@ body {
 
     const img=document.createElement("img");
     img.src=s.url;
-    img.alt="Client result "+(i+1);
+    img.alt="Client proof "+(i+1);
     img.loading="lazy";
 
     phone.appendChild(img);
@@ -642,10 +662,12 @@ body {
     track.appendChild(item);
   });
 
-  /* Mouse wheel horizontal scroll */
   track.addEventListener("wheel",e=>{
     e.preventDefault();
-    track.scrollLeft+=e.deltaY>0?200:-200;
+    track.scrollLeft+=e.deltaY>0?260:-260;
   },{passive:false});
+})();
+</script>
+
 })();
 </script>
