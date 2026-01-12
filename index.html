@@ -498,167 +498,154 @@ body {
   </div>
 
 </section> 
-<!-- TESTIMONIALS (WHITE • 3D GLOSSY) -->
+<!-- MOBILE TESTIMONIALS (ORIGINAL • PREMIUM) -->
 <style>
-:root{
-  --accent:#2563eb;
-  --soft:#f1f5f9;
-  --border:#e5e7eb;
-  --shadow:0 20px 40px rgba(0,0,0,.12);
+#proof-gallery{
+  max-width:1300px;
+  margin:0 auto;
+  padding:90px 14px 40px;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
 }
 
-/* SECTION */
-.tcarousel{
-  padding:100px 8%;
-  background:#ffffff;
+/* HEADING */
+.pg-head{
+  text-align:center;
+  margin-bottom:18px;
 }
-
-/* TEXT */
-.tc-title{
-  font:800 38px/1.2 Arial, sans-serif;
+.pg-head h2{
+  margin:0;
+  font-size:32px;
+  font-weight:800;
   color:#020617;
-  margin-bottom:6px;
 }
-
-.tc-sub{
+.pg-head p{
+  margin-top:6px;
   color:#475569;
-  margin-bottom:26px;
-  font-size:16px;
+  font-size:15px;
 }
 
-/* TRACK */
-.tc-track{
+/* HORIZONTAL TRACK */
+#proof-track{
   display:flex;
-  gap:20px;
+  gap:16px;
   overflow-x:auto;
-  padding-bottom:12px;
+  padding:12px 6px;
   scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
 }
+#proof-track::-webkit-scrollbar{display:none;}
+#proof-track{scrollbar-width:none;}
 
-.tc-track::-webkit-scrollbar{
-  height:6px;
-}
-
-.tc-track::-webkit-scrollbar-thumb{
-  background:var(--accent);
-  border-radius:3px;
-}
-
-/* CARD */
-.tc-card{
-  flex:0 0 auto;
-  width:220px;
+/* ITEM SIZE */
+.pg-item{
+  flex:0 0 220px;
   scroll-snap-align:start;
-  background:linear-gradient(180deg,#ffffff,#f8fafc);
-  border-radius:22px;
-  padding:10px;
-  border:1px solid var(--border);
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.8),
-    var(--shadow);
-  transition:.35s ease;
-  cursor:pointer;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
 }
-
-.tc-card:hover{
-  transform:translateY(-10px) scale(1.05);
-  box-shadow:0 30px 60px rgba(37,99,235,.25);
-}
+@media(min-width:900px){.pg-item{flex:0 0 260px;}}
+@media(min-width:1200px){.pg-item{flex:0 0 300px;}}
 
 /* PHONE FRAME */
-.tc-shot{
+.pg-phone{
+  width:100%;
+  height:180px;
+  background:#ffffff;
   border-radius:18px;
   overflow:hidden;
-  border:1px solid #dbeafe;
-  aspect-ratio:9/19.5;
-  background:#000;
+  border:1px solid #e5e7eb;
+  box-shadow:0 10px 30px rgba(0,0,0,.10);
+  transition:.35s ease;
+  position:relative;
 }
 
-.tc-shot img{
+/* IMAGE */
+.pg-phone img{
   width:100%;
   height:100%;
-  object-fit:contain;
+  object-fit:cover;
+  transition:.45s cubic-bezier(.2,.8,.2,1);
 }
 
-/* MODAL */
-.tc-modal{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.9);
-  display:none;
-  align-items:center;
-  justify-content:center;
-  z-index:9999;
+/* HOVER / TAP */
+.pg-item:hover .pg-phone{
+  transform:translateY(-6px);
+  box-shadow:0 18px 45px rgba(37,99,235,.25);
+}
+.pg-item:hover img{transform:scale(1.06);}
+
+/* CAPTION */
+.pg-cap{
+  font-size:13px;
+  color:#334155;
+  text-align:center;
+  min-height:34px;
 }
 
-.tc-modal.active{
-  display:flex;
-}
-
-.tc-modal img{
-  max-width:90%;
-  max-height:90%;
-  border-radius:20px;
-  box-shadow:0 0 60px rgba(37,99,235,.6);
+/* MOBILE */
+@media(max-width:420px){
+  .pg-phone{height:150px;}
+  .pg-item{flex:0 0 180px;}
+  .pg-cap{font-size:12px;}
 }
 </style>
 
-<section class="tcarousel">
+<section id="proof-gallery">
 
-  <h2 class="tc-title">Verified Client Screens</h2>
-  <p class="tc-sub">Authentic results shared directly by our growth partners.</p>
-
-  <div class="tc-track">
-
-    <!-- CARD -->
-    <div class="tc-card" onclick="openTc(this)">
-      <div class="tc-shot">
-        <img src="testimonials/1.jpg" alt="">
-      </div>
-    </div>
-
-    <div class="tc-card" onclick="openTc(this)">
-      <div class="tc-shot">
-        <img src="testimonials/2.jpg" alt="">
-      </div>
-    </div>
-
-    <div class="tc-card" onclick="openTc(this)">
-      <div class="tc-shot">
-        <img src="testimonials/3.jpg" alt="">
-      </div>
-    </div>
-
-    <div class="tc-card" onclick="openTc(this)">
-      <div class="tc-shot">
-        <img src="testimonials/4.jpg" alt="">
-      </div>
-    </div>
-
-    <div class="tc-card" onclick="openTc(this)">
-      <div class="tc-shot">
-        <img src="testimonials/5.jpg" alt="">
-      </div>
-    </div>
-
-    <!-- 10–11 images tak isi pattern me add -->
+  <div class="pg-head">
+    <h2>Real Results. Real Screens.</h2>
+    <p>Unfiltered proof shared by our ad & affiliate partners</p>
   </div>
+
+  <div id="proof-track"></div>
 
 </section>
 
-<!-- FULLSCREEN PREVIEW -->
-<div class="tc-modal" id="tcModal" onclick="closeTc()">
-  <img id="tcImg">
-</div>
-
 <script>
-function openTc(card){
-  const img = card.querySelector("img").src;
-  document.getElementById("tcImg").src = img;
-  document.getElementById("tcModal").classList.add("active");
-}
+(function(){
+  const shots = [
+    {url:"testimonials/1.jpg", text:"Leads quality improved within first week"},
+    {url:"testimonials/2.jpg", text:"Finally profitable ads after long time"},
+    {url:"testimonials/3.jpg", text:"WhatsApp leads system works perfectly"},
+    {url:"testimonials/4.jpg", text:"Scaling smoothly with AdsWelly support"},
+    {url:"testimonials/5.jpg", text:"Best decision for my affiliate journey"},
+    {url:"testimonials/6.jpg", text:"Daily optimization makes big difference"},
+    {url:"testimonials/7.jpg", text:"Consistent ROI, zero stress"},
+    {url:"testimonials/8.jpg", text:"Clean funnel + strong conversions"},
+    {url:"testimonials/9.jpg", text:"Trustworthy team, real results"},
+    {url:"testimonials/10.jpg", text:"Ads started converting in 3 days"}
+  ];
 
-function closeTc(){
-  document.getElementById("tcModal").classList.remove("active");
-}
+  const track=document.getElementById("proof-track");
+
+  shots.forEach((s,i)=>{
+    const item=document.createElement("div");
+    item.className="pg-item";
+
+    const phone=document.createElement("div");
+    phone.className="pg-phone";
+
+    const img=document.createElement("img");
+    img.src=s.url;
+    img.alt="Client result "+(i+1);
+    img.loading="lazy";
+
+    phone.appendChild(img);
+    item.appendChild(phone);
+
+    const cap=document.createElement("div");
+    cap.className="pg-cap";
+    cap.textContent=s.text;
+
+    item.appendChild(cap);
+    track.appendChild(item);
+  });
+
+  /* Mouse wheel horizontal scroll */
+  track.addEventListener("wheel",e=>{
+    e.preventDefault();
+    track.scrollLeft+=e.deltaY>0?200:-200;
+  },{passive:false});
+})();
 </script>
