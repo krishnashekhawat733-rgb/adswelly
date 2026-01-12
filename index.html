@@ -516,10 +516,15 @@ body {
   margin:0;
   font-size:40px;
   font-weight:900;
-  background:linear-gradient(135deg,#020617,#2563eb);
+  letter-spacing:-0.5px;
+}
+.text-black{
+  color:#020617;
+}
+.text-blue{
+  background:linear-gradient(135deg,#2563eb,#3b82f6);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
-  letter-spacing:-0.5px;
 }
 .pg-head p{
   margin-top:8px;
@@ -541,7 +546,7 @@ body {
 
 /* ITEM SIZE — BIG PHONE */
 .pg-item{
-  flex:0 0 300px; /* BIG */
+  flex:0 0 300px;
   scroll-snap-align:center;
   display:flex;
   flex-direction:column;
@@ -553,7 +558,7 @@ body {
 /* PHONE FRAME */
 .pg-phone{
   width:100%;
-  height:620px;   /* 🔥 REAL PHONE SCREEN HEIGHT */
+  height:620px;
   background:linear-gradient(180deg,#ffffff,#f1f5f9);
   border-radius:32px;
   padding:10px;
@@ -565,7 +570,7 @@ body {
   position:relative;
 }
 
-/* SCREEN */
+/* NOTCH */
 .pg-phone::before{
   content:"";
   position:absolute;
@@ -614,7 +619,10 @@ body {
 <section id="proof-gallery">
 
   <div class="pg-head">
-    <h2>Proof That Actually Converts</h2>
+    <h2>
+      <span class="text-black">Proof That</span>
+      <span class="text-blue">Actually Converts</span>
+    </h2>
     <p>Live mobile screenshots shared by our growth partners</p>
   </div>
 
@@ -668,4 +676,3 @@ body {
   },{passive:false});
 })();
 </script>
-
