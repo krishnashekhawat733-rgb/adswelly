@@ -356,3 +356,130 @@ body {
   </div>
 
 </section>
+<!-- STATS / TRAP SECTION (WHITE VERSION) -->
+<style>
+.trap-section{
+  padding:100px 8%;
+  background:#ffffff; /* WHITE */
+  color:#020617;
+  text-align:center;
+}
+
+/* Heading */
+.trap-title{
+  font-size:48px;
+  font-weight:800;
+  color:#020617;
+}
+
+.trap-title span{
+  color:#2563eb;
+}
+
+.trap-subtitle{
+  font-size:34px;
+  font-weight:700;
+  margin-top:6px;
+  color:#2563eb;
+}
+
+/* FORCE ONE LINE STATS */
+.trap-stats{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+  margin:60px 0 30px;
+  flex-wrap:nowrap;
+}
+
+.trap-box{
+  flex:1;
+  background:#f8fafc;
+  border:1px solid #e5e7eb;
+  border-radius:16px;
+  padding:18px 10px;
+}
+
+.trap-box h3{
+  font-size:30px;
+  font-weight:800;
+  color:#2563eb;
+  margin-bottom:2px;
+}
+
+.trap-box p{
+  font-size:13px;
+  color:#475569;
+}
+
+/* SUCCESS RATE TEXT */
+.client-success{
+  margin-top:18px;
+  font-size:18px;
+  font-weight:600;
+  color:#2563eb;
+}
+
+/* SUCCESS BAR */
+.success-bar{
+  max-width:600px;
+  height:8px;
+  margin:10px auto 0;
+  background:#e5e7eb;
+  border-radius:20px;
+  overflow:hidden;
+}
+
+.success-fill{
+  width:98%;
+  height:100%;
+  background:#2563eb;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .trap-title{font-size:34px;}
+  .trap-subtitle{font-size:24px;}
+
+  .trap-box h3{
+    font-size:22px;
+  }
+
+  .trap-box p{
+    font-size:11px;
+  }
+}
+</style>
+
+<section class="trap-section">
+
+  <h2 class="trap-title">
+    More isn’t always <span>better.</span>
+  </h2>
+  <h3 class="trap-subtitle">It’s a trap.</h3>
+
+  <div class="trap-stats">
+    <div class="trap-box">
+      <h3>10+</h3>
+      <p>Years Ads</p>
+    </div>
+
+    <div class="trap-box">
+      <h3>96%</h3>
+      <p>Accuracy</p>
+    </div>
+
+    <div class="trap-box">
+      <h3>50K+</h3>
+      <p>Leads</p>
+    </div>
+  </div>
+
+  <div class="client-success">Client Success Rate 98%</div>
+
+  <div class="success-bar">
+    <div class="success-fill"></div>
+  </div>
+
+</section>
