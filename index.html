@@ -354,5 +354,350 @@ body {
 .blue{background:#dbeafe;color:#1d4ed8;}
 .red{background:#fee2e2;color:#b91c1c;}
 
-/
+/* TITLE */
+.plan-card h3{
+  font-size:26px;
+  font-weight:800;
+  color:#020617;
+  margin-bottom:6px;
+}
 
+.price{
+  font-size:28px;
+  font-weight:800;
+  color:#2563eb;
+  margin-bottom:6px;
+}
+
+.best-for{
+  font-size:14px;
+  color:#475569;
+  margin-bottom:20px;
+}
+
+/* LIST */
+.plan-card ul{
+  list-style:none;
+  padding:0;
+  margin:0 0 30px;
+}
+
+.plan-card ul li{
+  font-size:15px;
+  color:#334155;
+  margin-bottom:10px;
+  padding-left:18px;
+  position:relative;
+}
+
+.plan-card ul li::before{
+  content:"✔";
+  position:absolute;
+  left:0;
+  color:#2563eb;
+  font-size:14px;
+}
+
+/* TAGLINE */
+.tagline{
+  font-size:15px;
+  font-weight:600;
+  color:#2563eb;
+  margin-bottom:20px;
+}
+
+/* BUTTON */
+.plan-btn{
+  display:block;
+  width:100%;
+  padding:14px;
+  border-radius:30px;
+  border:none;
+  font-size:15px;
+  font-weight:700;
+  cursor:pointer;
+  background:linear-gradient(135deg,#3b82f6,#06b6d4);
+  color:#fff;
+  transition:.3s;
+}
+
+.plan-btn:hover{
+  box-shadow:0 10px 25px rgba(59,130,246,0.4);
+}
+</style>
+
+<section class="pricing">
+
+  <h2>Service Plans</h2>
+  <p class="subtext">Choose a plan that fits your affiliate growth stage.</p>
+
+  <div class="pricing-grid">
+
+    <!-- PLAN 1 -->
+    <div class="plan-card">
+      <span class="plan-tag green">Starter Partner Plan</span>
+      <h3>Starter Plan</h3>
+      <div class="price">₹999 <span style="font-size:14px;color:#64748b;">/ One-Time</span></div>
+      <div class="best-for">Best for new & low-budget affiliates</div>
+
+      <ul>
+        <li>Meta Ads setup & management</li>
+        <li>WhatsApp lead delivery system</li>
+        <li>20% revenue share model</li>
+        <li>Ad creatives by our team</li>
+        <li>24/7 WhatsApp support</li>
+        <li>Upgrade to Growth / Scale anytime</li>
+      </ul>
+
+      <div class="tagline">Start risk-free. Pay less. Grow with us.</div>
+      <button class="plan-btn">Get Started</button>
+    </div>
+
+    <!-- PLAN 2 -->
+    <div class="plan-card">
+      <span class="plan-tag blue">Most Popular</span>
+      <h3>Growth Plan</h3>
+      <div class="price">₹3,999 <span style="font-size:14px;color:#64748b;">/ 30 Days</span></div>
+      <div class="best-for">For affiliates ready to scale conversions</div>
+
+      <ul>
+        <li>High-converting landing page (copy + structure)</li>
+        <li>Complete sales funnel setup</li>
+        <li>Custom ad creatives (image/video + hooks)</li>
+        <li>Meta Ads full management</li>
+        <li>Daily optimization & scaling</li>
+        <li>Daily performance reports</li>
+        <li>Priority WhatsApp & call support</li>
+      </ul>
+
+      <div class="tagline">More conversions. More consistency.</div>
+      <button class="plan-btn">Choose Growth</button>
+    </div>
+
+    <!-- PLAN 3 -->
+    <div class="plan-card">
+      <span class="plan-tag red">High Scale</span>
+      <h3>Scale Plan</h3>
+      <div class="price">₹5,999 <span style="font-size:14px;color:#64748b;">/ 30 Days</span></div>
+      <div class="best-for">Best for aggressive scaling & high volume</div>
+
+      <ul>
+        <li>Everything included in Growth Plan</li>
+        <li>Meta & Snapchat Ads management</li>
+        <li>Multi-platform ad strategy</li>
+        <li>2–3 campaigns (testing + scaling)</li>
+        <li>Advanced funnel optimization</li>
+        <li>Creative testing & scaling system</li>
+        <li>Dedicated support & strategy calls</li>
+      </ul>
+
+      <div class="tagline">Scale faster. Dominate your niche.</div>
+      <button class="plan-btn">Start Scaling</button>
+    </div>
+
+  </div>
+
+</section>
+<!-- SERVICE PLANS SECTION -->
+<style>
+.pricing{
+  padding:100px 8%;
+  background:#f8fafc;
+  text-align:center;
+}
+
+.pricing h2{
+  font-size:44px;
+  font-weight:800;
+  color:#020617;
+  margin-bottom:10px;
+}
+
+.pricing .subtext{
+  font-size:17px;
+  color:#475569;
+  margin-bottom:60px;
+}
+
+/* GRID */
+.pricing-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+  gap:30px;
+}
+
+/* CARD */
+.plan-card{
+  background:#ffffff;
+  border:1px solid #e5e7eb;
+  border-radius:22px;
+  padding:40px 28px;
+  text-align:left;
+  box-shadow:0 12px 25px rgba(0,0,0,0.06);
+  transition:0.35s ease;
+  position:relative;
+}
+
+.plan-card:hover{
+  transform:translateY(-8px) scale(1.02);
+  box-shadow:0 20px 40px rgba(59,130,246,0.25);
+}
+
+/* PLAN TAG */
+.plan-tag{
+  display:inline-block;
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:700;
+  margin-bottom:16px;
+}
+
+.green{background:#dcfce7;color:#15803d;}
+.blue{background:#dbeafe;color:#1d4ed8;}
+.red{background:#fee2e2;color:#b91c1c;}
+
+/* TITLE */
+.plan-card h3{
+  font-size:26px;
+  font-weight:800;
+  color:#020617;
+  margin-bottom:6px;
+}
+
+.price{
+  font-size:28px;
+  font-weight:800;
+  color:#2563eb;
+  margin-bottom:6px;
+}
+
+.best-for{
+  font-size:14px;
+  color:#475569;
+  margin-bottom:20px;
+}
+
+/* LIST */
+.plan-card ul{
+  list-style:none;
+  padding:0;
+  margin:0 0 30px;
+}
+
+.plan-card ul li{
+  font-size:15px;
+  color:#334155;
+  margin-bottom:10px;
+  padding-left:18px;
+  position:relative;
+}
+
+.plan-card ul li::before{
+  content:"✔";
+  position:absolute;
+  left:0;
+  color:#2563eb;
+  font-size:14px;
+}
+
+/* TAGLINE */
+.tagline{
+  font-size:15px;
+  font-weight:600;
+  color:#2563eb;
+  margin-bottom:20px;
+}
+
+/* BUTTON */
+.plan-btn{
+  display:block;
+  width:100%;
+  padding:14px;
+  border-radius:30px;
+  border:none;
+  font-size:15px;
+  font-weight:700;
+  cursor:pointer;
+  background:linear-gradient(135deg,#3b82f6,#06b6d4);
+  color:#fff;
+  transition:.3s;
+}
+
+.plan-btn:hover{
+  box-shadow:0 10px 25px rgba(59,130,246,0.4);
+}
+</style>
+
+<section class="pricing">
+
+  <h2>Service Plans</h2>
+  <p class="subtext">Choose a plan that fits your affiliate growth stage.</p>
+
+  <div class="pricing-grid">
+
+    <!-- PLAN 1 -->
+    <div class="plan-card">
+      <span class="plan-tag green">Starter Partner Plan</span>
+      <h3>Starter Plan</h3>
+      <div class="price">₹999 <span style="font-size:14px;color:#64748b;">/ One-Time</span></div>
+      <div class="best-for">Best for new & low-budget affiliates</div>
+
+      <ul>
+        <li>Meta Ads setup & management</li>
+        <li>WhatsApp lead delivery system</li>
+        <li>20% revenue share model</li>
+        <li>Ad creatives by our team</li>
+        <li>24/7 WhatsApp support</li>
+        <li>Upgrade to Growth / Scale anytime</li>
+      </ul>
+
+      <div class="tagline">Start risk-free. Pay less. Grow with us.</div>
+      <button class="plan-btn">Get Started</button>
+    </div>
+
+    <!-- PLAN 2 -->
+    <div class="plan-card">
+      <span class="plan-tag blue">Most Popular</span>
+      <h3>Growth Plan</h3>
+      <div class="price">₹3,999 <span style="font-size:14px;color:#64748b;">/ 30 Days</span></div>
+      <div class="best-for">For affiliates ready to scale conversions</div>
+
+      <ul>
+        <li>High-converting landing page (copy + structure)</li>
+        <li>Complete sales funnel setup</li>
+        <li>Custom ad creatives (image/video + hooks)</li>
+        <li>Meta Ads full management</li>
+        <li>Daily optimization & scaling</li>
+        <li>Daily performance reports</li>
+        <li>Priority WhatsApp & call support</li>
+      </ul>
+
+      <div class="tagline">More conversions. More consistency.</div>
+      <button class="plan-btn">Choose Growth</button>
+    </div>
+
+    <!-- PLAN 3 -->
+    <div class="plan-card">
+      <span class="plan-tag red">High Scale</span>
+      <h3>Scale Plan</h3>
+      <div class="price">₹5,999 <span style="font-size:14px;color:#64748b;">/ 30 Days</span></div>
+      <div class="best-for">Best for aggressive scaling & high volume</div>
+
+      <ul>
+        <li>Everything included in Growth Plan</li>
+        <li>Meta & Snapchat Ads management</li>
+        <li>Multi-platform ad strategy</li>
+        <li>2–3 campaigns (testing + scaling)</li>
+        <li>Advanced funnel optimization</li>
+        <li>Creative testing & scaling system</li>
+        <li>Dedicated support & strategy calls</li>
+      </ul>
+
+      <div class="tagline">Scale faster. Dominate your niche.</div>
+      <button class="plan-btn">Start Scaling</button>
+    </div>
+
+  </div>
+
+</section>
