@@ -10,8 +10,8 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: radial-gradient(circle at top, #0b0f1a, #020617);
-  color: white;
+  background: #ffffff;   /* WHITE THEME */
+  color: #020617;
 }
 
 /* HERO SECTION */
@@ -22,6 +22,7 @@ body {
   justify-content: center;
   text-align: center;
   padding: 40px 20px;
+  background: #ffffff;
 }
 
 .hero-box {
@@ -33,7 +34,7 @@ body {
   padding: 8px 18px;
   border-radius: 30px;
   background: linear-gradient(90deg, #22d3ee, #3b82f6);
-  color: #000;
+  color: #ffffff;
   font-weight: 600;
   margin-bottom: 20px;
 }
@@ -42,17 +43,16 @@ body {
   font-size: 48px;
   font-weight: 800;
   line-height: 1.2;
+  color:#020617;
 }
 
 .hero h1 span {
-  background: linear-gradient(90deg, #3b82f6, #22d3ee);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color:#2563eb;
 }
 
 .hero p {
   font-size: 18px;
-  color: #cbd5e1;
+  color: #475569;
   margin-top: 15px;
 }
 
@@ -71,7 +71,7 @@ body {
 
 .hero-btn:hover {
   transform: scale(1.08);
-  box-shadow: 0 0 25px rgba(59,130,246,0.6);
+  box-shadow: 0 10px 25px rgba(59,130,246,0.4);
 }
 </style>
 </head>
@@ -80,7 +80,6 @@ body {
 
 <section class="hero">
   <div class="hero-box">
-
     <div class="badge">🔥 Starting at just ₹59/day</div>
 
     <h1>
@@ -92,18 +91,14 @@ body {
     </p>
 
     <button class="hero-btn">Start Ads Now</button>
-
   </div>
 </section>
 
-</body>
-</html>
 <!-- SERVICES SECTION -->
 <style>
 .services {
   padding: 60px 8% 80px;
-  background: radial-gradient(circle at top, #020617, #000);
-  color: #fff;
+  background: #f8fafc;
   text-align: center;
 }
 
@@ -111,11 +106,11 @@ body {
   font-size: 44px;
   margin-bottom: 12px;
   font-weight: 700;
-  color: #ffffff;
+  color: #020617;
 }
 
 .services p.subtext {
-  color: #b6c2cf;
+  color: #475569;
   max-width: 650px;
   margin: 0 auto 50px;
   font-size: 17px;
@@ -130,13 +125,13 @@ body {
 
 /* CARD */
 .service-card {
-  background: rgba(255, 255, 255, 0.04);
+  background: #ffffff;
   padding: 36px 28px;
   border-radius: 20px;
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid #e5e7eb;
   transition: 0.35s ease;
-  position: relative;
   text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
 /* ICON BOX */
@@ -149,20 +144,18 @@ body {
   align-items: center;
   justify-content: center;
   background: rgba(59,130,246,0.12);
-  box-shadow: 0 0 20px rgba(59,130,246,0.4);
 }
 
 .service-icon svg {
   width: 28px;
   height: 28px;
-  stroke: #60a5fa;
+  stroke: #2563eb;
 }
 
-/* HOVER EFFECT */
+/* HOVER */
 .service-card:hover {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 12px 25px rgba(59,130,246,0.25);
-  border-color: rgba(59,130,246,0.6);
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(59,130,246,0.2);
 }
 
 /* TITLE */
@@ -170,18 +163,17 @@ body {
   font-size: 22px;
   margin-bottom: 10px;
   font-weight: 600;
-  color: #60a5fa;
+  color: #2563eb;
 }
 
 /* TEXT */
 .service-card p {
   font-size: 15px;
-  color: #cbd5e1;
+  color: #475569;
   line-height: 1.6;
 }
 </style>
 
-<!-- ICON CDN -->
 <script src="https://unpkg.com/lucide@latest"></script>
 
 <section class="services">
@@ -191,206 +183,60 @@ body {
   </p>
 
   <div class="services-grid">
-
     <div class="service-card">
-      <div class="service-icon">
-        <i data-lucide="target"></i>
-      </div>
+      <div class="service-icon"><i data-lucide="target"></i></div>
       <h3>Meta Ads</h3>
       <p>High-converting Facebook & Instagram ads designed to generate quality leads.</p>
     </div>
 
     <div class="service-card">
-      <div class="service-icon">
-        <i data-lucide="trending-up"></i>
-      </div>
+      <div class="service-icon"><i data-lucide="trending-up"></i></div>
       <h3>Google Ads</h3>
       <p>Search, display & YouTube ads focused on high-intent buyers.</p>
     </div>
 
     <div class="service-card">
-      <div class="service-icon">
-        <i data-lucide="zap"></i>
-      </div>
+      <div class="service-icon"><i data-lucide="zap"></i></div>
       <h3>Snapchat Ads</h3>
       <p>Creative campaigns built to engage Gen-Z & younger audiences.</p>
     </div>
 
     <div class="service-card">
-      <div class="service-icon">
-        <i data-lucide="layout-template"></i>
-      </div>
+      <div class="service-icon"><i data-lucide="layout-template"></i></div>
       <h3>Funnels & Landing Pages</h3>
       <p>High-converting landing pages optimized for ROI and performance.</p>
     </div>
-
   </div>
 </section>
 
-<script>
-  lucide.createIcons();
-</script>
-<!-- STATS / TRAP SECTION -->
+<script>lucide.createIcons();</script>
+
+<!-- STATS SECTION -->
 <style>
 .trap-section{
   padding:100px 8%;
-  background: radial-gradient(circle at top, #020617, #000);
-  color:#fff;
+  background:#ffffff;
   text-align:center;
 }
 
-/* Heading */
 .trap-title{
   font-size:48px;
   font-weight:800;
+  color:#020617;
 }
 
-.trap-title span{
-  color:#60a5fa;
-}
+.trap-title span{color:#2563eb;}
 
 .trap-subtitle{
   font-size:34px;
   font-weight:700;
-  margin-top:6px;
-  color:#60a5fa;
+  color:#2563eb;
 }
 
-/* FORCE ONE LINE STATS */
 .trap-stats{
   display:flex;
-  justify-content:space-between;
-  align-items:center;
   gap:12px;
   margin:60px 0 30px;
-  flex-wrap:nowrap; /* 🔥 FORCE SINGLE LINE */
-}
-
-.trap-box{
-  flex:1;
-  background: rgba(255,255,255,0.04);
-  border:1px solid rgba(255,255,255,0.08);
-  border-radius:16px;
-  padding:18px 10px;
-}
-
-.trap-box h3{
-  font-size:30px;
-  font-weight:800;
-  color:#60a5fa;
-  margin-bottom:2px;
-}
-
-.trap-box p{
-  font-size:13px;
-  color:#94a3b8;
-}
-
-/* SUCCESS RATE TEXT */
-.client-success{
-  margin-top:18px;
-  font-size:18px;
-  font-weight:600;
-  color:#60a5fa;
-}
-
-/* SUCCESS BAR */
-.success-bar{
-  max-width:600px;
-  height:8px;
-  margin:10px auto 0;
-  background:#1e293b;
-  border-radius:20px;
-  overflow:hidden;
-}
-
-.success-fill{
-  width:98%;
-  height:100%;
-  background:#60a5fa;
-}
-
-/* MOBILE ADJUST (STILL ONE LINE) */
-@media(max-width:768px){
-  .trap-title{font-size:34px;}
-  .trap-subtitle{font-size:24px;}
-
-  .trap-box h3{
-    font-size:22px;
-  }
-
-  .trap-box p{
-    font-size:11px;
-  }
-}
-</style>
-
-<section class="trap-section">
-
-  <h2 class="trap-title">
-    More isn’t always <span>better.</span>
-  </h2>
-  <h3 class="trap-subtitle">It’s a trap.</h3>
-
-  <div class="trap-stats">
-    <div class="trap-box">
-      <h3>10+</h3>
-      <p>Years Ads</p>
-    </div>
-
-    <div class="trap-box">
-      <h3>96%</h3>
-      <p>Accuracy</p>
-    </div>
-
-    <div class="trap-box">
-      <h3>50K+</h3>
-      <p>Leads</p>
-    </div>
-  </div>
-
-  <div class="client-success">Client Success Rate 98%</div>
-
-  <div class="success-bar">
-    <div class="success-fill"></div>
-  </div>
-
-</section>
-<!-- STATS / TRAP SECTION (WHITE VERSION) -->
-<style>
-.trap-section{
-  padding:100px 8%;
-  background:#ffffff; /* WHITE */
-  color:#020617;
-  text-align:center;
-}
-
-/* Heading */
-.trap-title{
-  font-size:48px;
-  font-weight:800;
-  color:#020617;
-}
-
-.trap-title span{
-  color:#2563eb;
-}
-
-.trap-subtitle{
-  font-size:34px;
-  font-weight:700;
-  margin-top:6px;
-  color:#2563eb;
-}
-
-/* FORCE ONE LINE STATS */
-.trap-stats{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:16px;
-  margin:60px 0 30px;
-  flex-wrap:nowrap;
 }
 
 .trap-box{
@@ -403,9 +249,7 @@ body {
 
 .trap-box h3{
   font-size:30px;
-  font-weight:800;
   color:#2563eb;
-  margin-bottom:2px;
 }
 
 .trap-box p{
@@ -413,7 +257,6 @@ body {
   color:#475569;
 }
 
-/* SUCCESS RATE TEXT */
 .client-success{
   margin-top:18px;
   font-size:18px;
@@ -421,14 +264,12 @@ body {
   color:#2563eb;
 }
 
-/* SUCCESS BAR */
 .success-bar{
   max-width:600px;
   height:8px;
   margin:10px auto 0;
   background:#e5e7eb;
   border-radius:20px;
-  overflow:hidden;
 }
 
 .success-fill{
@@ -436,50 +277,22 @@ body {
   height:100%;
   background:#2563eb;
 }
-
-/* MOBILE */
-@media(max-width:768px){
-  .trap-title{font-size:34px;}
-  .trap-subtitle{font-size:24px;}
-
-  .trap-box h3{
-    font-size:22px;
-  }
-
-  .trap-box p{
-    font-size:11px;
-  }
-}
 </style>
 
 <section class="trap-section">
-
-  <h2 class="trap-title">
-    More isn’t always <span>better.</span>
-  </h2>
+  <h2 class="trap-title">More isn’t always <span>better.</span></h2>
   <h3 class="trap-subtitle">It’s a trap.</h3>
 
   <div class="trap-stats">
-    <div class="trap-box">
-      <h3>10+</h3>
-      <p>Years Ads</p>
-    </div>
-
-    <div class="trap-box">
-      <h3>96%</h3>
-      <p>Accuracy</p>
-    </div>
-
-    <div class="trap-box">
-      <h3>50K+</h3>
-      <p>Leads</p>
-    </div>
+    <div class="trap-box"><h3>10+</h3><p>Years Ads</p></div>
+    <div class="trap-box"><h3>96%</h3><p>Accuracy</p></div>
+    <div class="trap-box"><h3>50K+</h3><p>Leads</p></div>
   </div>
 
   <div class="client-success">Client Success Rate 98%</div>
-
-  <div class="success-bar">
-    <div class="success-fill"></div>
-  </div>
-
+  <div class="success-bar"><div class="success-fill"></div></div>
 </section>
+
+</body>
+</html>
+
