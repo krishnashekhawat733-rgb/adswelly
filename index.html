@@ -706,7 +706,14 @@ body {
   margin:0 0 6px;
   font-size:32px;
   font-weight:900;
-  background:linear-gradient(135deg,#020617,#2563eb);
+}
+
+.h-black{
+  color:#020617;
+}
+
+.h-blue{
+  background:linear-gradient(135deg,#2563eb,#3b82f6);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
@@ -778,7 +785,11 @@ body {
 
   <div class="contact-card">
 
-    <h2>Get Started with AdsWelly</h2>
+    <h2>
+      <span class="h-black">Get Started</span>
+      <span class="h-blue">with AdsWelly</span>
+    </h2>
+
     <p>Share your details and connect instantly on WhatsApp.</p>
 
     <!-- PLAN -->
@@ -824,7 +835,7 @@ function sendWhatsApp(){
     return;
   }
 
-  var message = 
+  var message =
     "Hello, I am interested in your ad service.%0A%0A" +
     "Plan: " + plan + "%0A" +
     "Name: " + name + "%0A" +
@@ -834,4 +845,3 @@ function sendWhatsApp(){
   window.open(url, "_blank");
 }
 </script>
-
