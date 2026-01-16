@@ -58,4 +58,82 @@ body{
 .btn{
   padding:16px 34px;
   font-size:17px;
-  f
+  font-weight:600;
+  border-radius:14px;
+  text-decoration:none;
+  color:#fff;
+  background: linear-gradient(135deg,#2563eb,#06b6d4);
+  box-shadow:
+    0 12px 30px rgba(37,99,235,0.35),
+    inset 0 1px 0 rgba(255,255,255,0.4);
+  transition: all 0.35s ease;
+  position:relative;
+}
+
+/* BUTTON GLOSS EFFECT */
+.btn::after{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  border-radius:14px;
+  background:linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.35),
+    rgba(255,255,255,0)
+  );
+  pointer-events:none;
+}
+
+/* HOVER 3D ANIMATION */
+.btn:hover{
+  transform: translateY(-6px) scale(1.04);
+  box-shadow:
+    0 20px 45px rgba(37,99,235,0.45),
+    inset 0 1px 0 rgba(255,255,255,0.5);
+}
+
+/* SECONDARY BUTTON */
+.btn-outline{
+  background:#fff;
+  color:#2563eb;
+  border:2px solid transparent;
+  background-image:
+    linear-gradient(#fff,#fff),
+    linear-gradient(135deg,#2563eb,#06b6d4);
+  background-origin:border-box;
+  background-clip:padding-box,border-box;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .gradient-text{
+    font-size:36px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+  <h1 class="gradient-text">
+    Learn Meta Ads & Google Ads <br>
+    & Start Getting Clients
+  </h1>
+
+  <p>
+    Zero se advanced tak complete practical course – real campaigns,
+    live strategy aur freelancing roadmap ke saath.
+  </p>
+
+  <div class="hero-buttons">
+    <a href="#" class="btn">Enroll Now</a>
+    <a href="#" class="btn btn-outline">Book Free Demo</a>
+  </div>
+</section>
+
+</body>
+</html>
