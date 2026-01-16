@@ -553,6 +553,245 @@ body{
     </div>
 
   </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#ffffff;
+}
+
+/* SECTION */
+.course-section{
+  padding:90px 6% 110px;
+  text-align:center;
+}
+
+.course-section h2{
+  font-size:44px;
+  font-weight:800;
+  color:#0f172a;
+}
+
+.course-section p{
+  margin:14px auto 60px;
+  font-size:18px;
+  color:#475569;
+  max-width:650px;
+}
+
+/* GRID */
+.course-cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:40px;
+  max-width:1100px;
+  margin:auto;
+}
+
+/* CARD */
+.course-card{
+  position:relative;
+  background:#ffffff;
+  border-radius:24px;
+  padding:40px 30px;
+  text-align:left;
+  box-shadow:
+    0 30px 80px rgba(30,58,138,.25),
+    inset 0 1px 0 rgba(255,255,255,.7);
+  overflow:hidden;
+  transition:.4s ease;
+}
+
+/* GLOSSY LAYER */
+.course-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:24px;
+  background:linear-gradient(
+    to bottom,
+    rgba(255,255,255,.45),
+    rgba(255,255,255,0)
+  );
+  pointer-events:none;
+}
+
+/* ANIMATED BORDER GLOW */
+.course-card::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  border-radius:26px;
+  background:conic-gradient(
+    from 0deg,
+    transparent,
+    #2563eb,
+    transparent,
+    #1e3a8a,
+    transparent
+  );
+  animation:rotate 4s linear infinite;
+  z-index:-1;
+}
+
+@keyframes rotate{
+  0%{ transform:rotate(0deg); }
+  100%{ transform:rotate(360deg); }
+}
+
+/* HOVER */
+.course-card:hover{
+  transform:translateY(-12px) scale(1.04);
+  box-shadow:
+    0 50px 120px rgba(30,58,138,.4),
+    inset 0 1px 0 rgba(255,255,255,.8);
+}
+
+/* TITLE */
+.course-card h3{
+  font-size:26px;
+  font-weight:800;
+  color:#0f172a;
+  margin-bottom:10px;
+}
+
+/* PRICE */
+.price{
+  font-size:34px;
+  font-weight:900;
+  color:#1e3a8a;
+  margin:12px 0 6px;
+}
+
+.mode{
+  font-size:15px;
+  color:#334155;
+  margin-bottom:22px;
+}
+
+/* FEATURES */
+.features{
+  list-style:none;
+  margin-bottom:30px;
+}
+.features li{
+  margin-bottom:12px;
+  font-size:15px;
+  color:#111111;
+}
+.features li::before{
+  content:"✔";
+  color:#1e3a8a;
+  font-weight:700;
+  margin-right:10px;
+}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  padding:16px 40px;
+  border-radius:16px;
+  background:linear-gradient(135deg,#1e3a8a,#1d4ed8,#2563eb);
+  color:#fff;
+  font-size:16px;
+  font-weight:700;
+  text-decoration:none;
+  box-shadow:
+    0 18px 45px rgba(30,58,138,.6),
+    inset 0 1px 0 rgba(255,255,255,.25);
+  position:relative;
+  overflow:hidden;
+}
+
+/* SHINE */
+.btn::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-70%;
+  width:50%;
+  height:100%;
+  background:linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.6),
+    transparent
+  );
+  animation:shine 2.5s infinite;
+}
+
+@keyframes shine{
+  0%{ left:-70%; }
+  100%{ left:120%; }
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .course-section h2{
+    font-size:34px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="course-section">
+  <h2>Meta Ads Course – Choose Your Mode</h2>
+  <p>Learn Meta Ads with live practical training, job assistance and real exposure</p>
+
+  <div class="course-cards">
+
+    <!-- ONLINE CARD -->
+    <div class="course-card">
+      <h3>Meta Ads Course – Online</h3>
+      <div class="price">₹2,499</div>
+      <div class="mode">Live Online Training</div>
+
+      <ul class="features">
+        <li>Online Mode (Live Classes)</li>
+        <li>30 Days Live Practical Training</li>
+        <li>1:1 Mentorship Sessions</li>
+        <li>100% Job Assistance</li>
+        <li>Basics to Client Hunting</li>
+      </ul>
+
+      <a href="#" class="btn">Enroll Now</a>
+    </div>
+
+    <!-- OFFLINE CARD -->
+    <div class="course-card">
+      <h3>Meta Ads Course – Offline</h3>
+      <div class="price">₹5,999</div>
+      <div class="mode">Offline Classroom Training</div>
+
+      <ul class="features">
+        <li>Offline Mode (Classroom)</li>
+        <li>30 Days Live Practical Training</li>
+        <li>1:1 Personal Guidance</li>
+        <li>100% Job Assistance</li>
+        <li>Basics to Client Hunting</li>
+      </ul>
+
+      <a href="#" class="btn">Enroll Now</a>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
 
 </section>
 
