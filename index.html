@@ -5,6 +5,293 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+  <style>
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#ffffff;
+}
+
+/* HERO */
+.hero{
+  position:relative;
+  overflow:hidden;
+  padding:90px 6% 110px;
+  max-width:1200px;
+  margin:auto;
+  text-align:center;
+  background:#ffffff;
+}
+
+/* LIGHT GRID BACKGROUND (Exam Predict Style) */
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(rgba(30,58,138,.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30,58,138,.08) 1px, transparent 1px);
+  background-size:48px 48px;
+  opacity:.35;
+  z-index:0;
+}
+
+/* FLOWING BLUE LINE */
+.hero::after{
+  content:"";
+  position:absolute;
+  width:900px;
+  height:420px;
+  border-radius:50%;
+  border:1.5px solid rgba(30,58,138,.18);
+  top:35%;
+  right:-420px;
+  transform:rotate(-12deg);
+  z-index:0;
+}
+
+/* ABSTRACT SHAPES */
+.abstract-bg{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+}
+.shape{
+  position:absolute;
+  border-radius:50%;
+  opacity:.10;
+}
+.shape-1{
+  width:520px;
+  height:520px;
+  background:#e5e7eb;
+  top:-220px;
+  right:-220px;
+}
+.shape-2{
+  width:380px;
+  height:380px;
+  background:#dbeafe;
+  bottom:-180px;
+  left:-180px;
+}
+
+/* CONTENT */
+.hero-content{
+  position:relative;
+  z-index:2;
+}
+
+/* AI TAG */
+.hero-tag{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 20px;
+  border-radius:999px;
+  background:#eef2ff;
+  color:#1e3a8a;
+  font-weight:600;
+  margin-bottom:22px;
+  font-size:14px;
+}
+
+/* HEADING */
+.hero h1{
+  font-size:50px;
+  font-weight:800;
+  color:#0f172a;
+}
+
+/* SUBTEXT */
+.hero p{
+  margin:18px auto 12px;
+  font-size:18px;
+  color:#475569;
+  max-width:620px;
+}
+
+/* ROTATING TEXT */
+.rotating-text{
+  margin:20px auto 30px;
+  font-size:54px;
+  font-weight:900;
+  height:70px;
+  line-height:70px;
+  white-space:nowrap;
+  overflow:hidden;
+  color:#1e3a8a;
+  transition:opacity .5s ease, transform .5s ease;
+}
+
+/* BULLETS */
+.bullets{
+  list-style:none;
+  margin:0 auto 28px;
+  max-width:520px;
+}
+.bullets li{
+  margin-bottom:12px;
+  font-size:16px;
+  color:#334155;
+}
+.bullets li::before{
+  content:"✔";
+  color:#1e3a8a;
+  margin-right:10px;
+  font-weight:700;
+}
+
+/* TRUST */
+.trust{
+  margin-bottom:28px;
+}
+.stars{
+  color:#fb923c;
+  font-size:22px;
+  margin-bottom:6px;
+}
+.trust-text{
+  font-size:18px;
+  font-weight:600;
+  color:#0f172a;
+}
+
+/* CTA BUTTON */
+.btn{
+  padding:18px 46px;
+  border-radius:18px;
+  font-size:17px;
+  font-weight:700;
+  text-decoration:none;
+  color:#fff;
+  display:inline-block;
+  background:linear-gradient(135deg,#1e3a8a,#1d4ed8,#2563eb);
+  box-shadow:
+    0 20px 50px rgba(30,58,138,.55),
+    inset 0 1px 0 rgba(255,255,255,.25);
+  position:relative;
+  overflow:hidden;
+}
+
+/* SHINE */
+.btn::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-70%;
+  width:50%;
+  height:100%;
+  background:linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.6),
+    transparent
+  );
+  animation:shine 2.6s infinite;
+}
+
+@keyframes shine{
+  0%{ left:-70%; }
+  100%{ left:120%; }
+}
+
+.btn:hover{
+  transform:translateY(-4px);
+  box-shadow:
+    0 32px 70px rgba(30,58,138,.7),
+    inset 0 1px 0 rgba(255,255,255,.35);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .hero h1{font-size:36px}
+  .rotating-text{
+    font-size:38px;
+    height:50px;
+    line-height:50px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+  <!-- BACKGROUND SHAPES -->
+  <div class="abstract-bg">
+    <span class="shape shape-1"></span>
+    <span class="shape shape-2"></span>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="hero-content">
+
+    <div class="hero-tag">🤖 AI-Driven Ads Training</div>
+
+    <h1>India’s First Digital School</h1>
+
+    <p>
+      Learn Meta Ads & Google Ads from real practitioners  
+      and build skills that actually convert.
+    </p>
+
+    <div class="rotating-text" id="rotateText">
+      Built for Doers
+    </div>
+
+    <ul class="bullets">
+      <li>Live Meta & Google Ads Training</li>
+      <li>Real Dashboard Walkthrough</li>
+      <li>Freelancing & Client Growth Strategy</li>
+    </ul>
+
+    <div class="trust">
+      <div class="stars">★★★★★</div>
+      <div class="trust-text">Loved by 52,000+ Students</div>
+    </div>
+
+    <a href="#" class="btn">Join Live Batch</a>
+
+  </div>
+
+</section>
+
+<script>
+const texts = [
+  "Built for Doers",
+  "Built for Marketers",
+  "Built for Growth",
+  "Built for Results"
+];
+
+let index = 0;
+const el = document.getElementById("rotateText");
+
+setInterval(()=>{
+  el.style.opacity = 0;
+  el.style.transform = "translateY(10px)";
+
+  setTimeout(()=>{
+    index = (index + 1) % texts.length;
+    el.textContent = texts[index];
+    el.style.opacity = 1;
+    el.style.transform = "translateY(0)";
+  },500);
+
+},4000);
+</script>
+
+</body>
+</html> yeh shai hai  ?
 /* WHY CHOOSE SECTION */
 .why-choose{
   padding:90px 6% 100px;
