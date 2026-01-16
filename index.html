@@ -24,7 +24,6 @@ body{
   max-width:1200px;
   margin:auto;
   text-align:center;
-  background:#ffffff;
 }
 
 /* ABSTRACT BACKGROUND */
@@ -34,14 +33,11 @@ body{
   z-index:0;
   pointer-events:none;
 }
-
 .shape{
   position:absolute;
   border-radius:50%;
   opacity:.14;
 }
-
-/* Light gray big curve */
 .shape-1{
   width:520px;
   height:520px;
@@ -49,8 +45,6 @@ body{
   top:-200px;
   right:-200px;
 }
-
-/* Pastel blue circle */
 .shape-2{
   width:380px;
   height:380px;
@@ -58,8 +52,6 @@ body{
   bottom:-160px;
   left:-160px;
 }
-
-/* Thin abstract ellipse */
 .shape-3{
   width:720px;
   height:260px;
@@ -84,13 +76,13 @@ body{
 
 /* SUBTEXT */
 .hero p{
-  margin:18px auto 10px;
+  margin:18px auto 12px;
   font-size:18px;
   color:#475569;
   max-width:620px;
 }
 
-/* ROTATING TEXT (SINGLE LINE) */
+/* ROTATING TEXT (NO BG, DARK BLUE) */
 .rotating-text{
   margin:20px auto 30px;
   font-size:54px;
@@ -100,14 +92,13 @@ body{
   white-space:nowrap;
   overflow:hidden;
   color:#1e3a8a;
-  text-shadow:0 14px 35px rgba(30,58,138,.35);
   transition:opacity .5s ease, transform .5s ease;
 }
 
 /* BULLETS */
 .bullets{
   list-style:none;
-  margin:0 auto 40px;
+  margin:0 auto 28px;
   max-width:520px;
 }
 .bullets li{
@@ -120,6 +111,21 @@ body{
   color:#1e3a8a;
   margin-right:10px;
   font-weight:700;
+}
+
+/* STARS + TRUST */
+.trust{
+  margin-bottom:28px;
+}
+.stars{
+  color:#fb923c;
+  font-size:22px;
+  margin-bottom:6px;
+}
+.trust-text{
+  font-size:18px;
+  font-weight:600;
+  color:#0f172a;
 }
 
 /* BUTTON */
@@ -211,7 +217,14 @@ body{
       <li>Freelancing & Client Growth Strategy</li>
     </ul>
 
-    <a href="#" class="btn">Enroll Now</a>
+    <!-- TRUST -->
+    <div class="trust">
+      <div class="stars">★★★★★</div>
+      <div class="trust-text">Loved by 52,000+ Students</div>
+    </div>
+
+    <!-- CTA -->
+    <a href="#" class="btn">Join Live Batch</a>
   </div>
 
 </section>
@@ -238,7 +251,7 @@ setInterval(()=>{
     el.style.transform = "translateY(0)";
   },500);
 
-},3000);
+},4000); // ⏱ 4 sec
 </script>
 
 </body>
