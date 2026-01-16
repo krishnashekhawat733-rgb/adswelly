@@ -1285,4 +1285,118 @@ faqs.forEach(faq=>{
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* FOOTER */
+.footer{
+  padding:30px 5% 26px;
+  border-top:1px solid #e5e7eb;
+  background:#ffffff;
+}
+
+/* TOP */
+.footer-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:14px;
+}
+
+/* POLICIES */
+.footer-links{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+.footer-links a{
+  font-size:14px;
+  color:#000;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.footer-links a:hover{
+  color:#1e3a8a;
+}
+
+/* SOCIAL */
+.footer-social{
+  display:flex;
+  gap:14px;
+}
+
+.social-icon{
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg,#1e3a8a,#1d4ed8,#2563eb);
+  color:#fff;
+  font-size:18px;
+  text-decoration:none;
+  box-shadow:0 10px 25px rgba(30,58,138,.4);
+  transition:.3s;
+}
+
+.social-icon:hover{
+  transform:translateY(-3px);
+}
+
+/* BOTTOM */
+.footer-bottom{
+  margin-top:16px;
+  text-align:center;
+  font-size:13px;
+  color:#555;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  .footer-top{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<footer class="footer">
+
+  <div class="footer-top">
+
+    <!-- POLICY LINKS -->
+    <div class="footer-links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-and-conditions.html">Terms & Conditions</a>
+      <a href="refund-policy.html">Refund Policy</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+
+    <!-- SOCIAL LINKS -->
+    <div class="footer-social">
+      <a href="https://www.instagram.com/" target="_blank" class="social-icon">📷</a>
+      <a href="https://wa.me/916375759510" target="_blank" class="social-icon">💬</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Mthrive Skills. All rights reserved.
+  </div>
+
+</footer>
+
+</body>
+</html>
 
