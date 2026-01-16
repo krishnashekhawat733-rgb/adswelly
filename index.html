@@ -1086,4 +1086,203 @@ Please share further details.`;
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#ffffff;
+}
+
+/* FAQ SECTION */
+.faq-section{
+  padding:90px 5% 110px;
+  max-width:900px;
+  margin:auto;
+}
+
+.faq-section h2{
+  text-align:center;
+  font-size:42px;
+  font-weight:900;
+  color:#1e3a8a;
+  margin-bottom:12px;
+}
+
+.faq-section p{
+  text-align:center;
+  font-size:18px;
+  color:#000;
+  margin-bottom:50px;
+}
+
+/* FAQ ITEM */
+.faq-item{
+  background:#ffffff;
+  border-radius:22px;
+  padding:24px 26px;
+  margin-bottom:18px;
+  cursor:pointer;
+  box-shadow:
+    0 22px 55px rgba(30,58,138,.22),
+    inset 0 1px 0 rgba(255,255,255,.65);
+  position:relative;
+  transition:.35s ease;
+}
+
+/* GLOSS */
+.faq-item::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:22px;
+  background:linear-gradient(
+    to bottom,
+    rgba(255,255,255,.35),
+    rgba(255,255,255,0)
+  );
+  pointer-events:none;
+}
+
+/* QUESTION */
+.faq-question{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:18px;
+  font-weight:700;
+  color:#000;
+}
+
+/* ICON */
+.faq-icon{
+  font-size:22px;
+  color:#1e3a8a;
+  transition:.3s ease;
+}
+
+/* ANSWER */
+.faq-answer{
+  max-height:0;
+  overflow:hidden;
+  font-size:15px;
+  color:#000;
+  line-height:1.7;
+  margin-top:0;
+  transition:max-height .4s ease, margin-top .3s ease;
+}
+
+/* ACTIVE */
+.faq-item.active .faq-answer{
+  max-height:300px;
+  margin-top:14px;
+}
+
+.faq-item.active .faq-icon{
+  transform:rotate(45deg);
+}
+
+/* HOVER */
+.faq-item:hover{
+  transform:translateY(-4px);
+  box-shadow:
+    0 30px 70px rgba(30,58,138,.32),
+    inset 0 1px 0 rgba(255,255,255,.75);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .faq-section h2{
+    font-size:32px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="faq-section">
+
+  <h2>Frequently Asked Questions</h2>
+  <p>Everything you need to know before joining the training</p>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <span>Is this course suitable for beginners?</span>
+      <span class="faq-icon">+</span>
+    </div>
+    <div class="faq-answer">
+      Yes, this course is designed for absolute beginners as well as working professionals. We start from basics and move to advanced practical training.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <span>Will I get live practical training?</span>
+      <span class="faq-icon">+</span>
+    </div>
+    <div class="faq-answer">
+      Yes, you will work on real Meta & Google Ads accounts with live campaigns, dashboards, and real strategies.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <span>Do you provide job assistance?</span>
+      <span class="faq-icon">+</span>
+    </div>
+    <div class="faq-answer">
+      Yes, we provide 100% job assistance including interview preparation, portfolio guidance, and client-hunting strategies.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <span>What is the duration of the course?</span>
+      <span class="faq-icon">+</span>
+    </div>
+    <div class="faq-answer">
+      The course duration is 30 days with live practical sessions, assignments, and doubt-solving classes.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <span>Will I get a certificate after completion?</span>
+      <span class="faq-icon">+</span>
+    </div>
+    <div class="faq-answer">
+      Yes, you will receive a course completion certificate that you can share with clients and employers.
+    </div>
+  </div>
+
+</section>
+
+<script>
+const faqs = document.querySelectorAll(".faq-item");
+
+faqs.forEach(faq=>{
+  faq.addEventListener("click", ()=>{
+    faqs.forEach(item=>{
+      if(item !== faq){
+        item.classList.remove("active");
+      }
+    });
+    faq.classList.toggle("active");
+  });
+});
+</script>
+
+</body>
+</html>
 
