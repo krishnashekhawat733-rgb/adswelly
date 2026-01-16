@@ -129,6 +129,24 @@
 body{
   background:#ffffff;
 }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#ffffff;
+}
 
 /* HERO */
 .hero{
@@ -138,9 +156,37 @@ body{
   max-width:1200px;
   margin:auto;
   text-align:center;
+  background:#ffffff;
 }
 
-/* ABSTRACT BACKGROUND */
+/* LIGHT GRID BACKGROUND (Exam Predict Style) */
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(rgba(30,58,138,.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30,58,138,.08) 1px, transparent 1px);
+  background-size:48px 48px;
+  opacity:.35;
+  z-index:0;
+}
+
+/* FLOWING BLUE LINE */
+.hero::after{
+  content:"";
+  position:absolute;
+  width:900px;
+  height:420px;
+  border-radius:50%;
+  border:1.5px solid rgba(30,58,138,.18);
+  top:35%;
+  right:-420px;
+  transform:rotate(-12deg);
+  z-index:0;
+}
+
+/* ABSTRACT SHAPES */
 .abstract-bg{
   position:absolute;
   inset:0;
@@ -150,29 +196,21 @@ body{
 .shape{
   position:absolute;
   border-radius:50%;
-  opacity:.14;
+  opacity:.10;
 }
 .shape-1{
   width:520px;
   height:520px;
   background:#e5e7eb;
-  top:-200px;
-  right:-200px;
+  top:-220px;
+  right:-220px;
 }
 .shape-2{
   width:380px;
   height:380px;
   background:#dbeafe;
-  bottom:-160px;
-  left:-160px;
-}
-.shape-3{
-  width:720px;
-  height:260px;
-  border-radius:50%;
-  border:1px solid rgba(30,58,138,.08);
-  top:40%;
-  left:-300px;
+  bottom:-180px;
+  left:-180px;
 }
 
 /* CONTENT */
@@ -181,7 +219,21 @@ body{
   z-index:2;
 }
 
-/* MAIN HEADING */
+/* AI TAG */
+.hero-tag{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 20px;
+  border-radius:999px;
+  background:#eef2ff;
+  color:#1e3a8a;
+  font-weight:600;
+  margin-bottom:22px;
+  font-size:14px;
+}
+
+/* HEADING */
 .hero h1{
   font-size:50px;
   font-weight:800;
@@ -196,7 +248,7 @@ body{
   max-width:620px;
 }
 
-/* ROTATING TEXT (NO BG, DARK BLUE) */
+/* ROTATING TEXT */
 .rotating-text{
   margin:20px auto 30px;
   font-size:54px;
@@ -227,7 +279,7 @@ body{
   font-weight:700;
 }
 
-/* STARS + TRUST */
+/* TRUST */
 .trust{
   margin-bottom:28px;
 }
@@ -242,7 +294,7 @@ body{
   color:#0f172a;
 }
 
-/* BUTTON */
+/* CTA BUTTON */
 .btn{
   padding:18px 46px;
   border-radius:18px;
@@ -259,7 +311,7 @@ body{
   overflow:hidden;
 }
 
-/* SHINE EFFECT */
+/* SHINE */
 .btn::before{
   content:"";
   position:absolute;
@@ -281,7 +333,6 @@ body{
   100%{ left:120%; }
 }
 
-/* HOVER */
 .btn:hover{
   transform:translateY(-4px);
   box-shadow:
@@ -305,19 +356,21 @@ body{
 
 <section class="hero">
 
-  <!-- ABSTRACT SHAPES -->
+  <!-- BACKGROUND SHAPES -->
   <div class="abstract-bg">
     <span class="shape shape-1"></span>
     <span class="shape shape-2"></span>
-    <span class="shape shape-3"></span>
   </div>
 
   <!-- CONTENT -->
   <div class="hero-content">
+
+    <div class="hero-tag">🤖 AI-Driven Ads Training</div>
+
     <h1>India’s First Digital School</h1>
 
     <p>
-      Learn Meta Ads & Google Ads from real practitioners
+      Learn Meta Ads & Google Ads from real practitioners  
       and build skills that actually convert.
     </p>
 
@@ -331,14 +384,13 @@ body{
       <li>Freelancing & Client Growth Strategy</li>
     </ul>
 
-    <!-- TRUST -->
     <div class="trust">
       <div class="stars">★★★★★</div>
       <div class="trust-text">Loved by 52,000+ Students</div>
     </div>
 
-    <!-- CTA -->
     <a href="#" class="btn">Join Live Batch</a>
+
   </div>
 
 </section>
@@ -365,47 +417,12 @@ setInterval(()=>{
     el.style.transform = "translateY(0)";
   },500);
 
-},4000); // ⏱ 4 sec
+},4000);
 </script>
 
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-/* RESET */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-}
-
-body{
-  background:#ffffff;
-}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-/* RESET */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-}
-
-body{
-  background:#ffffff;
-}
 
 /* WHY CHOOSE SECTION */
 .why-choose{
