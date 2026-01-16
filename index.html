@@ -1306,6 +1306,13 @@ faqs.forEach(faq=>{
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
 /* FOOTER */
 .footer{
   background:#ffffff;
@@ -1320,14 +1327,16 @@ faqs.forEach(faq=>{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:60px;
+  text-align:left;   /* 👈 force left */
 }
 
 /* HEADING */
 .footer h4{
-  font-size:22px;           /* 👈 bigger */
-  font-weight:800;         /* 👈 bold */
-  color:#1e3a8a;           /* dark blue */
+  font-size:22px;
+  font-weight:800;
+  color:#1e3a8a;
   margin-bottom:18px;
+  text-align:left;   /* 👈 left */
 }
 
 /* LINKS */
@@ -1338,6 +1347,7 @@ faqs.forEach(faq=>{
   text-decoration:none;
   margin-bottom:14px;
   transition:.25s ease;
+  text-align:left;   /* 👈 left */
 }
 
 .footer a:hover{
@@ -1348,6 +1358,7 @@ faqs.forEach(faq=>{
 /* BRAND */
 .footer-brand{
   margin-top:40px;
+  text-align:left;   /* 👈 left */
 }
 
 .footer-brand h3{
@@ -1363,11 +1374,12 @@ faqs.forEach(faq=>{
   max-width:380px;
 }
 
-/* MOBILE */
+/* 📱 MOBILE FIX */
 @media(max-width:768px){
   .footer-wrap{
     grid-template-columns:1fr;
     gap:40px;
+    text-align:left;   /* 👈 mobile me bhi left */
   }
 }
 </style>
