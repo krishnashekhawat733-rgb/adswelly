@@ -571,57 +571,6 @@ body{
   background:#ffffff;
 }
 
-asics to Client Hunting</li>
-      </ul>
-
-      <a href="#" class="btn">Enroll Now</a>
-    </div>
-
-    <!-- OFFLINE CARD -->
-    <div class="course-card">
-      <h3>Meta Ads Course – Offline</h3>
-      <div class="price">₹5,999</div>
-      <div class="mode">Offline Classroom Training</div>
-
-      <ul class="features">
-        <li>Offline Mode (Classroom)</li>
-        <li>30 Days Live Practical Training</li>
-        <li>1:1 Personal Guidance</li>
-        <li>100% Job Assistance</li>
-        <li>Basics to Client Hunting</li>
-      </ul>
-
-      <a href="#" class="btn">Enroll Now</a>
-    </div>
-
-  </div>
-</section>
-
-</body>
-</html>
-
-</section>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-}
-
-body{
-  background:#ffffff;
-}
-
 /* SECTION */
 .course-section{
   padding:90px 5% 110px;
@@ -641,7 +590,7 @@ body{
   max-width:650px;
 }
 
-/* GRID – ALWAYS 2 COLUMNS (MOBILE TOO) */
+/* DESKTOP GRID */
 .course-cards{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -678,20 +627,14 @@ body{
   pointer-events:none;
   z-index:1;
 }
-
 .course-card *{
   position:relative;
   z-index:2;
 }
 
 /* HOVER / TOUCH */
-.course-card:hover{
-  transform:translateY(-8px);
-}
-
-.course-card:active{
-  transform:scale(1.05);
-}
+.course-card:hover{ transform:translateY(-8px); }
+.course-card:active{ transform:scale(1.05); }
 
 /* IMAGE */
 .course-img{
@@ -700,50 +643,32 @@ body{
   border-radius:18px;
   object-fit:cover;
   margin-bottom:18px;
-  box-shadow:0 14px 30px rgba(30,58,138,.25);
 }
 
-/* TITLE */
-.course-card h3{
-  font-size:22px;
-  font-weight:800;
+/* TEXT */
+.course-card h3,
+.price,
+.mode,
+.features li{
   color:#000;
-  margin-bottom:8px;
 }
 
-/* PRICE */
 .price{
   font-size:30px;
   font-weight:900;
-  color:#000;
 }
 
-.mode{
-  font-size:14px;
-  color:#000;
-  margin:6px 0 18px;
-}
-
-/* FEATURES */
 .features{
   list-style:none;
-  margin-bottom:26px;
+  margin:20px 0 26px;
 }
-
-.features li{
-  margin-bottom:10px;
-  font-size:14px;
-  color:#000;
-}
-
 .features li::before{
   content:"✔";
   color:#1e3a8a;
-  font-weight:700;
   margin-right:8px;
 }
 
-/* HERO STYLE BUTTON */
+/* BUTTON */
 .btn{
   display:inline-block;
   padding:14px 34px;
@@ -753,14 +678,10 @@ body{
   color:#fff;
   text-decoration:none;
   background:linear-gradient(135deg,#1e3a8a,#1d4ed8,#2563eb);
-  box-shadow:
-    0 18px 45px rgba(30,58,138,.55),
-    inset 0 1px 0 rgba(255,255,255,.25);
+  box-shadow:0 18px 45px rgba(30,58,138,.55);
   position:relative;
   overflow:hidden;
 }
-
-/* SHINE */
 .btn::before{
   content:"";
   position:absolute;
@@ -768,27 +689,37 @@ body{
   left:-70%;
   width:50%;
   height:100%;
-  background:linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,255,255,.6),
-    transparent
-  );
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,.6),transparent);
   animation:shine 2.6s infinite;
 }
-
 @keyframes shine{
   0%{ left:-70%; }
   100%{ left:120%; }
 }
 
-/* MOBILE TEXT SIZE */
-@media(max-width:600px){
+/* 🔥 MOBILE SLIDER FIX */
+@media(max-width:768px){
+
   .course-section h2{
     font-size:32px;
   }
-  .course-img{
-    height:130px;
+
+  .course-cards{
+    display:flex;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    gap:20px;
+    padding-bottom:10px;
+  }
+
+  .course-card{
+    min-width:100%;
+    scroll-snap-align:start;
+  }
+
+  /* hide scrollbar */
+  .course-cards::-webkit-scrollbar{
+    display:none;
   }
 }
 </style>
@@ -804,10 +735,7 @@ body{
 
     <!-- ONLINE -->
     <div class="course-card">
-      <img class="course-img"
-        src="https://images.unsplash.com/photo-1588702547923-7093a6c3ba33"
-        alt="Online Meta Ads Course">
-
+      <img class="course-img" src="https://images.unsplash.com/photo-1588702547923-7093a6c3ba33">
       <h3>Meta Ads Course – Online</h3>
       <div class="price">₹2,499</div>
       <div class="mode">Live Online Training</div>
@@ -825,10 +753,7 @@ body{
 
     <!-- OFFLINE -->
     <div class="course-card">
-      <img class="course-img"
-        src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655"
-        alt="Offline Meta Ads Course">
-
+      <img class="course-img" src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655">
       <h3>Meta Ads Course – Offline</h3>
       <div class="price">₹5,999</div>
       <div class="mode">Offline Classroom Training</div>
