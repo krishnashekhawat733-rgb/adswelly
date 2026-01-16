@@ -1313,10 +1313,17 @@ faqs.forEach(faq=>{
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
 /* FOOTER */
 .footer{
   background:#ffffff;
-  padding:60px 6% 40px;
+  padding:60px 6% 30px;
   border-top:1px solid #e5e7eb;
 }
 
@@ -1327,16 +1334,23 @@ faqs.forEach(faq=>{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:60px;
-  text-align:left;   /* 👈 force left */
+  text-align:left;
+}
+
+/* BRAND HEADING */
+.footer-brand-title{
+  font-size:24px;
+  font-weight:900;
+  color:#1e3a8a;   /* dark blue */
+  margin-bottom:18px;
 }
 
 /* HEADING */
 .footer h4{
-  font-size:22px;
+  font-size:20px;
   font-weight:800;
   color:#1e3a8a;
-  margin-bottom:18px;
-  text-align:left;   /* 👈 left */
+  margin-bottom:16px;
 }
 
 /* LINKS */
@@ -1347,7 +1361,6 @@ faqs.forEach(faq=>{
   text-decoration:none;
   margin-bottom:14px;
   transition:.25s ease;
-  text-align:left;   /* 👈 left */
 }
 
 .footer a:hover{
@@ -1355,31 +1368,19 @@ faqs.forEach(faq=>{
   transform:translateX(4px);
 }
 
-/* BRAND */
-.footer-brand{
+/* COPYRIGHT */
+.footer-bottom{
   margin-top:40px;
-  text-align:left;   /* 👈 left */
-}
-
-.footer-brand h3{
-  font-size:20px;
-  font-weight:800;
-  color:#000;
-  margin-bottom:6px;
-}
-
-.footer-brand p{
-  font-size:14px;
+  font-size:13px;
   color:#555;
-  max-width:380px;
+  text-align:left;
 }
 
-/* 📱 MOBILE FIX */
+/* MOBILE */
 @media(max-width:768px){
   .footer-wrap{
     grid-template-columns:1fr;
     gap:40px;
-    text-align:left;   /* 👈 mobile me bhi left */
   }
 }
 </style>
@@ -1391,8 +1392,10 @@ faqs.forEach(faq=>{
 
   <div class="footer-wrap">
 
-    <!-- LIVE COURSES -->
+    <!-- BRAND + LIVE COURSES -->
     <div class="footer-col">
+      <div class="footer-brand-title">Mthrive Skills</div>
+
       <h4>Live Courses</h4>
       <a href="#">Meta & Google Ads</a>
       <a href="#">Graphic Designing & Video Editing</a>
@@ -1412,10 +1415,9 @@ faqs.forEach(faq=>{
 
   </div>
 
-  <!-- BRAND INFO -->
-  <div class="footer-brand">
-    <h3>Mthrive Skills</h3>
-    <p>Made for Practical Learning & Real Career Growth</p>
+  <!-- COPYRIGHT -->
+  <div class="footer-bottom">
+    © 2026 Mthrive Skills. All Rights Reserved.
   </div>
 
 </footer>
