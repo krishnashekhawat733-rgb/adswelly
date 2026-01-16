@@ -869,4 +869,221 @@ body{
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#ffffff;
+}
+
+/* SECTION */
+.contact-section{
+  padding:90px 5% 110px;
+  display:flex;
+  justify-content:center;
+}
+
+/* FORM CARD */
+.contact-card{
+  width:100%;
+  max-width:520px;
+  background:#ffffff;
+  border-radius:26px;
+  padding:40px 34px;
+  box-shadow:
+    0 30px 80px rgba(30,58,138,.28),
+    inset 0 1px 0 rgba(255,255,255,.7);
+  position:relative;
+}
+
+/* GLOSS */
+.contact-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:26px;
+  background:linear-gradient(
+    to bottom,
+    rgba(255,255,255,.4),
+    rgba(255,255,255,0)
+  );
+  pointer-events:none;
+}
+
+/* CONTENT ABOVE GLOSS */
+.contact-card *{
+  position:relative;
+  z-index:2;
+}
+
+/* HEADING */
+.contact-card h2{
+  font-size:36px;
+  font-weight:900;
+  color:#1e3a8a;
+  text-align:center;
+  margin-bottom:10px;
+}
+
+.contact-card p{
+  text-align:center;
+  font-size:16px;
+  color:#000;
+  margin-bottom:32px;
+}
+
+/* INPUTS */
+.form-group{
+  margin-bottom:18px;
+}
+
+.form-group input,
+.form-group select{
+  width:100%;
+  padding:16px 18px;
+  border-radius:14px;
+  border:1.5px solid #c7d2fe;
+  font-size:15px;
+  outline:none;
+  transition:.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus{
+  border-color:#1e3a8a;
+  box-shadow:0 0 0 3px rgba(30,58,138,.15);
+}
+
+/* BUTTON */
+.whatsapp-btn{
+  width:100%;               /* 👈 wide button */
+  margin-top:18px;
+  padding:18px 0;
+  border:none;
+  border-radius:18px;
+  font-size:17px;
+  font-weight:700;
+  color:#fff;
+  cursor:pointer;
+  background:linear-gradient(135deg,#1e3a8a,#1d4ed8,#2563eb);
+  box-shadow:
+    0 20px 50px rgba(30,58,138,.6),
+    inset 0 1px 0 rgba(255,255,255,.25);
+  position:relative;
+  overflow:hidden;
+}
+
+/* SHINE EFFECT */
+.whatsapp-btn::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-70%;
+  width:50%;
+  height:100%;
+  background:linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.6),
+    transparent
+  );
+  animation:shine 2.6s infinite;
+}
+
+@keyframes shine{
+  0%{ left:-70%; }
+  100%{ left:120%; }
+}
+
+/* HOVER */
+.whatsapp-btn:hover{
+  transform:translateY(-2px);
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  .contact-card h2{
+    font-size:30px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="contact-section">
+  <div class="contact-card">
+
+    <h2>Let’s Talk About Your Training</h2>
+    <p>Share your details & connect with us on WhatsApp</p>
+
+    <div class="form-group">
+      <input type="text" id="name" placeholder="Your Name">
+    </div>
+
+    <div class="form-group">
+      <input type="tel" id="mobile" placeholder="Mobile Number">
+    </div>
+
+    <div class="form-group">
+      <select id="plan">
+        <option value="">Select Your Plan</option>
+        <option value="Online Meta & Google Ads – ₹2,499">
+          Online Meta & Google Ads – ₹2,499
+        </option>
+        <option value="Offline Meta & Google Ads – ₹5,999">
+          Offline Meta & Google Ads – ₹5,999
+        </option>
+      </select>
+    </div>
+
+    <button class="whatsapp-btn" onclick="sendWhatsApp()">
+      💬 Chat on WhatsApp
+    </button>
+
+  </div>
+</section>
+
+<script>
+function sendWhatsApp(){
+  const name = document.getElementById("name").value.trim();
+  const mobile = document.getElementById("mobile").value.trim();
+  const plan = document.getElementById("plan").value;
+
+  if(!name || !mobile || !plan){
+    alert("Please fill all details");
+    return;
+  }
+
+  const message =
+`Hello Mthrive Skills 👋
+
+I’m interested in your training program.
+
+👤 Name: ${name}
+📱 Mobile: ${mobile}
+🎓 Selected Plan: ${plan}
+
+Please share further details.`;
+
+  const whatsappURL =
+`https://wa.me/916375759510?text=${encodeURIComponent(message)}`;
+
+  window.open(whatsappURL, "_blank");
+}
+</script>
+
+</body>
+</html>
 
