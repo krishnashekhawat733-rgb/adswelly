@@ -588,18 +588,38 @@ body{
   background:#ffffff;
 }
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#ffffff;
+}
+
 /* SECTION */
 .course-section{
   padding:80px 5% 100px;
   text-align:center;
 }
 
+/* HEADING */
 .course-section h2{
   font-size:44px;
-  font-weight:800;
-  color:#0f172a;
+  font-weight:900;
+  color:#1e3a8a;
 }
 
+/* SUB HEADING */
 .course-section p{
   margin:14px auto 50px;
   font-size:18px;
@@ -607,7 +627,7 @@ body{
   max-width:650px;
 }
 
-/* DESKTOP GRID */
+/* GRID */
 .course-cards{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -630,7 +650,10 @@ body{
   transition:.35s ease;
 }
 
-/* GLOSSY TOP */
+.course-card:hover{ transform:translateY(-8px); }
+.course-card:active{ transform:scale(1.05); }
+
+/* GLOSS */
 .course-card::after{
   content:"";
   position:absolute;
@@ -642,20 +665,6 @@ body{
     rgba(255,255,255,0)
   );
   pointer-events:none;
-  z-index:1;
-}
-
-.course-card *{
-  position:relative;
-  z-index:2;
-}
-
-/* HOVER + CLICK */
-.course-card:hover{
-  transform:translateY(-8px);
-}
-.course-card:active{
-  transform:scale(1.05);
 }
 
 /* IMAGE */
@@ -668,24 +677,60 @@ body{
   box-shadow:0 14px 30px rgba(30,58,138,.25);
 }
 
-/* TEXT */
+/* BADGES */
+.badge{
+  position:absolute;
+  top:16px;
+  left:16px;
+  background:#dc2626;
+  color:#fff;
+  font-size:12px;
+  font-weight:800;
+  padding:6px 12px;
+  border-radius:20px;
+}
+
+.badge.popular{
+  background:#16a34a;
+}
+
+/* TITLE */
 .course-card h3{
   font-size:22px;
   font-weight:800;
   color:#000;
-  margin-bottom:6px;
+  margin-bottom:8px;
 }
 
-.price{
+/* PRICE */
+.price-box{
+  margin-bottom:18px;
+}
+
+.old-price{
+  font-size:16px;
+  color:#555;
+  text-decoration:line-through;
+}
+
+.new-price{
   font-size:30px;
   font-weight:900;
   color:#000;
 }
 
+.off{
+  font-size:13px;
+  font-weight:700;
+  color:#dc2626;
+  margin-left:8px;
+}
+
+/* MODE */
 .mode{
   font-size:14px;
   color:#000;
-  margin:6px 0 18px;
+  margin-bottom:18px;
 }
 
 /* FEATURES */
@@ -707,7 +752,7 @@ body{
   margin-right:8px;
 }
 
-/* HERO STYLE BUTTON */
+/* BUTTON */
 .btn{
   display:inline-block;
   padding:14px 36px;
@@ -724,7 +769,6 @@ body{
   overflow:hidden;
 }
 
-/* SHINE EFFECT */
 .btn::before{
   content:"";
   position:absolute;
@@ -746,21 +790,11 @@ body{
   100%{ left:120%; }
 }
 
-/* 📱 MOBILE FIX – STACKED */
+/* MOBILE */
 @media(max-width:768px){
-
-  .course-section h2{
-    font-size:32px;
-  }
-
-  .course-cards{
-    grid-template-columns:1fr; /* 👈 ek ke niche ek */
-    gap:22px;
-  }
-
-  .course-img{
-    height:140px;
-  }
+  .course-section h2{ font-size:32px; }
+  .course-cards{ grid-template-columns:1fr; gap:22px; }
+  .course-img{ height:140px; }
 }
 </style>
 </head>
@@ -775,12 +809,18 @@ body{
 
     <!-- ONLINE -->
     <div class="course-card">
+      <span class="badge popular">🔥 MOST POPULAR</span>
+
       <img class="course-img"
-        src="https://images.unsplash.com/photo-1588702547923-7093a6c3ba33"
-        alt="Online Meta Ads Course">
+        src="https://images.unsplash.com/photo-1588702547923-7093a6c3ba33">
 
       <h3>Meta & Google Ads</h3>
-      <div class="price">₹2,499</div>
+
+      <div class="price-box">
+        <div class="old-price">₹3,499</div>
+        <div class="new-price">₹2,499 <span class="off">30% OFF</span></div>
+      </div>
+
       <div class="mode">Live Online Training</div>
 
       <ul class="features">
@@ -789,8 +829,8 @@ body{
         <li>100% Job Assistance</li>
         <li>AI-Assisted Ad Strategy</li>
         <li>Basics to Client Hunting</li>
-         <li>Doubt solving + feedback</li>
-         <li>Certificate + guidance</li>
+        <li>Doubt Solving + Feedback</li>
+        <li>Certificate + Guidance</li>
       </ul>
 
       <a href="#" class="btn">Enroll Now</a>
@@ -798,12 +838,18 @@ body{
 
     <!-- OFFLINE -->
     <div class="course-card">
+      <span class="badge">HOT SELLING</span>
+
       <img class="course-img"
-        src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655"
-        alt="Offline Meta Ads Course">
+        src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655">
 
       <h3>Meta & Google Ads</h3>
-      <div class="price">₹6,999</div>
+
+      <div class="price-box">
+        <div class="old-price">₹9,999</div>
+        <div class="new-price">₹5,999 <span class="off">40% OFF</span></div>
+      </div>
+
       <div class="mode">Offline Classroom Training</div>
 
       <ul class="features">
@@ -823,3 +869,4 @@ body{
 
 </body>
 </html>
+
