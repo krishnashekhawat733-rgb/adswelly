@@ -588,3 +588,153 @@ Please assist with site visit details.`;
   </div>
 
 </section>
+<style>
+/* ===== FAQ SECTION ===== */
+.faq-section {
+  padding: 60px 20px;
+  background: #ffffff;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 40px;
+}
+
+/* FAQ ITEM */
+.faq-item {
+  background: #ffffff;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.1);
+  overflow: hidden;
+}
+
+/* QUESTION */
+.faq-question {
+  padding: 18px 22px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0f172a;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question span {
+  font-size: 22px;
+  transition: transform 0.3s ease;
+}
+
+/* ANSWER */
+.faq-answer {
+  padding: 0 22px;
+  max-height: 0;
+  overflow: hidden;
+  font-size: 15px;
+  color: #475569;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 120px;
+  padding: 0 22px 18px;
+}
+
+.faq-item.active .faq-question span {
+  transform: rotate(45deg);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .faq-title {
+    font-size: 28px;
+  }
+}
+</style>
+
+<section class="faq-section">
+  <div class="faq-container">
+
+    <h2 class="faq-title">❓ Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Is property registry available?
+        <span>+</span>
+      </div>
+      <div class="faq-answer">
+        ✅ Yes, immediate registry is available with complete documentation.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Is bank loan facility available?
+        <span>+</span>
+      </div>
+      <div class="faq-answer">
+        ✅ Yes, bank loan assistance is available from leading banks.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Is the villa ready to move?
+        <span>+</span>
+      </div>
+      <div class="faq-answer">
+        ✔️ Semi-furnished villa, ready / near-ready to move.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Is this a gated society?
+        <span>+</span>
+      </div>
+      <div class="faq-answer">
+        ✅ Yes, the villa is located in a peaceful residential society.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Is the price negotiable?
+        <span>+</span>
+      </div>
+      <div class="faq-answer">
+        ✔️ Slight negotiation possible, depending on payment terms.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        How can I schedule a site visit?
+        <span>+</span>
+      </div>
+      <div class="faq-answer">
+        📲 Site visit is available by prior appointment via WhatsApp.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+document.querySelectorAll(".faq-question").forEach(q => {
+  q.addEventListener("click", () => {
+    const item = q.parentElement;
+    item.classList.toggle("active");
+  });
+});
+</script>
