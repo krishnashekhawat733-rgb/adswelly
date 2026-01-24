@@ -1,314 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mthrive Skills</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Villa Landing Page</title>
 
-<style>
-/* ================= RESET ================= */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-}
-body{background:#fff;color:#000}
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(180deg, #f8fafc, #ffffff);
+      color: #1f2937;
+    }
 
-/* ================= ANNOUNCEMENT ================= */
-.announcement-bar{
-  height:38px;
-  background:linear-gradient(135deg,#1e3a8a,#2563eb);
-  display:flex;
-  align-items:center;
-  overflow:hidden;
-}
-.announcement-track{
-  display:flex;
-  animation:scroll 22s linear infinite;
-}
-.announcement-text{
-  color:#fff;
-  font-size:14px;
-  font-weight:600;
-  padding-right:40px;
-  white-space:nowrap;
-}
-@keyframes scroll{
-  from{transform:translateX(0)}
-  to{transform:translateX(-50%)}
-}
+    /* HERO WRAPPER */
+    .hero-wrapper {
+      padding: 80px 20px;
+      display: flex;
+      justify-content: center;
+    }
 
-/* ================= HERO ================= */
-.hero{
-  position:relative;
-  padding:90px 6% 110px;
-  max-width:1200px;
-  margin:auto;
-  text-align:center;
-  overflow:hidden;
-}
-.hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(rgba(30,58,138,.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(30,58,138,.08) 1px, transparent 1px);
-  background-size:48px 48px;
-  opacity:.35;
-}
-.shape{
-  position:absolute;
-  border-radius:50%;
-  opacity:.1;
-}
-.shape-1{width:520px;height:520px;background:#e5e7eb;top:-220px;right:-220px}
-.shape-2{width:380px;height:380px;background:#dbeafe;bottom:-180px;left:-180px}
+    /* GLASS CARD */
+    .hero {
+      max-width: 900px;
+      width: 100%;
+      text-align: center;
+      padding: 60px 40px;
+      border-radius: 20px;
 
-.hero-content{position:relative;z-index:2}
-.hero-tag{
-  display:inline-block;
-  padding:10px 20px;
-  background:#eef2ff;
-  color:#1e3a8a;
-  border-radius:999px;
-  font-weight:600;
-  margin-bottom:22px;
-}
-.hero h1{
-  font-size:50px;
-  font-weight:800;
-  color:#0f172a;
-}
-.hero p{
-  max-width:620px;
-  margin:18px auto;
-  font-size:18px;
-  color:#475569;
-}
-.rotating-text{
-  font-size:54px;
-  font-weight:900;
-  color:#1e3a8a;
-  margin:20px 0 30px;
-}
-.bullets{
-  list-style:none;
-  max-width:520px;
-  margin:0 auto 28px;
-}
-.bullets li{
-  margin-bottom:12px;
-  color:#334155;
-}
-.bullets li::before{
-  content:"✔";
-  color:#1e3a8a;
-  margin-right:10px;
-}
-.btn{
-  padding:18px 46px;
-  border-radius:18px;
-  background:linear-gradient(135deg,#1e3a8a,#2563eb);
-  color:#fff;
-  font-weight:700;
-  text-decoration:none;
-  display:inline-block;
-}
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
 
-/* ================= WHY CHOOSE ================= */
-.why-choose{
-  padding:90px 6% 100px;
-  text-align:center;
-}
-.why-choose h2{
-  font-size:42px;
-  font-weight:800;
-}
-.why-choose h2 span{color:#1e3a8a}
-.section-sub{
-  margin:16px auto 50px;
-  max-width:620px;
-  font-size:18px;
-}
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:28px;
-  max-width:1100px;
-  margin:auto;
-}
-.card{
-  background:#fff;
-  padding:36px 28px;
-  border-radius:22px;
-  box-shadow:0 18px 45px rgba(30,58,138,.18);
-}
+      box-shadow:
+        0 20px 40px rgba(15, 23, 42, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    }
 
-/* ================= COURSES ================= */
-.course-section{
-  padding:80px 5% 100px;
-  text-align:center;
-}
-.course-section h2{
-  font-size:44px;
-  font-weight:900;
-  color:#1e3a8a;
-}
-.course-cards{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:28px;
-  max-width:1100px;
-  margin:auto;
-}
-.course-card{
-  background:#fff;
-  padding:28px;
-  border-radius:24px;
-  box-shadow:0 26px 65px rgba(30,58,138,.25);
-}
+    .badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #e0e7ff, #eef2ff);
+      color: #1e3a8a;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.6px;
+    }
 
-/* ================= CONTACT ================= */
-.contact-section{
-  padding:90px 5%;
-  display:flex;
-  justify-content:center;
-}
-.contact-card{
-  max-width:520px;
-  width:100%;
-  padding:40px;
-  border-radius:26px;
-  box-shadow:0 30px 80px rgba(30,58,138,.28);
-}
-.form-group{margin-bottom:18px}
-input,select{
-  width:100%;
-  padding:16px;
-  border-radius:14px;
-  border:1.5px solid #c7d2fe;
-}
-.whatsapp-btn{
-  width:100%;
-  padding:18px;
-  border:none;
-  border-radius:18px;
-  background:linear-gradient(135deg,#1e3a8a,#2563eb);
-  color:#fff;
-  font-weight:700;
-}
+    .hero h1 {
+      margin-top: 26px;
+      font-size: 48px;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.2;
+    }
 
-/* ================= FAQ ================= */
-.faq-section{
-  padding:90px 5%;
-  max-width:900px;
-  margin:auto;
-}
-.faq-item{
-  background:#fff;
-  padding:24px;
-  border-radius:22px;
-  margin-bottom:18px;
-  box-shadow:0 22px 55px rgba(30,58,138,.22);
-}
-.faq-question{
-  display:flex;
-  justify-content:space-between;
-  font-weight:700;
-  cursor:pointer;
-}
-.faq-answer{
-  display:none;
-  margin-top:12px;
-}
-.faq-item.active .faq-answer{display:block}
+    .hero p {
+      margin-top: 18px;
+      font-size: 18px;
+      color: #475569;
+    }
 
-/* ================= FOOTER ================= */
-.footer{
-  padding:60px 6% 30px;
-  border-top:1px solid #e5e7eb;
-}
-.footer-wrap{
-  max-width:1200px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:60px;
-}
-.footer a{display:block;color:#000;margin-bottom:12px;text-decoration:none}
-.footer-bottom{margin-top:40px}
+    /* LEARN MORE BUTTON */
+    .learn-btn {
+      display: inline-block;
+      margin-top: 34px;
+      padding: 14px 34px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #ffffff;
 
-@media(max-width:768px){
-  .hero h1{font-size:36px}
-  .rotating-text{font-size:38px}
-  .course-cards,.footer-wrap{grid-template-columns:1fr}
-}
-</style>
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      box-shadow:
+        0 10px 20px rgba(37, 99, 235, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .learn-btn:hover {
+      transform: translateY(-3px);
+      box-shadow:
+        0 18px 30px rgba(37, 99, 235, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    }
+
+    /* MOBILE RESPONSIVE */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 44px 22px;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="announcement-bar">
-  <div class="announcement-track">
-    <div class="announcement-text">
-      👨‍🎓 Beginner Friendly | 💼 Job Ready | 🤝 100% Job Assistance | 🔴 Live Batch Started
+  <section class="hero-wrapper">
+    <div class="hero">
+      <span class="badge">NEW LAUNCH</span>
+
+      <h1>
+        Premium Independent Villas<br />
+        for Sale
+      </h1>
+
+      <p>
+        3 & 4 BHK • Private Parking • Ready to Move
+      </p>
+
+      <a href="#gallery" class="learn-btn">
+        Learn More
+      </a>
     </div>
-  </div>
-</div>
-
-<section class="hero">
-  <span class="shape shape-1"></span>
-  <span class="shape shape-2"></span>
-  <div class="hero-content">
-    <div class="hero-tag">🤖 AI-Driven Ads Training</div>
-    <h1>India’s First Digital School</h1>
-    <p>Learn Meta & Google Ads from real practitioners</p>
-    <div class="rotating-text" id="rotateText">Built for Doers</div>
-    <ul class="bullets">
-      <li>Live Meta & Google Ads</li>
-      <li>Real Dashboard Walkthrough</li>
-      <li>Freelancing Strategy</li>
-    </ul>
-    <a href="#" class="btn">Join Live Batch</a>
-  </div>
-</section>
-
-<section class="why-choose">
-  <h2>Why Choose <span>Mthrive Skills</span></h2>
-  <p class="section-sub">Practical learning & career-focused training</p>
-  <div class="cards">
-    <div class="card">👨‍🎓 200+ Students</div>
-    <div class="card">💼 Job Assistance</div>
-    <div class="card">📊 Live Practical</div>
-    <div class="card">🚀 Projects</div>
-    <div class="card">🎓 Certificate</div>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="footer-wrap">
-    <div>
-      <h3>Mthrive Skills</h3>
-      <p>Future-ready digital skills</p>
-    </div>
-    <div>
-      <a href="#">Terms</a>
-      <a href="#">Privacy</a>
-      <a href="#">Contact</a>
-    </div>
-  </div>
-  <div class="footer-bottom">© 2026 Mthrive Skills</div>
-</footer>
-
-<script>
-const texts=["Built for Doers","Built for Marketers","Built for Growth","Built for Results"];
-let i=0;
-setInterval(()=>{
-  document.getElementById("rotateText").innerText=texts[i++%texts.length];
-},4000);
-</script>
+  </section>
 
 </body>
 </html>
