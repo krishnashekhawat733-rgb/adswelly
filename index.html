@@ -403,3 +403,181 @@ Please assist with site visit details.`;
 </script>
 
 <!-- ================= END ================= -->
+<style>
+/* ===== PROPERTY DETAILS SECTION ===== */
+.property-section {
+  padding: 60px 20px;
+  background: #f8fafc;
+}
+
+.property-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* ===== COMMON CARD STYLE ===== */
+.property-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 26px;
+  box-shadow: 8px 10px 28px rgba(15, 23, 42, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 14px 18px 36px rgba(15, 23, 42, 0.18);
+}
+
+.property-card h3 {
+  font-size: 22px;
+  margin-bottom: 16px;
+  color: #0f172a;
+}
+
+.property-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.property-card ul li {
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #334155;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* ===== PRIMARY CARD (OVERVIEW) ===== */
+.primary-card {
+  grid-column: span 2;
+}
+
+/* ===== PRICE CARD ===== */
+.price-card {
+  background: linear-gradient(180deg, #ffffff, #f0fdf4);
+  border: 1px solid rgba(22, 163, 74, 0.2);
+}
+
+.price {
+  font-size: 34px;
+  font-weight: 800;
+  color: #15803d;
+  margin: 10px 0;
+}
+
+.price small {
+  display: block;
+  font-size: 14px;
+  color: #64748b;
+  margin-top: 6px;
+}
+
+/* CTA BUTTON INSIDE CARD */
+.price-btn {
+  margin-top: 18px;
+  width: 100%;
+  height: 54px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #15803d;
+
+  box-shadow: 0 10px 24px rgba(21, 128, 61, 0.45);
+  position: relative;
+  overflow: hidden;
+}
+
+/* SHINE EFFECT */
+.price-btn::before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.6),
+    transparent
+  );
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  60% { left: 100%; }
+  100% { left: 100%; }
+}
+
+/* RESPONSIVE FIX */
+@media (max-width: 768px) {
+  .primary-card {
+    grid-column: span 1;
+  }
+}
+</style>
+
+<section class="property-section">
+
+  <div class="property-grid">
+
+    <!-- 🟦 CARD 1: PROPERTY OVERVIEW -->
+    <div class="property-card primary-card">
+      <h3>🏘️ Property Overview</h3>
+      <ul>
+        <li>📐 <strong>Plot Size:</strong> 18×50 (100 Gaj)</li>
+        <li>🏠 <strong>Configuration:</strong> 3 BHK Semi Duplex</li>
+        <li>🧭 <strong>Facing:</strong> East Facing ☀️</li>
+        <li>🛋️ <strong>Status:</strong> Semi Furnished</li>
+        <li>🏘️ <strong>Type:</strong> Society Villa</li>
+      </ul>
+    </div>
+
+    <!-- 🟩 CARD 2: LOCATION -->
+    <div class="property-card">
+      <h3>📍 Location Highlights</h3>
+      <ul>
+        <li>📌 Prime Kalwad Road</li>
+        <li>🏥 Near Hospital</li>
+        <li>🛒 Daily Needs Nearby</li>
+        <li>🌳 Peaceful Residential Society</li>
+      </ul>
+    </div>
+
+    <!-- 🟨 CARD 3: IDEAL FOR -->
+    <div class="property-card">
+      <h3>⭐ Best Suited For</h3>
+      <ul>
+        <li>👨‍👩‍👧 Family Living</li>
+        <li>📈 Long-Term Investment</li>
+        <li>🏡 Rental Potential</li>
+      </ul>
+    </div>
+
+    <!-- 🟥 CARD 4: PRICE + CTA -->
+    <div class="property-card price-card">
+      <h3>💰 Investment Value</h3>
+      <div class="price">
+        ₹59 Lacs Only
+        <small>Limited availability</small>
+      </div>
+
+      <button class="price-btn" onclick="openForm()">
+        👉 Check Site Visit Availability
+      </button>
+    </div>
+
+  </div>
+
+</section>
