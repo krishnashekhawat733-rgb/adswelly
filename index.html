@@ -152,15 +152,14 @@
 
 </body>
 </html>
-
 <!-- ================= PROJECT GALLERY + WHATSAPP FORM ================= -->
 
 <style>
 /* ===== PROJECT GALLERY ===== */
 .project-gallery {
-  padding: 50px 20px; /* gap kam */
+  padding: 50px 20px;
   text-align: center;
-  background: #ffffff; /* PURE WHITE */
+  background: #ffffff;
 }
 
 .project-gallery h2 {
@@ -179,7 +178,6 @@
 .slider {
   overflow: hidden;
   margin: 30px auto;
-  max-width: 100%;
 }
 
 .slide-track {
@@ -200,13 +198,13 @@
   100% { transform: translateX(-50%); }
 }
 
-/* ===== WHATSAPP CTA BUTTON (PRO LEVEL) ===== */
+/* ===== WHATSAPP CTA BUTTON ===== */
 .whatsapp-cta {
-  width: 94%;                 /* thumb friendly */
+  width: 94%;
   max-width: 420px;
-  height: 58px;
-
+  height: 60px;
   margin: 28px auto 0;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -216,23 +214,18 @@
   font-weight: 600;
   color: #ffffff;
 
-  background: #25D366;        /* ORIGINAL WhatsApp green */
+  background: #128C7E; /* DARK WhatsApp green */
   border: none;
   border-radius: 16px;
   cursor: pointer;
 
-  /* 3D soft shadow */
-  box-shadow:
-    0 10px 22px rgba(37, 211, 102, 0.45),
-    inset 0 1px 0 rgba(255,255,255,0.35);
-
+  box-shadow: 0 12px 24px rgba(18,140,126,0.45);
   position: relative;
   overflow: hidden;
 
   animation: pulseGlow 3s infinite, microShake 7s infinite;
 }
 
-/* SHINE */
 .whatsapp-cta::before {
   content: "";
   position: absolute;
@@ -255,25 +248,14 @@
   100% { left: 100%; }
 }
 
-/* GLOW PULSE */
 @keyframes pulseGlow {
-  0% {
-    box-shadow: 0 0 0 rgba(37,211,102,0.0);
-  }
-  50% {
-    box-shadow: 0 0 18px rgba(37,211,102,0.6);
-  }
-  100% {
-    box-shadow: 0 0 0 rgba(37,211,102,0.0);
-  }
+  50% { box-shadow: 0 0 20px rgba(18,140,126,0.7); }
 }
 
-/* MICRO SHAKE (very subtle) */
 @keyframes microShake {
   0%, 90%, 100% { transform: translateX(0); }
   92% { transform: translateX(-2px); }
   94% { transform: translateX(2px); }
-  96% { transform: translateX(-1px); }
 }
 
 /* ===== FORM MODAL ===== */
@@ -312,13 +294,14 @@
 
 .submit-btn {
   width: 100%;
-  height: 52px;
-  background: #25D366;
+  height: 54px;
+  background: #128C7E;
   color: #ffffff;
   font-weight: 600;
   border-radius: 12px;
   border: none;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .close {
@@ -345,7 +328,6 @@
       <img src="https://res.cloudinary.com/dxr9zstt4/image/upload/v1769261140/WhatsApp_Image_2026-01-24_at_6.53.05_PM_pnw3gs.jpg">
       <img src="https://res.cloudinary.com/dxr9zstt4/image/upload/v1769261139/WhatsApp_Image_2026-01-24_at_6.53.06_PM_geweoc.jpg">
       <img src="https://res.cloudinary.com/dxr9zstt4/image/upload/v1769261138/WhatsApp_Image_2026-01-24_at_6.53.06_PM_1_ahjndm.jpg">
-      <img src="https://res.cloudinary.com/dxr9zstt4/image/upload/v1769261140/WhatsApp_Image_2026-01-24_at_3.06.25_PM_fenyfk.jpg">
     </div>
   </div>
 
@@ -354,3 +336,69 @@
   </button>
 
 </section>
+
+<!-- ===== FORM ===== -->
+<div class="form-overlay" id="formOverlay">
+  <div class="form-box">
+    <h3>Book Site Visit</h3>
+
+    <input id="name" placeholder="Your Name">
+    <input id="mobile" placeholder="Mobile Number">
+
+    <select id="budget">
+      <option>₹30–40L</option>
+      <option>₹40–60L</option>
+      <option>₹60L+</option>
+    </select>
+
+    <select id="purpose">
+      <option>Self use</option>
+      <option>Investment</option>
+    </select>
+
+    <select id="visit">
+      <option>Immediate (1–3 days)</option>
+      <option>Within 7 days</option>
+      <option>7–15 days</option>
+    </select>
+
+    <button class="submit-btn" onclick="sendWhatsApp()">
+      Book Site Visit on WhatsApp
+    </button>
+
+    <span class="close" onclick="closeForm()">✕</span>
+  </div>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("formOverlay").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("formOverlay").style.display = "none";
+}
+
+function sendWhatsApp() {
+  const name = document.getElementById("name").value;
+  const budget = document.getElementById("budget").value;
+  const purpose = document.getElementById("purpose").value;
+  const visit = document.getElementById("visit").value;
+
+  const msg =
+`Hi, I’m ${name}
+Budget: ${budget}
+Purpose: ${purpose}
+Site Visit: ${visit}
+
+I’m interested in this project
+Please assist with site visit details.`;
+
+  window.open(
+    "https://wa.me/916375759510?text=" + encodeURIComponent(msg),
+    "_blank"
+  );
+}
+</script>
+
+<!-- ================= END ================= -->
