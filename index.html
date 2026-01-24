@@ -9,93 +9,100 @@
     body {
       margin: 0;
       font-family: "Segoe UI", Arial, sans-serif;
-      background: linear-gradient(180deg, #f8fafc, #ffffff);
+      background: #fffaf5;
       color: #1f2937;
     }
 
-    /* HERO WRAPPER */
-    .hero-wrapper {
-      padding: 80px 20px;
-      display: flex;
-      justify-content: center;
-    }
-
-    /* GLASS CARD */
     .hero {
-      max-width: 900px;
-      width: 100%;
+      padding: 90px 20px 70px;
       text-align: center;
-      padding: 60px 40px;
-      border-radius: 20px;
-
-      background: rgba(255, 255, 255, 0.65);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-
-      box-shadow:
-        0 20px 40px rgba(15, 23, 42, 0.12),
-        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+      max-width: 1100px;
+      margin: auto;
     }
 
+    /* NEW LAUNCH BADGE */
     .badge {
-      display: inline-block;
-      background: linear-gradient(135deg, #e0e7ff, #eef2ff);
-      color: #1e3a8a;
-      padding: 8px 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
       border-radius: 999px;
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 600;
-      letter-spacing: 0.6px;
+      color: #ffffff;
+      background: linear-gradient(135deg, #ff4d6d, #ffb703);
+      box-shadow: 0 8px 20px rgba(255, 77, 109, 0.35);
     }
 
+    /* GRADIENT HEADING */
     .hero h1 {
       margin-top: 26px;
-      font-size: 48px;
+      font-size: 54px;
       font-weight: 800;
-      color: #0f172a;
-      line-height: 1.2;
+      line-height: 1.15;
+      background: linear-gradient(90deg, #0f172a, #2563eb, #0f172a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .hero p {
       margin-top: 18px;
-      font-size: 18px;
+      font-size: 19px;
       color: #475569;
     }
 
-    /* LEARN MORE BUTTON */
+    /* SHINY BUTTON */
     .learn-btn {
+      position: relative;
       display: inline-block;
-      margin-top: 34px;
-      padding: 14px 34px;
-      border-radius: 10px;
-      font-size: 16px;
+      margin-top: 36px;
+      padding: 16px 42px;
+      font-size: 17px;
       font-weight: 600;
-      text-decoration: none;
       color: #ffffff;
+      text-decoration: none;
+      border-radius: 12px;
+      overflow: hidden;
 
       background: linear-gradient(135deg, #1e3a8a, #2563eb);
-      box-shadow:
-        0 10px 20px rgba(37, 99, 235, 0.35),
-        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+      box-shadow: 0 12px 30px rgba(37, 99, 235, 0.45);
+    }
 
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    .learn-btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.6),
+        transparent
+      );
+      animation: shine 2.5s infinite;
+    }
+
+    @keyframes shine {
+      0% { left: -100%; }
+      60% { left: 100%; }
+      100% { left: 100%; }
     }
 
     .learn-btn:hover {
       transform: translateY(-3px);
-      box-shadow:
-        0 18px 30px rgba(37, 99, 235, 0.45),
-        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+      box-shadow: 0 18px 40px rgba(37, 99, 235, 0.55);
     }
 
-    /* MOBILE RESPONSIVE */
+    /* RESPONSIVE */
     @media (max-width: 768px) {
       .hero {
-        padding: 44px 22px;
+        padding: 70px 16px 50px;
       }
 
       .hero h1 {
-        font-size: 32px;
+        font-size: 34px;
       }
 
       .hero p {
@@ -107,23 +114,21 @@
 
 <body>
 
-  <section class="hero-wrapper">
-    <div class="hero">
-      <span class="badge">NEW LAUNCH</span>
+  <section class="hero">
+    <span class="badge">🚀 NEW LAUNCH</span>
 
-      <h1>
-        Premium Independent Villas<br />
-        for Sale
-      </h1>
+    <h1>
+      Premium Independent Villas<br />
+      for Sale
+    </h1>
 
-      <p>
-        3 & 4 BHK • Private Parking • Ready to Move
-      </p>
+    <p>
+      Spacious 3 & 4 BHK Villas • Private Parking • Ready to Move
+    </p>
 
-      <a href="#gallery" class="learn-btn">
-        Learn More
-      </a>
-    </div>
+    <a href="#gallery" class="learn-btn">
+      Learn More
+    </a>
   </section>
 
 </body>
