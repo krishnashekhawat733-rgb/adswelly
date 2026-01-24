@@ -133,3 +133,231 @@
 
 </body>
 </html>
+<!-- ================= PROJECT GALLERY + WHATSAPP FORM ================= -->
+
+<style>
+/* ===== PROJECT GALLERY ===== */
+.project-gallery {
+  padding: 80px 20px;
+  text-align: center;
+  background: #fff7ed;
+}
+
+.project-gallery h2 {
+  font-size: 42px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.project-gallery .subtext {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #475569;
+}
+
+/* ===== AUTO SCROLL GALLERY ===== */
+.slider {
+  overflow: hidden;
+  margin: 40px auto;
+  max-width: 100%;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(260px * 6);
+  animation: scroll 18s linear infinite;
+}
+
+.slide-track img {
+  width: 250px;
+  margin: 0 10px;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ===== WHATSAPP CTA BUTTON ===== */
+.whatsapp-cta {
+  margin-top: 40px;
+  padding: 16px 42px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #ffffff;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #14532d, #22c55e);
+  box-shadow: 0 12px 30px rgba(34, 197, 94, 0.45);
+  position: relative;
+  overflow: hidden;
+}
+
+.whatsapp-cta::before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.6),
+    transparent
+  );
+  animation: shine 2.5s infinite;
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  60% { left: 100%; }
+  100% { left: 100%; }
+}
+
+/* ===== FORM MODAL ===== */
+.form-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 999;
+}
+
+.form-box {
+  background: #ffffff;
+  max-width: 420px;
+  margin: 80px auto;
+  padding: 30px;
+  border-radius: 18px;
+  position: relative;
+}
+
+.form-box h3 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.form-box input,
+.form-box select {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #14532d, #22c55e);
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font-size: 18px;
+  cursor: pointer;
+}
+</style>
+
+<section class="project-gallery" id="gallery">
+
+  <h2>🏡 Project Gallery</h2>
+  <p class="subtext">
+    We share some live project images & clips to give you real on-site clarity.
+  </p>
+
+  <div class="slider">
+    <div class="slide-track">
+      <img src="/villa1.jpg">
+      <img src="/villa2.jpg">
+      <img src="/villa3.jpg">
+      <img src="/villa4.jpg">
+      <img src="/villa1.jpg">
+      <img src="/villa2.jpg">
+    </div>
+  </div>
+
+  <button class="whatsapp-cta" onclick="openForm()">
+    📲 Book Site Visit on WhatsApp
+  </button>
+
+</section>
+
+<!-- ===== FORM ===== -->
+<div class="form-overlay" id="formOverlay">
+  <div class="form-box">
+    <h3>Book Site Visit</h3>
+
+    <input type="text" id="name" placeholder="Your Name">
+    <input type="tel" id="mobile" placeholder="Mobile Number">
+
+    <select id="budget">
+      <option>₹30–40L</option>
+      <option>₹40–60L</option>
+      <option>₹60L+</option>
+    </select>
+
+    <select id="purpose">
+      <option>Self Use</option>
+      <option>Investment</option>
+    </select>
+
+    <select id="visit">
+      <option>Immediate (1–3 days)</option>
+      <option>Within 7 days</option>
+      <option>7–15 days</option>
+    </select>
+
+    <button class="submit-btn" onclick="sendWhatsApp()">
+      Book Site Visit on WhatsApp
+    </button>
+
+    <span class="close" onclick="closeForm()">✕</span>
+  </div>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("formOverlay").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("formOverlay").style.display = "none";
+}
+
+function sendWhatsApp() {
+  const name = document.getElementById("name").value;
+  const budget = document.getElementById("budget").value;
+  const purpose = document.getElementById("purpose").value;
+  const visit = document.getElementById("visit").value;
+
+  const message = `Hi, I’m ${name}
+Budget: ${budget}
+Purpose: ${purpose}
+Site Visit: ${visit}
+
+I’m interested in this project.
+Please assist with site visit details.`;
+
+  window.open(
+    "https://wa.me/916375759510?text=" + encodeURIComponent(message),
+    "_blank"
+  );
+}
+</script>
+
+<!-- ================= END ================= -->
