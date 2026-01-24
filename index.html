@@ -738,3 +738,131 @@ document.querySelectorAll(".faq-question").forEach(q => {
   });
 });
 </script>
+<style>
+/* ===== FOOTER ===== */
+.footer {
+  background: #0f172a; /* Dark Blue */
+  color: #e5e7eb;
+  padding: 50px 20px 25px;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* TOP INFO */
+.footer-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.footer-card {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+/* ICON */
+.footer-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #ffffff; /* White bg */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #0f172a; /* Dark blue icon */
+  flex-shrink: 0;
+}
+
+/* TEXT */
+.footer-card h4 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.footer-card p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #cbd5f5;
+}
+
+/* BOTTOM BAR */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #cbd5f5;
+}
+
+.footer-bottom a {
+  color: #cbd5f5;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+</style>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- TOP INFO -->
+    <div class="footer-info">
+
+      <!-- ADDRESS -->
+      <div class="footer-card">
+        <div class="footer-icon">📍</div>
+        <div>
+          <h4>Address</h4>
+          <p>
+            P.No. 87, 3rd Floor, Tagore Nagar, DCM,<br>
+            Ajmer Road, Jaipur (Raj.) – 302021
+          </p>
+        </div>
+      </div>
+
+      <!-- PHONE -->
+      <div class="footer-card">
+        <div class="footer-icon">📞</div>
+        <div>
+          <h4>Phone</h4>
+          <p>+91 63757 59510</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM BAR -->
+    <div class="footer-bottom">
+      <div>
+        <a href="#">Privacy Policy</a>
+      </div>
+      <div>
+        Powered by <strong>@mthrivemedia</strong>
+      </div>
+    </div>
+
+  </div>
+</footer>
