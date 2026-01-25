@@ -244,6 +244,7 @@
 function openForm() {
   document.getElementById("formOverlay").style.display = "block";
 }
+
 function closeForm() {
   document.getElementById("formOverlay").style.display = "none";
 }
@@ -255,6 +256,7 @@ function prepareWhatsApp() {
   const purpose = document.getElementById("purpose").value;
   const visit = document.getElementById("visit").value;
 
+  // Prepare WhatsApp message
   const msg =
 `Hi, I’m ${name}
 Phone: ${phone}
@@ -264,17 +266,24 @@ Site Visit: ${visit}
 
 I’m interested in this project.`;
 
+  // Put message into hidden field so WhatsApp reads it
   document.getElementById("waMessage").value = msg;
 
-  fetch("https://script.google.com/macros/s/AKfycby9xj7PfkdlEA0wvrsVMx9jh_frB8amT3HDGxLdul9m-fcNHwu9A2Ee9uJdMqWxdYT2/exec", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ name, phone, budget, purpose, visit })
-  }).catch(()=>{});
+  // Save to Google Sheet using sendBeacon (reliable even with redirect)
+  const data = {
+    name: name,
+    phone: phone,
+    budget: budget,
+    purpose: purpose,
+    visit: visit
+  };
 
-  return true;
+  navigator.sendBeacon(
+    "https://script.google.com/macros/s/AKfycby9xj7PfkdlEA0wvrsVMx9jh_frB8amT3HDGxLdul9m-fcNHwu9A2Ee9uJdMqWxdYT2/exec",
+    new Blob([JSON.stringify(data)], { type: "application/json" })
+  );
+
+  return true; // allow form submit → WhatsApp opens
 }
 </script>
 
-</body>
-</html>
