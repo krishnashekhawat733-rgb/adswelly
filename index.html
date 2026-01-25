@@ -339,47 +339,99 @@
 </section>
 
 <!-- ===== FORM ===== -->
+<!-- ===== WHATSAPP LEAD FORM ===== -->
+
 <div class="form-overlay" id="formOverlay">
   <div class="form-box">
 
-<form id="leadForm">
+<form id="leadForm"
+      action="https://wa.me/916375759510"
+      method="GET"
+      target="_blank">
+
   <h3>Book Site Visit</h3>
 
   <label>Your Name</label>
-  <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+  <input type="text" id="name" required>
 
   <label>Mobile Number</label>
-  <input type="tel" id="mobile" name="phone" placeholder="Enter WhatsApp number" required>
+  <input type="tel" id="mobile" required>
 
   <label>Select Your Budget Range</label>
-  <select id="budget" name="budget" required>
-    <option>₹35–50L</option>
-    <option>₹50–60L</option>
-    <option>₹60L+</option>
+  <select id="budget" required>
+    <option value="₹35–50L">₹35–50L</option>
+    <option value="₹50–60L">₹50–60L</option>
+    <option value="₹60L+">₹60L+</option>
   </select>
 
   <label>Buying Purpose</label>
-  <select id="purpose" name="purpose">
-    <option>Self Use (Family Residence)</option>
-    <option>Investment</option>
+  <select id="purpose">
+    <option value="Self Use">Self Use</option>
+    <option value="Investment">Investment</option>
   </select>
 
-  <label>When Would You Like to Visit the Site?</label>
-  <select id="visit" name="visit">
-    <option>Immediate (1–3 days)</option>
-    <option>Within 7 days</option>
-    <option>7–15 days</option>
+  <label>When Would You Like to Visit?</label>
+  <select id="visit">
+    <option value="Immediate">Immediate (1–3 days)</option>
+    <option value="Within 7 days">Within 7 days</option>
+    <option value="7–15 days">7–15 days</option>
   </select>
+
+  <!-- 🔥 WHATSAPP MESSAGE GOES HERE -->
+  <input type="hidden" name="text" id="waMessage">
 
   <button type="submit" class="submit-btn">
     Book Site Visit on WhatsApp
   </button>
-</form>
 
-  <span class="close" onclick="closeForm()">✕</span>
+</form>
 
   </div>
 </div>
+
+<!-- ===== SCRIPT ===== -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("leadForm");
+
+  form.addEventListener("submit", function () {
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("mobile").value;
+    const budget = document.getElementById("budget").value;
+    const purpose = document.getElementById("purpose").value;
+    const visit = document.getElementById("visit").value;
+
+    // ✅ WHATSAPP MESSAGE (THIS OPENS WHATSAPP)
+    const msg =
+`Hi, I’m ${name}
+Phone: ${phone}
+Budget: ${budget}
+Purpose: ${purpose}
+Site Visit: ${visit}
+
+I’m interested in this project.
+Please assist me with site visit details.`;
+
+    document.getElementById("waMessage").value = msg;
+
+    // ✅ GOOGLE SHEET BACKGROUND SAVE
+    fetch("https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLiZxbtrN1x_i1Bp57TU2Nmflf2CaGX9ZYOG4_sDQPZgREjSCoru7bG-v2A5QvmWryhLRo55JDJTVj36VX67antU24NCmdWyuDfc7TX0-2zHll33K3yGTg_jlv0NY-P9U_uLivlKUz4SxkGrgQ3tGCXGDSCnzF8Z7V9kwKt6QOy9Qs_F-o5N1fMt6ycsNrS8gmFIrzSAfBamKKJ8la0E75dRVRlB9UPHYvhxaOJlRWP6nzNKmp75i6QojH5ko0__oQ3ljOMomkExHw5u6p39V8pX1Cp6sw&lib=McgWGcfAyXWx8uTRa2NzHhvTkCZgkOAXv", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        name: name,
+        phone: phone,
+        budget: budget,
+        purpose: purpose,
+        visit: visit
+      })
+    }).catch(err => console.error(err));
+  });
+});
+</script>
 
 <!-- ================= END ================= -->
 <style>
