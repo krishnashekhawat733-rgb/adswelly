@@ -851,23 +851,103 @@ document.querySelectorAll(".faq-question").forEach(q => {
   });
 });
 </script>
+<!-- ===== PREMIUM FOOTER ===== -->
+<style>
+.footer {
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  padding: 60px 20px 20px;
+}
+
+/* TOP GRADIENT LINE */
+.footer::before {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, #0f172a, #2563eb, #22c55e);
+  margin-bottom: 40px;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.footer-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 36px;
+}
+
+/* INFO BOXES */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+.footer-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 22px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+
+  box-shadow:
+    0 10px 26px rgba(15, 23, 42, 0.12),
+    0 4px 10px rgba(37, 99, 235, 0.12);
+}
+
+.footer-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #0f172a, #2563eb);
+  color: #ffffff;
+  font-size: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.footer-text h4 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.footer-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.6;
+}
 
 /* BOTTOM BAR */
 .footer-bottom {
   margin-top: 40px;
-  padding: 15px 20px;
+  padding-top: 18px;
   border-top: 1px solid #e5e7eb;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   font-size: 13px;
-  color: #333333;
+  color: #475569;
 }
 
 .footer-bottom a {
   color: #2563eb;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .footer-bottom a:hover {
@@ -876,57 +956,58 @@ document.querySelectorAll(".faq-question").forEach(q => {
 
 /* MOBILE */
 @media (max-width: 768px) {
-  .simple-footer h2 {
-    font-size: 28px;
+  .footer-title {
+    font-size: 26px;
   }
 
   .footer-bottom {
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
     text-align: center;
   }
 }
 </style>
 
-<section class="simple-footer">
-  <div class="footer-box">
+<footer class="footer">
+  <div class="footer-container">
 
-    <h2>Contact Us</h2>
+    <h2 class="footer-title">Contact Us</h2>
 
-    <!-- ADDRESS -->
-    <div class="footer-item">
-      <div class="footer-icon">📍</div>
-      <div class="footer-text">
-        <h4>Address</h4>
-        <p>
-          P.No. 87, 3rd Floor, Tagore Nagar, DCM,<br>
-          Ajmer Road, Jaipur (Raj.) – 302021
-        </p>
+    <div class="footer-grid">
+
+      <!-- ADDRESS -->
+      <div class="footer-card">
+        <div class="footer-icon">📍</div>
+        <div class="footer-text">
+          <h4>Office Address</h4>
+          <p>
+            P.No. 87, 3rd Floor, Tagore Nagar, DCM,<br>
+            Ajmer Road, Jaipur – 302021
+          </p>
+        </div>
       </div>
+
+      <!-- PHONE -->
+      <div class="footer-card">
+        <div class="footer-icon">📞</div>
+        <div class="footer-text">
+          <h4>Call / WhatsApp</h4>
+          <p>+91 63757 59510</p>
+        </div>
+      </div>
+
     </div>
 
-    <!-- PHONE -->
-    <div class="footer-item">
-      <div class="footer-icon">📞</div>
-      <div class="footer-text">
-        <h4>Phone</h4>
-        <p>+91 63757 59510</p>
+    <!-- BOTTOM -->
+    <div class="footer-bottom">
+      <div>© 2026 All Rights Reserved</div>
+      <div>
+        Powered by
+        <a href="https://www.instagram.com/mthrive.in" target="_blank">
+          @mthrivemedia
+        </a>
       </div>
     </div>
 
   </div>
-
-  <!-- BOTTOM -->
-  <div class="footer-bottom">
-    <div>
-      <a href="#">Privacy Policy</a>
-    </div>
-    <div>
-      Powered by 
-      <a href="https://www.instagram.com/mthrive.in?igsh=NmJxaHF1eHI3aGdn" target="_blank">
-        @mthrivemedia
-      </a>
-    </div>
-  </div>
-</section>
-
+</footer>
