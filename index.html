@@ -437,41 +437,61 @@ Please assist with site visit details.`;
 </script>
 
 <!-- ================= END ================= -->
+<!-- ===== PREMIUM PROPERTY DETAILS SECTION ===== -->
 <style>
 /* ===== PROPERTY DETAILS SECTION ===== */
 .property-section {
-  padding: 60px 20px;
+  padding: 70px 20px;
   background: #f8fafc;
 }
 
+/* GRID */
 .property-grid {
   max-width: 1100px;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
+  gap: 26px;
 }
 
-/* ===== COMMON CARD STYLE ===== */
+/* ===== PREMIUM CARD ===== */
 .property-card {
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 26px;
-  box-shadow: 8px 10px 28px rgba(15, 23, 42, 0.12);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  border-radius: 22px;
+  padding: 28px;
+
+  /* DARK BLUE PREMIUM SHADOW (ALL SIDES) */
+  box-shadow:
+    0 0 0 1px rgba(37, 99, 235, 0.08),
+    0 22px 46px rgba(15, 23, 42, 0.18),
+    0 10px 26px rgba(37, 99, 235, 0.25);
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .property-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 14px 18px 36px rgba(15, 23, 42, 0.18);
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 0 1px rgba(37, 99, 235, 0.16),
+    0 32px 68px rgba(15, 23, 42, 0.28),
+    0 16px 36px rgba(37, 99, 235, 0.38);
 }
 
+/* ===== CARD HEADING ===== */
 .property-card h3 {
   font-size: 22px;
-  margin-bottom: 16px;
-  color: #0f172a;
+  font-weight: 700;
+  margin-bottom: 18px;
+
+  background: linear-gradient(90deg, #0f172a, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
+/* ===== LIST STYLE ===== */
 .property-card ul {
   list-style: none;
   padding: 0;
@@ -479,15 +499,39 @@ Please assist with site visit details.`;
 }
 
 .property-card ul li {
+  position: relative;
+  padding-left: 36px;
+  margin-bottom: 12px;
+
   font-size: 15px;
-  margin-bottom: 10px;
-  color: #334155;
-  display: flex;
-  gap: 8px;
-  align-items: center;
+  color: #0f172a;
+  line-height: 1.6;
 }
 
-/* ===== PRIMARY CARD (OVERVIEW) ===== */
+/* ===== GRADIENT TICK BULLET ===== */
+.property-card ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 2px;
+
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #0f172a, #2563eb);
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.45);
+}
+
+/* ===== PRIMARY CARD ===== */
 .primary-card {
   grid-column: span 2;
 }
@@ -495,7 +539,7 @@ Please assist with site visit details.`;
 /* ===== PRICE CARD ===== */
 .price-card {
   background: linear-gradient(180deg, #ffffff, #f0fdf4);
-  border: 1px solid rgba(22, 163, 74, 0.2);
+  border: 1px solid rgba(22, 163, 74, 0.25);
 }
 
 .price {
@@ -512,21 +556,21 @@ Please assist with site visit details.`;
   margin-top: 6px;
 }
 
-/* CTA BUTTON INSIDE CARD */
+/* ===== CTA BUTTON ===== */
 .price-btn {
-  margin-top: 18px;
+  margin-top: 20px;
   width: 100%;
-  height: 54px;
-  border-radius: 14px;
+  height: 56px;
+  border-radius: 16px;
   border: none;
   cursor: pointer;
 
   font-size: 16px;
   font-weight: 600;
   color: #ffffff;
-  background: #15803d;
+  background: linear-gradient(135deg, #15803d, #22c55e);
 
-  box-shadow: 0 10px 24px rgba(21, 128, 61, 0.45);
+  box-shadow: 0 12px 28px rgba(21, 128, 61, 0.45);
   position: relative;
   overflow: hidden;
 }
@@ -554,7 +598,7 @@ Please assist with site visit details.`;
   100% { left: 100%; }
 }
 
-/* RESPONSIVE FIX */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .primary-card {
     grid-column: span 1;
@@ -566,42 +610,43 @@ Please assist with site visit details.`;
 
   <div class="property-grid">
 
-    <!-- 🟦 CARD 1: PROPERTY OVERVIEW -->
+    <!-- CARD 1: PROPERTY OVERVIEW -->
     <div class="property-card primary-card">
-      <h3>🏘️ Property Overview</h3>
+      <h3>Property Overview</h3>
       <ul>
-        <li>📐 <strong>Plot Size:</strong> 18×50 (100 Gaj)</li>
-        <li>🏠 <strong>Configuration:</strong> 3 BHK Semi Duplex</li>
-        <li>🧭 <strong>Facing:</strong> East Facing ☀️</li>
-        <li>🛋️ <strong>Status:</strong> Semi Furnished</li>
-        <li>🏘️ <strong>Type:</strong> Society Villa</li>
+        <li><strong>Plot Size:</strong> 18×50 (100 Gaj)</li>
+        <li><strong>Configuration:</strong> 3 BHK Semi Duplex</li>
+        <li><strong>Facing:</strong> East Facing</li>
+        <li><strong>Status:</strong> Semi Furnished</li>
+        <li><strong>Type:</strong> Society Villa</li>
       </ul>
     </div>
 
-    <!-- 🟩 CARD 2: LOCATION -->
+    <!-- CARD 2: LOCATION -->
     <div class="property-card">
-      <h3>📍 Location Highlights</h3>
+      <h3>Location Highlights</h3>
       <ul>
-        <li>📌 Prime Kalwad Road</li>
-        <li>🏥 Near Hospital</li>
-        <li>🛒 Daily Needs Nearby</li>
-        <li>🌳 Peaceful Residential Society</li>
+        <li>Prime Kalwad Road</li>
+        <li>Near Hospital</li>
+        <li>Daily Needs Nearby</li>
+        <li>Peaceful Residential Society</li>
       </ul>
     </div>
 
-    <!-- 🟨 CARD 3: IDEAL FOR -->
+    <!-- CARD 3: IDEAL FOR -->
     <div class="property-card">
-      <h3>⭐ Best Suited For</h3>
+      <h3>Best Suited For</h3>
       <ul>
-        <li>👨‍👩‍👧 Family Living</li>
-        <li>📈 Long-Term Investment</li>
-        <li>🏡 Rental Potential</li>
+        <li>Family Living</li>
+        <li>Long-Term Investment</li>
+        <li>Rental Potential</li>
       </ul>
     </div>
 
-    <!-- 🟥 CARD 4: PRICE + CTA -->
+    <!-- CARD 4: PRICE -->
     <div class="property-card price-card">
-      <h3>💰 Investment Value</h3>
+      <h3>Investment Value</h3>
+
       <div class="price">
         ₹59 Lacs Only
         <small>Limited availability</small>
@@ -615,7 +660,7 @@ Please assist with site visit details.`;
   </div>
 
 </section>
-<style>
+
 /* ===== FAQ SECTION ===== */
 .faq-section {
   padding: 60px 20px;
