@@ -857,7 +857,6 @@ document.querySelectorAll(".faq-question").forEach(q => {
   2) Open WhatsApp with prefilled message
   Author: Landing Page Automation
 ================================ -->
-
 <script>
 function openForm() {
   document.getElementById("formOverlay").style.display = "block";
@@ -867,24 +866,19 @@ function closeForm() {
   document.getElementById("formOverlay").style.display = "none";
 }
 
-// MAIN FORM SUBMIT HANDLER
-document.getElementById("leadForm").addEventListener("submit", function(e){
-  e.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("leadForm");
 
-  const name = document.getElementById("name").value;
-  const phone = document.getElementById("mobile").value;
-  const budget = document.getElementById("budget").value;
-  const purpose = document.getElementById("purpose").value;
-  const visit = document.getElementById("visit").value;
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
 
-  // 1️⃣ SAVE DATA TO GOOGLE SHEET
-  fetch("https://script.google.com/macros/s/AKfycbwEkn6-Q6XIFhT7DIV-fwXatCLROVGkDwssSgS-ylmHjLErIdQeRwtDxBgfdHJbQTgt/exec", {
-    method: "POST",
-    body: JSON.stringify({ name, phone, budget, purpose, visit })
-  })
-  .then(() => {
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("mobile").value;
+    const budget = document.getElementById("budget").value;
+    const purpose = document.getElementById("purpose").value;
+    const visit = document.getElementById("visit").value;
 
-    // 2️⃣ OPEN WHATSAPP WITH MESSAGE
+    // ✅ 1. WHATSAPP OPEN IMMEDIATELY (no block)
     const msg =
 `Hi, I’m ${name}
 Phone: ${phone}
@@ -900,10 +894,13 @@ Please guide me for site visit.`;
       "_blank"
     );
 
+    // ✅ 2. SAVE TO GOOGLE SHEET (background)
+    fetch("https://script.google.com/macros/s/AKfycbwEkn6-Q6XIFhT7DIV-fwXatCLROVGkDwssSgS-ylmHjLErIdQeRwtDxBgfdHJbQTgt/exec", {
+      method: "POST",
+      body: JSON.stringify({ name, phone, budget, purpose, visit })
+    }).catch(err => console.error(err));
+
     closeForm();
   });
 });
 </script>
-
-</body>
-</html>
