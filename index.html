@@ -414,7 +414,7 @@ Please assist me with site visit details.`;
   document.getElementById("waMessage").value = msg;
 
   // 2) Google Sheet save (background)
-  fetch("https://script.google.com/macros/s/AKfycbwEkn6-Q6XIFhT7DIV-fwXatCLROVGkDwssSgS-ylmHjLErIdQeRwtDxBgfdHJbQTgt/exec", {
+  fetch("https://script.google.com/macros/s/AKfycby9xj7PfkdlEA0wvrsVMx9jh_frB8amT3HDGxLdul9m-fcNHwu9A2Ee9uJdMqWxdYT2/exec", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ name, phone, budget, purpose, visit })
