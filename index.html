@@ -858,27 +858,17 @@ document.querySelectorAll(".faq-question").forEach(q => {
   Author: Landing Page Automation
 ================================ -->
 <script>
-function openForm() {
-  document.getElementById("formOverlay").style.display = "block";
-}
-
-function closeForm() {
-  document.getElementById("formOverlay").style.display = "none";
-}
-
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("leadForm");
 
-  form.addEventListener("submit", function(e){
-    e.preventDefault();
-
+  form.addEventListener("submit", function () {
     const name = document.getElementById("name").value;
     const phone = document.getElementById("mobile").value;
     const budget = document.getElementById("budget").value;
     const purpose = document.getElementById("purpose").value;
     const visit = document.getElementById("visit").value;
 
-    // ✅ 1. WHATSAPP OPEN IMMEDIATELY (no block)
+    // ✅ WhatsApp message (NO BLOCK EVER)
     const msg =
 `Hi, I’m ${name}
 Phone: ${phone}
@@ -886,26 +876,16 @@ Budget: ${budget}
 Purpose: ${purpose}
 Site Visit: ${visit}
 
-I’m interested in this project.
-Please guide me for site visit.`;
+I’m interested in this project.`;
 
-    window.open(
-      "https://wa.me/916375759510?text=" + encodeURIComponent(msg),
-      "_blank"
-    );
+    document.getElementById("waMessage").value = msg;
 
-    // ✅ 2. SAVE TO GOOGLE SHEET (background)
-    fetch("https://script.google.com/macros/s/AKfycbwaTfMtO5UqiivSLcCaN5RVCSC8kMQqUMwGDidsI82wHUuDs7KA91Z4JoWDrkps3zbi/exec", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify({
-    name: name,
-    phone: phone,
-    budget: budget,
-    purpose: purpose,
-    visit: visit
-  })
-})
-.catch(err => console.error(err));
+    // ✅ Sheet update (background, no block)
+    fetch("https://script.google.com/macros/s/AKfycbwEkn6-Q6XIFhT7DIV-fwXatCLROVGkDwssSgS-ylmHjLErIdQeRwtDxBgfdHJbQTgt/exec", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, phone, budget, purpose, visit })
+    }).catch(err => console.error(err));
+  });
+});
+</script>
