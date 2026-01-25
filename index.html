@@ -813,65 +813,195 @@ document.querySelectorAll(".faq-question").forEach(q => {
 <style>
 <style>
 <style>
-/* ===== SIMPLE CONTACT FOOTER ===== */
-.simple-footer {
-  background: #ffffff;
-  padding: 50px 20px 0;
+<!-- ===== PREMIUM FAQ SECTION ===== -->
+<style>
+.faq-section {
+  padding: 70px 20px;
+  background: #f8fafc;
 }
 
-.simple-footer h2 {
-  text-align: center;
-  font-size: 34px;
-  font-weight: 700;
-  color: #000000;
-  margin-bottom: 40px;
-}
-
-.footer-box {
+.faq-container {
   max-width: 900px;
   margin: auto;
 }
 
-/* CONTACT CARD */
-.footer-item {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  padding: 20px;
-  border-radius: 12px;
-  background: #ffffff;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
-  margin-bottom: 18px;
+/* SECTION TITLE */
+.faq-title {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 42px;
+
+  background: linear-gradient(90deg, #0f172a, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* ICON */
-.footer-icon {
-  width: 54px;
-  height: 54px;
-  border-radius: 12px;
-  background: #2563eb; /* BLUE */
+/* FAQ CARD */
+.faq-item {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  border-radius: 20px;
+  margin-bottom: 18px;
+  overflow: hidden;
+
+  box-shadow:
+    0 0 0 1px rgba(37, 99, 235, 0.08),
+    0 20px 42px rgba(15, 23, 42, 0.18),
+    0 10px 26px rgba(37, 99, 235, 0.25);
+
+  transition: box-shadow 0.35s ease, transform 0.35s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 0 0 1px rgba(37, 99, 235, 0.15),
+    0 30px 64px rgba(15, 23, 42, 0.28),
+    0 14px 34px rgba(37, 99, 235, 0.38);
+}
+
+/* QUESTION */
+.faq-question {
+  padding: 20px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0f172a;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* PLUS ICON */
+.faq-question span {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 22px;
-  color: #ffffff;
-  flex-shrink: 0;
-}
 
-/* TEXT */
-.footer-text h4 {
-  margin: 0 0 6px;
   font-size: 18px;
-  font-weight: 600;
-  color: #000000;
+  font-weight: 700;
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #0f172a, #2563eb);
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.45);
+
+  transition: transform 0.3s ease;
 }
 
-.footer-text p {
-  margin: 0;
-  font-size: 14px;
-  color: #333333;
+/* ANSWER */
+.faq-answer {
+  padding: 0 24px;
+  max-height: 0;
+  overflow: hidden;
+
+  font-size: 15px;
+  color: #475569;
   line-height: 1.6;
+
+  transition: max-height 0.45s ease, padding 0.35s ease;
 }
+
+/* ACTIVE STATE */
+.faq-item.active .faq-answer {
+  max-height: 140px;
+  padding: 0 24px 20px;
+}
+
+.faq-item.active .faq-question span {
+  transform: rotate(45deg);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .faq-title {
+    font-size: 28px;
+  }
+}
+</style>
+
+<section class="faq-section">
+  <div class="faq-container">
+
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Is property registry available?
+        <span>+</span>
+      </div>
+      <div class="faq-answer">
+        Yes, immediate registry is available with complete documentation.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Is bank loan facility available?
+        <span>+</span>
+      </div>
+      <div class="faq-answer">
+        Yes, bank loan assistance is available from leading banks.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Is the villa ready to move?
+        <span>+</span>
+      </div>
+      <div class="faq-answer">
+        Semi-furnished villa, ready / near-ready to move.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Is this a gated society?
+        <span>+</span>
+      </div>
+      <div class="faq-answer">
+        Yes, the villa is located in a peaceful residential society.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Is the price negotiable?
+        <span>+</span>
+      </div>
+      <div class="faq-answer">
+        Slight negotiation possible, depending on payment terms.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        How can I schedule a site visit?
+        <span>+</span>
+      </div>
+      <div class="faq-answer">
+        Site visit is available by prior appointment via WhatsApp.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+document.querySelectorAll(".faq-question").forEach(q => {
+  q.addEventListener("click", () => {
+    q.parentElement.classList.toggle("active");
+  });
+});
+</script>
 
 /* BOTTOM BAR */
 .footer-bottom {
