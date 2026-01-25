@@ -340,6 +340,7 @@
 
 <!-- ===== FORM ===== -->
 <!-- ===== WHATSAPP LEAD FORM ===== -->
+<!-- ===== WHATSAPP + SHEET FORM ===== -->
 
 <div class="form-overlay" id="formOverlay">
   <div class="form-box">
@@ -347,7 +348,8 @@
 <form id="leadForm"
       action="https://wa.me/916375759510"
       method="GET"
-      target="_blank">
+      target="_blank"
+      onsubmit="return prepareWhatsApp();">
 
   <h3>Book Site Visit</h3>
 
@@ -377,7 +379,7 @@
     <option value="7–15 days">7–15 days</option>
   </select>
 
-  <!-- 🔥 WHATSAPP MESSAGE GOES HERE -->
+  <!-- WhatsApp message goes here -->
   <input type="hidden" name="text" id="waMessage">
 
   <button type="submit" class="submit-btn">
@@ -389,21 +391,17 @@
   </div>
 </div>
 
-<!-- ===== SCRIPT ===== -->
-
+<!-- ===== SCRIPT (PLACE AT VERY BOTTOM) ===== -->
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("leadForm");
+function prepareWhatsApp() {
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("mobile").value;
+  const budget = document.getElementById("budget").value;
+  const purpose = document.getElementById("purpose").value;
+  const visit = document.getElementById("visit").value;
 
-  form.addEventListener("submit", function () {
-    const name = document.getElementById("name").value;
-    const phone = document.getElementById("mobile").value;
-    const budget = document.getElementById("budget").value;
-    const purpose = document.getElementById("purpose").value;
-    const visit = document.getElementById("visit").value;
-
-    // ✅ WHATSAPP MESSAGE (THIS OPENS WHATSAPP)
-    const msg =
+  // 1) WhatsApp message (opens WhatsApp)
+  const msg =
 `Hi, I’m ${name}
 Phone: ${phone}
 Budget: ${budget}
@@ -413,24 +411,17 @@ Site Visit: ${visit}
 I’m interested in this project.
 Please assist me with site visit details.`;
 
-    document.getElementById("waMessage").value = msg;
+  document.getElementById("waMessage").value = msg;
 
-    // ✅ GOOGLE SHEET BACKGROUND SAVE
-    fetch("https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLiZxbtrN1x_i1Bp57TU2Nmflf2CaGX9ZYOG4_sDQPZgREjSCoru7bG-v2A5QvmWryhLRo55JDJTVj36VX67antU24NCmdWyuDfc7TX0-2zHll33K3yGTg_jlv0NY-P9U_uLivlKUz4SxkGrgQ3tGCXGDSCnzF8Z7V9kwKt6QOy9Qs_F-o5N1fMt6ycsNrS8gmFIrzSAfBamKKJ8la0E75dRVRlB9UPHYvhxaOJlRWP6nzNKmp75i6QojH5ko0__oQ3ljOMomkExHw5u6p39V8pX1Cp6sw&lib=McgWGcfAyXWx8uTRa2NzHhvTkCZgkOAXv", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        name: name,
-        phone: phone,
-        budget: budget,
-        purpose: purpose,
-        visit: visit
-      })
-    }).catch(err => console.error(err));
-  });
-});
+  // 2) Google Sheet save (background)
+  fetch("https://script.google.com/macros/s/AKfycbwEkn6-Q6XIFhT7DIV-fwXatCLROVGkDwssSgS-ylmHjLErIdQeRwtDxBgfdHJbQTgt/exec", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name, phone, budget, purpose, visit })
+  }).catch(()=>{});
+
+  return true; // allow form submit → WhatsApp opens
+}
 </script>
 
 <!-- ================= END ================= -->
