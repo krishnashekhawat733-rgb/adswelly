@@ -365,7 +365,6 @@ body {
   text-align: center;
 }
 
-/* HEADING */
 .product-heading {
   color: #fff;
   font-size: 34px;
@@ -373,7 +372,6 @@ body {
   margin-bottom: 30px;
 }
 
-/* CARD */
 .product-card {
   max-width: 420px;
   margin: auto;
@@ -386,18 +384,14 @@ body {
     0 20px 60px rgba(0,0,0,0.25);
 }
 
-/* IMAGE */
 .product-image {
   width: 100%;
   max-width: 320px;
   aspect-ratio: 1/1;
   object-fit: cover;
-  margin: auto;
-  display: block;
   border-radius: 20px;
 }
 
-/* TITLE */
 .product-title {
   font-size: 26px;
   font-weight: 900;
@@ -405,14 +399,11 @@ body {
   color: #064e48;
 }
 
-/* TEXT */
 .product-text {
   font-size: 15px;
   margin-top: 10px;
-  color: #333;
 }
 
-/* POINTS */
 .product-points {
   margin-top: 15px;
   text-align: left;
@@ -423,14 +414,12 @@ body {
   margin-bottom: 8px;
   padding-left: 28px;
   position: relative;
-  font-size: 14px;
 }
 
 .product-points li::before {
   content: "✔";
   position: absolute;
   left: 0;
-  top: 0;
   background: #0b635b;
   color: #fff;
   width: 18px;
@@ -456,13 +445,23 @@ body {
   overflow: hidden;
 
   background: linear-gradient(135deg, #0b635b, #14b8a6);
+
+  animation: shake 3s infinite;
 }
 
-/* SHINE EFFECT */
+/* SHAKE */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  5% { transform: translateX(-3px); }
+  10% { transform: translateX(3px); }
+  15% { transform: translateX(-3px); }
+  20% { transform: translateX(0); }
+}
+
+/* SHINE */
 .order-btn::before {
   content: "";
   position: absolute;
-  top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
@@ -481,7 +480,7 @@ body {
   100% { left: 100%; }
 }
 
-/* POPUP */
+/* ===== POPUP ===== */
 .popup {
   display: none;
   position: fixed;
@@ -500,8 +499,16 @@ body {
   border-radius: 20px;
   width: 90%;
   max-width: 350px;
+  text-align: center;
 }
 
+/* HEADING */
+.popup-content h3 {
+  margin-bottom: 15px;
+  color: #064e48;
+}
+
+/* INPUT */
 .popup-content input {
   width: 100%;
   padding: 10px;
@@ -510,47 +517,51 @@ body {
   border: 1px solid #ccc;
 }
 
+/* PAYMENT */
+.payment {
+  text-align: left;
+  margin: 10px 0;
+}
+
+/* SUBMIT BUTTON */
 .submit-btn {
   width: 100%;
   padding: 12px;
   border-radius: 10px;
-  background: #0b635b;
+  background: linear-gradient(135deg, #0b635b, #14b8a6);
   color: #fff;
   border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.submit-btn:hover {
+  transform: scale(1.03);
 }
 </style>
 
 
 <section class="product-section">
 
-  <!-- HEADING -->
-  <div class="product-heading">
-    🌿 उत्पाद परिचय
-  </div>
+  <div class="product-heading">🌿 उत्पाद परिचय</div>
 
   <div class="product-card">
 
-    <!-- IMAGE -->
     <img src="https://via.placeholder.com/1080" class="product-image">
 
-    <!-- TITLE -->
-    <div class="product-title">
-      आयुर्वाणी आयुर्वेदिक कैप्सूल
-    </div>
+    <div class="product-title">आयुर्वाणी आयुर्वेदिक कैप्सूल</div>
 
-    <!-- TEXT -->
     <div class="product-text">
-      यह एक आयुर्वेदिक सपोर्ट फॉर्मूला है जो हकलाने और बोलने की समस्या पर अंदर से काम करता है।
+      हकलाने की समस्या को अंदर से सुधारने में मदद करता है।
     </div>
 
-    <!-- POINTS -->
     <ul class="product-points">
-      <li>100% आयुर्वेदिक और सुरक्षित</li>
-      <li>धीरे-धीरे सुधार में मदद</li>
-      <li>आत्मविश्वास बढ़ाने में सहायक</li>
+      <li>100% आयुर्वेदिक</li>
+      <li>धीरे-धीरे सुधार</li>
+      <li>आत्मविश्वास बढ़ाए</li>
     </ul>
 
-    <!-- BUTTON -->
     <button class="order-btn" onclick="openForm()">
       👉 अभी ऑर्डर करें
     </button>
@@ -560,17 +571,24 @@ body {
 </section>
 
 
-<!-- POPUP FORM -->
+<!-- POPUP -->
 <div class="popup" id="popup">
   <div class="popup-content">
+
+    <h3>Fill this form to complete your order</h3>
 
     <input type="text" id="name" placeholder="Name">
     <input type="text" id="phone" placeholder="Mobile Number">
     <input type="text" id="address" placeholder="Address">
     <input type="text" id="pincode" placeholder="Pin Code">
 
+    <div class="payment">
+      <label><input type="radio" name="payment" value="COD"> Cash on Delivery</label><br>
+      <label><input type="radio" name="payment" value="Prepaid"> Prepaid</label>
+    </div>
+
     <button class="submit-btn" onclick="sendWhatsApp()">
-      Submit
+      Submit & Order on WhatsApp
     </button>
 
   </div>
@@ -588,11 +606,15 @@ function sendWhatsApp(){
   var address = document.getElementById("address").value;
   var pincode = document.getElementById("pincode").value;
 
+  var payment = document.querySelector('input[name="payment"]:checked');
+  payment = payment ? payment.value : "Not Selected";
+
   var message = "New Order:%0A"
               + "Name: " + name + "%0A"
               + "Mobile: " + phone + "%0A"
               + "Address: " + address + "%0A"
-              + "Pincode: " + pincode;
+              + "Pincode: " + pincode + "%0A"
+              + "Payment: " + payment;
 
   var url = "https://wa.me/918239828901?text=" + message;
 
