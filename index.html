@@ -171,113 +171,117 @@ body {
 
 </section>
 <!-- 🔥 HERO SECTION END -->
- <!-- ===== 🧠 PROBLEM SECTION WITH IMAGE FINAL START ===== -->
+ <!-- ===== 🧠 PROBLEM SECTION PREMIUM FINAL START ===== -->
 
 <style>
 .problem-section {
   padding: 70px 20px;
-  background: #f6fbfa;
+  background: #f4f8f7;
 }
 
+/* HEADING */
 .problem-heading {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .problem-heading h2 {
   font-size: 40px;
   font-weight: 900;
-  background: linear-gradient(90deg, #064e48, #0b635b, #14b8a6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #0b635b;
 }
 
 .problem-heading p {
   margin-top: 10px;
-  color: #64748b;
-  font-size: 16px;
+  color: #6b7280;
 }
 
+/* GRID */
 .problem-grid {
   max-width: 1100px;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 26px;
+  gap: 30px;
 }
 
 /* CARD */
 .problem-card {
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(8px);
-  border-radius: 22px;
-  padding: 22px;
+  background: linear-gradient(145deg, #f7fbfa, #eef6f4);
+  border-radius: 24px;
+  padding: 30px 20px;
+  text-align: center;
 
-  box-shadow:
-    0 0 0 1px rgba(11, 99, 91, 0.08),
-    0 22px 46px rgba(0, 0, 0, 0.12),
-    0 10px 26px rgba(11, 99, 91, 0.18);
+  border: 2px solid #0b635b33;
 
-  transition: all 0.3s ease;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  transition: 0.3s;
 }
 
 .problem-card:hover {
   transform: translateY(-8px);
 }
 
-/* 🔥 IMAGE FIXED */
-.card-img {
-  width: 100%;
+/* IMAGE BOX */
+.card-img-box {
+  width: 180px;
   height: 180px;
-  border-radius: 16px;
-  object-fit: contain; /* NO CROP */
-  background: linear-gradient(145deg, #eef7f5, #f8fffd);
-  padding: 12px;
-  margin-bottom: 16px;
+  margin: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 20px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* TITLE */
 .problem-card h3 {
   font-size: 20px;
-  margin-bottom: 12px;
-  color: #064e48;
+  margin-bottom: 15px;
+  color: #0b635b;
 }
 
 /* LIST */
 .problem-card ul {
   list-style: none;
   padding: 0;
+  text-align: left;
 }
 
 .problem-card ul li {
   position: relative;
-  padding-left: 36px;
+  padding-left: 32px;
   margin-bottom: 10px;
+  font-size: 14px;
 }
 
 /* TICK */
 .problem-card ul li::before {
-  content: "✓";
+  content: "✔";
   position: absolute;
   left: 0;
   top: 2px;
 
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
+  background: #0b635b;
+  color: #fff;
+  font-size: 12px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-
-  font-size: 13px;
-  color: #fff;
-
-  background: linear-gradient(135deg, #064e48, #0b635b);
-  box-shadow: 0 6px 14px rgba(11, 99, 91, 0.45);
 }
 
 @media(max-width:768px){
-  .problem-heading h2{
+  .problem-heading h2 {
     font-size: 28px;
   }
 }
@@ -297,7 +301,9 @@ body {
 
     <!-- CARD 1 -->
     <div class="problem-card">
-      <img src="https://res.cloudinary.com/dpqc0j5hg/image/upload/v1775306763/ChatGPT_Image_Apr_4_2026_06_10_57_PM_tkezhh.png" class="card-img">
+      <div class="card-img-box">
+        <img src="YOUR_IMAGE_URL">
+      </div>
       <h3>फेफड़े (सांस)</h3>
       <ul>
         <li>सांस नियंत्रित नहीं रहती</li>
@@ -308,7 +314,9 @@ body {
 
     <!-- CARD 2 -->
     <div class="problem-card">
-      <img src="YOUR_IMAGE_URL" class="card-img">
+      <div class="card-img-box">
+        <img src="YOUR_IMAGE_URL">
+      </div>
       <h3>हृदय</h3>
       <ul>
         <li>दिल तेजी से धड़कता है</li>
@@ -319,7 +327,9 @@ body {
 
     <!-- CARD 3 -->
     <div class="problem-card">
-      <img src="YOUR_IMAGE_URL" class="card-img">
+      <div class="card-img-box">
+        <img src="YOUR_IMAGE_URL">
+      </div>
       <h3>गला</h3>
       <ul>
         <li>नसें कमजोर होती हैं</li>
@@ -330,7 +340,9 @@ body {
 
     <!-- CARD 4 -->
     <div class="problem-card">
-      <img src="YOUR_IMAGE_URL" class="card-img">
+      <div class="card-img-box">
+        <img src="YOUR_IMAGE_URL">
+      </div>
       <h3>दिमाग</h3>
       <ul>
         <li>सबसे बड़ा कारण</li>
@@ -343,6 +355,6 @@ body {
 
 </section>
 
-<!-- ===== 🧠 PROBLEM SECTION WITH IMAGE FINAL END ===== -->
+<!-- ===== 🧠 PROBLEM SECTION PREMIUM FINAL END ===== -->
 </body>
 </html>
