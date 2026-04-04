@@ -177,3 +177,190 @@ body {
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Stammering Section</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f7f9fb;
+}
+
+/* SECTION */
+.problem-section {
+    padding: 80px 20px;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+/* HEADING */
+.problem-section h2 {
+    font-size: 34px;
+    font-weight: 800;
+    color: #0b635b;
+    margin-bottom: 10px;
+}
+
+/* SUBTEXT */
+.subtext {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* CARD */
+.card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 25px;
+    text-align: left;
+
+    /* Premium 3D Soft */
+    box-shadow: 
+        0 10px 30px rgba(0,0,0,0.08),
+        inset 0 1px 2px rgba(255,255,255,0.6);
+
+    transition: 0.3s;
+}
+
+/* HOVER */
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* CARD TITLE */
+.card h3 {
+    color: #0b635b;
+    margin-bottom: 15px;
+}
+
+/* LIST */
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* LIST ITEMS */
+.card ul li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: #333;
+}
+
+/* PREMIUM TICK */
+.card ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: linear-gradient(145deg, #064e48, #0b635b);
+    color: #fff;
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 
+        inset 0 1px 2px rgba(255,255,255,0.4),
+        inset 0 -2px 4px rgba(0,0,0,0.3);
+}
+
+/* MOBILE */
+@media(max-width: 600px){
+    .problem-section h2 {
+        font-size: 26px;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<section class="problem-section">
+
+    <div class="container">
+
+        <!-- HEADING -->
+        <h2>🧠 हमें Stammering (हकलाहट) क्यों होती है?</h2>
+
+        <!-- SUBTEXT -->
+        <p class="subtext">
+            हकलाना जुबान की समस्या नहीं है…  
+            यह हमारे शरीर और दिमाग की अंदरूनी कमजोरी और असंतुलन की वजह से होता है।
+        </p>
+
+        <!-- GRID -->
+        <div class="grid">
+
+            <!-- CARD 1 -->
+            <div class="card">
+                <h3>🫁 फेफड़े (सांस)</h3>
+                <ul>
+                    <li>जब हम बोलते हैं, सांस नियंत्रित नहीं रहती</li>
+                    <li>सांस फूलती है, शब्द अटकते हैं</li>
+                    <li>गहरी सांस = आसान बोलना</li>
+                </ul>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="card">
+                <h3>❤️ हृदय गति (दिल)</h3>
+                <ul>
+                    <li>डर से दिल तेज धड़कता है</li>
+                    <li>बोलने की लय बिगड़ जाती है</li>
+                    <li>शब्द साफ नहीं निकलते</li>
+                </ul>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="card">
+                <h3>🗣️ गला (कंठ / नसें)</h3>
+                <ul>
+                    <li>गले की नसें कमजोर हो सकती हैं</li>
+                    <li>जकड़न से आवाज अटकती है</li>
+                    <li>वोकल कॉर्ड सही काम नहीं करते</li>
+                </ul>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="card">
+                <h3>🧠 मन (दिमाग – सबसे महत्वपूर्ण)</h3>
+                <ul>
+                    <li>यह सबसे बड़ा कारण है</li>
+                    <li>दिमाग अस्थिर होने से असर पड़ता है</li>
+                    <li>ब्लड सर्कुलेशन कम = बोलने में समस्या</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>
