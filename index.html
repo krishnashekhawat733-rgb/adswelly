@@ -356,25 +356,30 @@ body {
 </section>
 
 <!-- ===== 🧠 PROBLEM SECTION PREMIUM FINAL END ===== -->
-    <!-- ===== 💊 PRODUCT + ORDER SECTION START ===== -->
+   <!-- ===== 💊 PRODUCT SECTION START ===== -->
 
 <style>
 .product-section {
   padding: 70px 20px;
   background: #064e48;
+  text-align: center;
 }
 
-.product-container {
-  max-width: 900px;
-  margin: auto;
+/* HEADING */
+.product-heading {
+  color: #fff;
+  font-size: 34px;
+  font-weight: 900;
+  margin-bottom: 30px;
 }
 
 /* CARD */
 .product-card {
+  max-width: 420px;
+  margin: auto;
   background: #ffffff;
   border-radius: 24px;
-  padding: 30px 20px;
-  text-align: center;
+  padding: 25px;
 
   box-shadow:
     0 0 0 3px #facc15,
@@ -385,6 +390,8 @@ body {
 .product-image {
   width: 100%;
   max-width: 320px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
   margin: auto;
   display: block;
   border-radius: 20px;
@@ -392,34 +399,89 @@ body {
 
 /* TITLE */
 .product-title {
-  font-size: 32px;
+  font-size: 26px;
   font-weight: 900;
-  margin-top: 20px;
+  margin-top: 15px;
   color: #064e48;
 }
 
 /* TEXT */
 .product-text {
-  font-size: 17px;
-  line-height: 1.6;
+  font-size: 15px;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* POINTS */
+.product-points {
   margin-top: 15px;
+  text-align: left;
+}
+
+.product-points li {
+  list-style: none;
+  margin-bottom: 8px;
+  padding-left: 28px;
+  position: relative;
+  font-size: 14px;
+}
+
+.product-points li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #0b635b;
+  color: #fff;
+  width: 18px;
+  height: 18px;
+  font-size: 11px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* BUTTON */
 .order-btn {
-  margin-top: 25px;
-  padding: 15px 30px;
+  position: relative;
+  margin-top: 20px;
+  padding: 14px 30px;
   font-size: 16px;
   font-weight: 700;
   color: #fff;
   border: none;
   border-radius: 12px;
   cursor: pointer;
+  overflow: hidden;
 
   background: linear-gradient(135deg, #0b635b, #14b8a6);
 }
 
-/* ===== POPUP FORM ===== */
+/* SHINE EFFECT */
+.order-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.6),
+    transparent
+  );
+  animation: shine 2.5s infinite;
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  60% { left: 100%; }
+  100% { left: 100%; }
+}
+
+/* POPUP */
 .popup {
   display: none;
   position: fixed;
@@ -440,10 +502,6 @@ body {
   max-width: 350px;
 }
 
-.popup-content h3 {
-  margin-bottom: 15px;
-}
-
 .popup-content input {
   width: 100%;
   padding: 10px;
@@ -455,47 +513,56 @@ body {
 .submit-btn {
   width: 100%;
   padding: 12px;
-  border: none;
   border-radius: 10px;
   background: #0b635b;
   color: #fff;
-  font-weight: 600;
+  border: none;
 }
 </style>
 
 
 <section class="product-section">
 
-  <div class="product-container">
+  <!-- HEADING -->
+  <div class="product-heading">
+    🌿 उत्पाद परिचय
+  </div>
 
-    <div class="product-card">
+  <div class="product-card">
 
-      <img src="https://via.placeholder.com/300" class="product-image">
+    <!-- IMAGE -->
+    <img src="https://via.placeholder.com/1080" class="product-image">
 
-      <div class="product-title">
-        आयुर्वाणी आयुर्वेदिक कैप्सूल
-      </div>
-
-      <div class="product-text">
-        हकलाने की समस्या को जड़ से सुधारने में मदद करता है।
-      </div>
-
-      <!-- ORDER BUTTON -->
-      <button class="order-btn" onclick="openForm()">
-        👉 अभी ऑर्डर करें
-      </button>
-
+    <!-- TITLE -->
+    <div class="product-title">
+      आयुर्वाणी आयुर्वेदिक कैप्सूल
     </div>
+
+    <!-- TEXT -->
+    <div class="product-text">
+      यह एक आयुर्वेदिक सपोर्ट फॉर्मूला है जो हकलाने और बोलने की समस्या पर अंदर से काम करता है।
+    </div>
+
+    <!-- POINTS -->
+    <ul class="product-points">
+      <li>100% आयुर्वेदिक और सुरक्षित</li>
+      <li>धीरे-धीरे सुधार में मदद</li>
+      <li>आत्मविश्वास बढ़ाने में सहायक</li>
+    </ul>
+
+    <!-- BUTTON -->
+    <button class="order-btn" onclick="openForm()">
+      👉 अभी ऑर्डर करें
+    </button>
 
   </div>
 
 </section>
 
 
-<!-- ===== POPUP FORM ===== -->
+<!-- POPUP FORM -->
 <div class="popup" id="popup">
   <div class="popup-content">
-    <h3>Order Details</h3>
 
     <input type="text" id="name" placeholder="Name">
     <input type="text" id="phone" placeholder="Mobile Number">
@@ -505,6 +572,7 @@ body {
     <button class="submit-btn" onclick="sendWhatsApp()">
       Submit
     </button>
+
   </div>
 </div>
 
@@ -532,6 +600,6 @@ function sendWhatsApp(){
 }
 </script>
 
-<!-- ===== 💊 PRODUCT + ORDER SECTION END ===== -->
+<!-- ===== 💊 PRODUCT SECTION END ===== -->
 </body>
 </html>
