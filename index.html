@@ -623,7 +623,7 @@ function sendWhatsApp(){
 </script>
 
 <!-- ===== 💊 PRODUCT SECTION END ===== -->
-   <!-- ===== 🎥 REELS VIDEO SECTION START ===== -->
+  <!-- ===== 🎥 REELS VIDEO SECTION START ===== -->
 
 <style>
 .video-section {
@@ -655,7 +655,16 @@ function sendWhatsApp(){
   display: flex;
   gap: 16px;
   overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
   padding-bottom: 10px;
+
+  /* ❌ SCROLLBAR REMOVE */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.video-scroll::-webkit-scrollbar {
+  display: none;
 }
 
 /* CARD */
@@ -665,6 +674,8 @@ function sendWhatsApp(){
   overflow: hidden;
   background: #fff;
 
+  scroll-snap-align: center;
+
   box-shadow:
     0 10px 25px rgba(0,0,0,0.1),
     0 4px 10px rgba(11,99,91,0.15);
@@ -672,14 +683,15 @@ function sendWhatsApp(){
   transition: 0.3s;
 }
 
+/* 🎯 HOVER SCALE (bounce feel) */
 .video-card:hover {
-  transform: translateY(-5px);
+  transform: scale(1.05) translateY(-6px);
 }
 
-/* 🎯 REEL SIZE VIDEO */
+/* 🎯 REEL SIZE */
 .video-card iframe {
   width: 100%;
-  aspect-ratio: 9/16; /* IMPORTANT */
+  aspect-ratio: 9/16;
   border: none;
 }
 
@@ -689,6 +701,11 @@ function sendWhatsApp(){
   font-size: 13px;
   font-weight: 600;
   color: #064e48;
+}
+
+/* 📱 MOBILE SWIPE FEEL */
+.video-scroll {
+  scroll-snap-stop: always;
 }
 </style>
 
@@ -705,25 +722,21 @@ function sendWhatsApp(){
 
   <div class="video-scroll">
 
-    <!-- VIDEO 1 -->
     <div class="video-card">
       <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID1"></iframe>
       <div class="video-title">30 दिन में फर्क देखें</div>
     </div>
 
-    <!-- VIDEO 2 -->
     <div class="video-card">
       <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID2"></iframe>
       <div class="video-title">रियल कस्टमर अनुभव</div>
     </div>
 
-    <!-- VIDEO 3 -->
     <div class="video-card">
       <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID3"></iframe>
       <div class="video-title">पहले और बाद का फर्क</div>
     </div>
 
-    <!-- VIDEO 4 -->
     <div class="video-card">
       <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID4"></iframe>
       <div class="video-title">कॉन्फिडेंस में सुधार</div>
