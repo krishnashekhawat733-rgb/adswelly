@@ -623,5 +623,134 @@ function sendWhatsApp(){
 </script>
 
 <!-- ===== 💊 PRODUCT SECTION END ===== -->
+    <!-- ===== 🎥 VIDEO SECTION START ===== -->
+
+<style>
+.video-section {
+  padding: 70px 20px;
+  background: #ffffff;
+}
+
+/* HEADING */
+.video-heading {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 10px;
+
+  background: linear-gradient(90deg, #064e48, #14b8a6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.video-sub {
+  text-align: center;
+  color: #64748b;
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+/* SCROLL */
+.video-scroll {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.video-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.video-scroll::-webkit-scrollbar-thumb {
+  background: #0b635b;
+  border-radius: 10px;
+}
+
+/* CARD */
+.video-card {
+  min-width: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #ffffff;
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.1),
+    0 4px 10px rgba(11,99,91,0.15);
+
+  scroll-snap-align: start;
+  transition: 0.3s;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+}
+
+/* VIDEO */
+.video-card iframe {
+  width: 100%;
+  height: 190px;
+  border: none;
+}
+
+/* TITLE */
+.video-title {
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #064e48;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .video-card {
+    min-width: 260px;
+  }
+}
+</style>
+
+
+<section class="video-section">
+
+  <div class="video-heading">
+    🎥 असली लोगों के रिज़ल्ट और अनुभव
+  </div>
+
+  <div class="video-sub">
+    देखें कैसे लोगों ने हकलाने पर काबू पाया
+  </div>
+
+  <div class="video-scroll">
+
+    <!-- VIDEO 1 -->
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID1"></iframe>
+      <div class="video-title">30 दिन में फर्क देखें</div>
+    </div>
+
+    <!-- VIDEO 2 -->
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID2"></iframe>
+      <div class="video-title">रियल कस्टमर अनुभव</div>
+    </div>
+
+    <!-- VIDEO 3 -->
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID3"></iframe>
+      <div class="video-title">पहले और बाद का फर्क</div>
+    </div>
+
+    <!-- VIDEO 4 -->
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID4"></iframe>
+      <div class="video-title">कॉन्फिडेंस में सुधार</div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ===== 🎥 VIDEO SECTION END ===== -->
 </body>
 </html>
