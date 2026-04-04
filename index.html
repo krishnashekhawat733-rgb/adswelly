@@ -19,22 +19,22 @@ body {
     padding: 90px 20px;
 }
 
-/* BADGE (Glossy Flat) */
+/* BADGE (DARK PREMIUM GREEN) */
 .badge {
     position: relative;
     display: inline-block;
-    background: linear-gradient(135deg, #0b635b, #14b8a6);
+    background: linear-gradient(145deg, #064e48, #0b635b);
     color: #fff;
     font-weight: 700;
-    padding: 10px 24px;
+    padding: 10px 26px;
     border-radius: 30px;
     font-size: 14px;
     margin-bottom: 25px;
     overflow: hidden;
 
     box-shadow: 
-        inset 0 1px 2px rgba(255,255,255,0.4),
-        inset 0 -2px 4px rgba(0,0,0,0.15);
+        inset 0 2px 4px rgba(255,255,255,0.25),
+        inset 0 -4px 8px rgba(0,0,0,0.4);
 }
 
 /* HEADING */
@@ -78,28 +78,26 @@ body {
     margin: 0 10px;
 }
 
-/* CTA BUTTON (Glossy Flat) */
+/* CTA BUTTON (DARK PREMIUM SAME AS IMAGE) */
 .cta-btn {
     position: relative;
     margin-top: 40px;
     display: inline-block;
-    background: linear-gradient(135deg, #0b635b, #14b8a6);
+    background: linear-gradient(145deg, #064e48, #0b635b);
     color: white;
     font-weight: 700;
-    padding: 16px 34px;
-    border-radius: 10px;
+    padding: 16px 36px;
+    border-radius: 12px;
     font-size: 18px;
     text-decoration: none;
     overflow: hidden;
 
     box-shadow: 
-        inset 0 1px 2px rgba(255,255,255,0.4),
-        inset 0 -3px 6px rgba(0,0,0,0.15);
-
-    transition: 0.3s;
+        inset 0 2px 4px rgba(255,255,255,0.25),
+        inset 0 -5px 10px rgba(0,0,0,0.5);
 }
 
-/* SHINE EFFECT (Badge + Button) */
+/* SHINE EFFECT */
 .badge::before,
 .cta-btn::before {
     content: "";
@@ -111,7 +109,7 @@ body {
     background: linear-gradient(
         120deg,
         rgba(255,255,255,0) 0%,
-        rgba(255,255,255,0.6) 50%,
+        rgba(255,255,255,0.5) 50%,
         rgba(255,255,255,0) 100%
     );
     transform: skewX(-25deg);
@@ -128,9 +126,6 @@ body {
 /* HOVER */
 .cta-btn:hover {
     transform: translateY(-1px);
-    box-shadow: 
-        inset 0 1px 3px rgba(255,255,255,0.5),
-        inset 0 -4px 8px rgba(0,0,0,0.2);
 }
 
 /* MOBILE */
