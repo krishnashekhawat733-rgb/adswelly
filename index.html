@@ -171,7 +171,7 @@ body {
 
 </section>
 <!-- 🔥 HERO SECTION END -->
-  <!-- ===== 🧠 PROBLEM SECTION WITH TOP IMAGE START ===== -->
+ <!-- ===== 🧠 PROBLEM SECTION WITH IMAGE FINAL START ===== -->
 
 <style>
 .problem-section {
@@ -225,12 +225,14 @@ body {
   transform: translateY(-8px);
 }
 
-/* 🔥 IMAGE */
+/* 🔥 IMAGE FIXED */
 .card-img {
   width: 100%;
   height: 180px;
   border-radius: 16px;
-  object-fit: cover;
+  object-fit: contain; /* NO CROP */
+  background: linear-gradient(145deg, #eef7f5, #f8fffd);
+  padding: 12px;
   margin-bottom: 16px;
 }
 
@@ -295,7 +297,7 @@ body {
 
     <!-- CARD 1 -->
     <div class="problem-card">
-      <img src="https://res.cloudinary.com/dpqc0j5hg/image/upload/v1775306763/ChatGPT_Image_Apr_4_2026_06_10_57_PM_tkezhh.png" class="card-img">
+      <img src="YOUR_IMAGE_URL" class="card-img">
       <h3>फेफड़े (सांस)</h3>
       <ul>
         <li>सांस नियंत्रित नहीं रहती</li>
@@ -341,6 +343,6 @@ body {
 
 </section>
 
-<!-- ===== 🧠 PROBLEM SECTION WITH TOP IMAGE END ===== -->
+<!-- ===== 🧠 PROBLEM SECTION WITH IMAGE FINAL END ===== -->
 </body>
 </html>
