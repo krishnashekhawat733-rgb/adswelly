@@ -13,70 +13,63 @@ body {
     background: #ffffff;
 }
 
-/* Header Section */
-.header {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Section */
+.hero {
     text-align: center;
-    padding: 20px;
-    background: linear-gradient(135deg, #ffffff, #f5fdfc);
+    padding: 80px 20px;
 }
 
-/* Glass Effect Box */
-.header-box {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(20px);
-    border-radius: 20px;
-    padding: 40px 25px;
-    box-shadow: 
-        0 10px 30px rgba(0,0,0,0.08),
-        inset 0 1px 1px rgba(255,255,255,0.6);
-    max-width: 900px;
+/* Top Badge */
+.badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #0b635b, #0f8f84);
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 30px;
+    font-size: 14px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 20px rgba(11,99,91,0.25);
 }
 
 /* Main Heading */
-.header h1 {
-    font-size: 38px;
+.hero h1 {
+    font-size: 44px;
+    font-weight: 800;
     line-height: 1.4;
     color: #0b635b;
-    font-weight: 800;
-    margin-bottom: 15px;
+    max-width: 900px;
+    margin: auto;
 }
 
-/* Highlight Text */
-.highlight {
-    color: #000;
-    background: linear-gradient(120deg, #0b635b20, #0b635b40);
-    padding: 5px 10px;
-    border-radius: 8px;
-}
-
-/* Sub Text */
-.header p {
-    font-size: 18px;
+/* Sub points */
+.points {
+    margin-top: 20px;
     color: #444;
-    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.points span {
+    margin: 0 10px;
 }
 
 /* CTA Button */
-.btn {
-    background: #0b635b;
-    color: #fff;
-    padding: 14px 28px;
-    border-radius: 50px;
-    text-decoration: none;
+.cta-btn {
+    margin-top: 35px;
+    display: inline-block;
+    background: linear-gradient(135deg, #0b635b, #0f8f84);
+    color: white;
+    padding: 16px 32px;
+    border-radius: 10px;
     font-size: 18px;
     font-weight: 600;
-    display: inline-block;
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(11,99,91,0.3);
     transition: 0.3s;
-    box-shadow: 0 8px 20px rgba(11, 99, 91, 0.3);
 }
 
-.btn:hover {
+.cta-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 25px rgba(11, 99, 91, 0.4);
+    box-shadow: 0 15px 30px rgba(11,99,91,0.4);
 }
 </style>
 
@@ -84,21 +77,36 @@ body {
 
 <body>
 
-<section class="header">
-    <div class="header-box">
+<section class="hero">
 
-        <h1>
-            <span class="highlight">हकलाने / तुतलाने</span> की समस्या से परेशान हैं,<br>
-            तो अब इंतजार न करें — <br>आज ही शुरुआत करें।
-        </h1>
-
-        <p>
-            अब बिना झिझक, बिना डर — खुलकर बोलें 💬
-        </p>
-
-        <a href="#" class="btn">WhatsApp पर जानकारी लें</a>
-
+    <!-- Badge -->
+    <div class="badge">
+        ⭐ 100+ लोगों ने भरोसा किया | बेहतर बोलने का अनुभव
     </div>
+
+    <!-- Heading -->
+    <h1>
+        हकलाने / तुतलाने की समस्या से परेशान हैं,<br>
+        तो अब इंतजार न करें —<br>
+        आज ही शुरुआत करें।
+    </h1>
+
+    <!-- Points -->
+    <div class="points">
+        ✔ बोलने से पहले घबराहट कम करे 
+        <span>|</span>
+        ✔ सांस और शब्दों का बेहतर तालमेल 
+        <span>|</span>
+        ✔ आत्मविश्वास बढ़ाए 
+        <span>|</span>
+        ✔ 100% आयुर्वेदिक समाधान
+    </div>
+
+    <!-- CTA -->
+    <a href="#" class="cta-btn">
+        📲 WhatsApp पर पूरी जानकारी लें
+    </a>
+
 </section>
 
 </body>
