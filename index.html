@@ -203,83 +203,183 @@ body {
 
 <body>
 
-<!-- 🔥 HERO SECTION -->
-<section class="hero">
+<!-- ===== 🧠 PROBLEM SECTION (PREMIUM STYLE) ===== -->
+<style>
 
-    <span class="badge">
-        ⭐ 100+ लोगों ने भरोसा किया | बेहतर बोलने का अनुभव
-    </span>
+/* ===== SECTION ===== */
+.problem-section {
+  padding: 70px 20px;
+  background: #f6fbfa;
+}
 
-    <h1>
-        हकलाने / तुतलाने की समस्या से परेशान हैं,<br>
-        तो अब इंतजार न करें —<br>
-        आज ही शुरुआत करें।
-    </h1>
+/* GRID */
+.problem-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 26px;
+}
 
-    <p>
-        ✔ बोलने से पहले घबराहट कम करे | ✔ आत्मविश्वास बढ़ाए | ✔ 100% आयुर्वेदिक समाधान
-    </p>
+/* ===== PREMIUM CARD ===== */
+.problem-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 
-    <a href="https://wa.me/918239828901" class="cta-btn">
-        📲 WhatsApp पर पूरी जानकारी लें
-    </a>
+  border-radius: 22px;
+  padding: 26px;
 
-</section>
+  box-shadow:
+    0 0 0 1px rgba(11, 99, 91, 0.08),
+    0 22px 46px rgba(0, 0, 0, 0.12),
+    0 10px 26px rgba(11, 99, 91, 0.18);
 
-<!-- 🧠 PROBLEM SECTION -->
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.problem-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 0 1px rgba(11, 99, 91, 0.15),
+    0 30px 60px rgba(0, 0, 0, 0.18),
+    0 16px 36px rgba(11, 99, 91, 0.25);
+}
+
+/* ===== HEADING ===== */
+.problem-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.problem-heading h2 {
+  font-size: 40px;
+  font-weight: 900;
+
+  background: linear-gradient(90deg, #064e48, #0b635b, #14b8a6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.problem-heading p {
+  margin-top: 10px;
+  color: #64748b;
+  font-size: 16px;
+}
+
+/* ===== CARD TITLE ===== */
+.problem-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+
+  background: linear-gradient(90deg, #064e48, #0b635b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== LIST ===== */
+.problem-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.problem-card ul li {
+  position: relative;
+  padding-left: 36px;
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #0f172a;
+  line-height: 1.6;
+}
+
+/* ===== PREMIUM TICK ===== */
+.problem-card ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 2px;
+
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #064e48, #0b635b);
+  box-shadow: 0 6px 14px rgba(11, 99, 91, 0.45);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .problem-heading h2 {
+    font-size: 28px;
+  }
+}
+
+</style>
+
+
 <section class="problem-section">
 
-    <div class="container">
+  <!-- HEADING -->
+  <div class="problem-heading">
+    <h2>🧠 हमें Stammering (हकलाहट) क्यों होती है?</h2>
+    <p>
+      हकलाना जुबान की समस्या नहीं है… यह शरीर और दिमाग के असंतुलन की वजह से होता है।
+    </p>
+  </div>
 
-        <h2>🧠 हमें Stammering (हकलाहट) क्यों होती है?</h2>
+  <!-- GRID -->
+  <div class="problem-grid">
 
-        <p class="subtext">
-            हकलाना जुबान की समस्या नहीं है… यह शरीर और दिमाग के असंतुलन की वजह से होता है।
-        </p>
-
-        <div class="grid">
-
-            <div class="card">
-                <h3>🫁 फेफड़े</h3>
-                <ul>
-                    <li>सांस नियंत्रित नहीं रहती</li>
-                    <li>सांस फूलती है</li>
-                    <li>शब्द अटकते हैं</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <h3>❤️ हृदय</h3>
-                <ul>
-                    <li>दिल तेजी से धड़कता है</li>
-                    <li>डर बढ़ता है</li>
-                    <li>बोलना बिगड़ता है</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <h3>🗣️ गला</h3>
-                <ul>
-                    <li>नसें कमजोर होती हैं</li>
-                    <li>आवाज अटकती है</li>
-                    <li>कंट्रोल कम होता है</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <h3>🧠 दिमाग</h3>
-                <ul>
-                    <li>सबसे बड़ा कारण</li>
-                    <li>अस्थिरता का असर</li>
-                    <li>ब्लड सर्कुलेशन कम</li>
-                </ul>
-            </div>
-
-        </div>
-
+    <!-- CARD 1 -->
+    <div class="problem-card">
+      <h3>🫁 फेफड़े (सांस)</h3>
+      <ul>
+        <li>सांस नियंत्रित नहीं रहती</li>
+        <li>सांस फूलती है</li>
+        <li>शब्द अटकते हैं</li>
+      </ul>
     </div>
 
-</section>
+    <!-- CARD 2 -->
+    <div class="problem-card">
+      <h3>❤️ हृदय गति (दिल)</h3>
+      <ul>
+        <li>दिल तेजी से धड़कता है</li>
+        <li>डर बढ़ता है</li>
+        <li>बोलने की लय बिगड़ती है</li>
+      </ul>
+    </div>
 
-</body>
-</html>
+    <!-- CARD 3 -->
+    <div class="problem-card">
+      <h3>🗣️ गला (कंठ / नसें)</h3>
+      <ul>
+        <li>नसें कमजोर होती हैं</li>
+        <li>आवाज अटकती है</li>
+        <li>वोकल कंट्रोल कम होता है</li>
+      </ul>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="problem-card">
+      <h3>🧠 दिमाग (सबसे महत्वपूर्ण)</h3>
+      <ul>
+        <li>यह सबसे बड़ा कारण है</li>
+        <li>दिमाग अस्थिर हो जाता है</li>
+        <li>ब्लड सर्कुलेशन कम हो जाता है</li>
+      </ul>
+    </div>
+
+  </div>
+
+</section>
