@@ -171,7 +171,7 @@ body {
 
 </section>
 <!-- 🔥 HERO SECTION END -->
-   <!-- ===== 🧠 PROBLEM SECTION START ===== -->
+   <!-- ===== 🧠 PROBLEM SECTION WITH ICONS START ===== -->
 
 <style>
 .problem-section {
@@ -221,20 +221,28 @@ body {
   transition: all 0.3s ease;
 }
 
-/* 🔥 HOVER ANIMATION */
 .problem-card:hover {
   transform: translateY(-8px);
-  box-shadow:
-    0 0 0 1px rgba(11, 99, 91, 0.15),
-    0 30px 60px rgba(0, 0, 0, 0.18),
-    0 16px 36px rgba(11, 99, 91, 0.25);
+}
+
+/* HEADER WITH ICON */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.card-header img {
+  width: 26px;
+  height: 26px;
 }
 
 /* TITLE */
 .problem-card h3 {
   font-size: 20px;
-  margin-bottom: 16px;
-  color: #064e48; /* 👈 emoji color fix */
+  margin: 0;
+  color: #064e48;
 }
 
 /* LIST */
@@ -270,7 +278,6 @@ body {
   box-shadow: 0 6px 14px rgba(11, 99, 91, 0.45);
 }
 
-/* MOBILE */
 @media(max-width:768px){
   .problem-heading h2{
     font-size: 28px;
@@ -290,8 +297,12 @@ body {
 
   <div class="problem-grid">
 
+    <!-- CARD 1 -->
     <div class="problem-card">
-      <h3>🫁 फेफड़े (सांस)</h3>
+      <div class="card-header">
+        <img src="https://cdn-icons-png.flaticon.com/512/3063/3063821.png">
+        <h3>फेफड़े (सांस)</h3>
+      </div>
       <ul>
         <li>सांस नियंत्रित नहीं रहती</li>
         <li>सांस फूलती है</li>
@@ -299,8 +310,12 @@ body {
       </ul>
     </div>
 
+    <!-- CARD 2 -->
     <div class="problem-card">
-      <h3>❤️ हृदय</h3>
+      <div class="card-header">
+        <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png">
+        <h3>हृदय</h3>
+      </div>
       <ul>
         <li>दिल तेजी से धड़कता है</li>
         <li>डर बढ़ता है</li>
@@ -308,8 +323,12 @@ body {
       </ul>
     </div>
 
+    <!-- CARD 3 -->
     <div class="problem-card">
-      <h3>🗣️ गला</h3>
+      <div class="card-header">
+        <img src="https://cdn-icons-png.flaticon.com/512/2921/2921822.png">
+        <h3>गला</h3>
+      </div>
       <ul>
         <li>नसें कमजोर होती हैं</li>
         <li>आवाज अटकती है</li>
@@ -317,8 +336,12 @@ body {
       </ul>
     </div>
 
+    <!-- CARD 4 -->
     <div class="problem-card">
-      <h3>🧠 दिमाग</h3>
+      <div class="card-header">
+        <img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png">
+        <h3>दिमाग</h3>
+      </div>
       <ul>
         <li>सबसे बड़ा कारण</li>
         <li>अस्थिरता का असर</li>
@@ -330,7 +353,6 @@ body {
 
 </section>
 
-<!-- ===== 🧠 PROBLEM SECTION END ===== -->
-
+<!-- ===== 🧠 PROBLEM SECTION WITH ICONS END ===== -->
 </body>
 </html>
