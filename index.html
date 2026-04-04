@@ -7,6 +7,8 @@
 <title>Vaanishuddha</title>
 
 <style>
+
+/* ===== GLOBAL ===== */
 body {
     margin: 0;
     font-family: "Segoe UI", Arial, sans-serif;
@@ -14,15 +16,17 @@ body {
     color: #1f2937;
 }
 
-/* HERO */
+/* ===================== */
+/* 🔥 HERO SECTION */
+/* ===================== */
+
 .hero {
-    padding: 90px 20px 60px;
+    padding: 90px 20px 50px;
     text-align: center;
     max-width: 1100px;
     margin: auto;
 }
 
-/* BADGE */
 .badge {
     position: relative;
     display: inline-flex;
@@ -34,67 +38,11 @@ body {
     font-weight: 600;
     color: #ffffff;
     overflow: hidden;
-
     background: linear-gradient(135deg, #064e48, #0b635b);
     box-shadow: 0 8px 20px rgba(6, 78, 72, 0.35);
 }
 
-/* BADGE SHINE */
-.badge::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        120deg,
-        transparent,
-        rgba(255, 255, 255, 0.6),
-        transparent
-    );
-    animation: shine 2.5s infinite;
-}
-
-/* HEADING */
-.hero h1 {
-    margin-top: 26px;
-    font-size: 52px;
-    font-weight: 900;
-    line-height: 1.2;
-
-    background: linear-gradient(90deg, #064e48, #14b8a6, #064e48);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-/* SUB TEXT */
-.hero p {
-    margin-top: 18px;
-    font-size: 18px;
-    color: #475569;
-}
-
-/* BUTTON */
-.cta-btn {
-    position: relative;
-    display: inline-block;
-    margin-top: 36px;
-    padding: 16px 42px;
-    font-size: 17px;
-    font-weight: 700;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 12px;
-    overflow: hidden;
-
-    background: linear-gradient(135deg, #064e48, #0b635b);
-    box-shadow: 0 12px 30px rgba(6, 78, 72, 0.45);
-
-    transition: 0.3s;
-}
-
-/* BUTTON SHINE */
+.badge::before,
 .cta-btn::before {
     content: "";
     position: absolute;
@@ -111,73 +59,55 @@ body {
     animation: shine 2.5s infinite;
 }
 
-/* ANIMATION */
+.hero h1 {
+    margin-top: 26px;
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1.2;
+    background: linear-gradient(90deg, #064e48, #14b8a6, #064e48);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    margin-top: 18px;
+    font-size: 18px;
+    color: #475569;
+}
+
+.cta-btn {
+    position: relative;
+    display: inline-block;
+    margin-top: 36px;
+    padding: 16px 42px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 12px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #064e48, #0b635b);
+    box-shadow: 0 12px 30px rgba(6, 78, 72, 0.45);
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 40px rgba(6, 78, 72, 0.55);
+}
+
 @keyframes shine {
     0% { left: -100%; }
     60% { left: 100%; }
     100% { left: 100%; }
 }
 
-/* HOVER */
-.cta-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 18px 40px rgba(6, 78, 72, 0.55);
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-    .hero {
-        padding: 70px 16px 50px;
-    }
-
-    .hero h1 {
-        font-size: 32px;
-    }
-
-    .hero p {
-        font-size: 15px;
-    }
-}
-</style>
-
-</head>
-
-<body>
-
-<!-- 🔥 HERO SECTION START -->
-<section class="hero">
-
-    <!-- BADGE -->
-    <span class="badge">
-        ⭐ 100+ लोगों ने भरोसा किया | बेहतर बोलने का अनुभव
-    </span>
-
-    <!-- HEADING -->
-    <h1>
-        हकलाने / तुतलाने की समस्या से परेशान हैं,<br>
-        तो अब इंतजार न करें —<br>
-        आज ही शुरुआत करें।
-    </h1>
-
-    <!-- SUBTEXT -->
-    <p>
-        ✔ बोलने से पहले घबराहट कम करे | ✔ आत्मविश्वास बढ़ाए | ✔ 100% आयुर्वेदिक समाधान
-    </p>
-
-    <!-- BUTTON -->
-    <a href="https://wa.me/918239828901" class="cta-btn">
-        📲 WhatsApp पर पूरी जानकारी लें
-    </a>
-
-</section>
-<!-- 🔥 HERO SECTION END -->
-
 /* ============================ */
 /* 🧠 PROBLEM SECTION */
 /* ============================ */
 
 .problem-section {
-    padding: 30px 20px 70px;
+    padding: 40px 20px 70px;
     background: #f7f9fb;
 }
 
@@ -191,7 +121,6 @@ body {
     font-size: 40px;
     font-weight: 900;
     margin-bottom: 10px;
-
     background: linear-gradient(135deg, #064e48, #0b635b, #14b8a6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -247,8 +176,8 @@ body {
 }
 
 /* MOBILE */
-@media(max-width: 600px){
-    .hero h1 { font-size: 30px; }
+@media (max-width: 768px) {
+    .hero h1 { font-size: 32px; }
     .problem-section h2 { font-size: 26px; }
 }
 
@@ -260,9 +189,9 @@ body {
 <!-- 🔥 HERO SECTION -->
 <section class="hero">
 
-    <div class="badge">
+    <span class="badge">
         ⭐ 100+ लोगों ने भरोसा किया | बेहतर बोलने का अनुभव
-    </div>
+    </span>
 
     <h1>
         हकलाने / तुतलाने की समस्या से परेशान हैं,<br>
@@ -270,12 +199,12 @@ body {
         आज ही शुरुआत करें।
     </h1>
 
-    <div class="points">
-        ✔ बोलने से पहले घबराहट कम करे | ✔ आत्मविश्वास बढ़ाए | ✔ 100% आयुर्वेदिक
-    </div>
+    <p>
+        ✔ बोलने से पहले घबराहट कम करे | ✔ आत्मविश्वास बढ़ाए | ✔ 100% आयुर्वेदिक समाधान
+    </p>
 
-    <a href="https://wa.me/919251237984" class="cta-btn">
-        📲 WhatsApp पर जानकारी लें
+    <a href="https://wa.me/918239828901" class="cta-btn">
+        📲 WhatsApp पर पूरी जानकारी लें
     </a>
 
 </section>
@@ -334,3 +263,6 @@ body {
     </div>
 
 </section>
+
+</body>
+</html>
