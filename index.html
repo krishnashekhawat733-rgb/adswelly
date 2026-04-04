@@ -13,27 +13,27 @@ body {
     background: #ffffff;
 }
 
-/* Section */
+/* HERO SECTION */
 .hero {
     text-align: center;
-    padding: 80px 20px;
+    padding: 90px 20px;
 }
 
-/* Top Badge */
+/* BADGE */
 .badge {
     display: inline-block;
     background: linear-gradient(135deg, #0b635b, #0f8f84);
     color: #fff;
-    padding: 10px 22px;
+    padding: 10px 24px;
     border-radius: 30px;
     font-size: 14px;
     margin-bottom: 25px;
     box-shadow: 0 8px 20px rgba(11,99,91,0.25);
 }
 
-/* Main Heading */
+/* HEADING */
 .hero h1 {
-    font-size: 44px;
+    font-size: 46px;
     font-weight: 800;
     line-height: 1.4;
     color: #0b635b;
@@ -41,35 +41,83 @@ body {
     margin: auto;
 }
 
-/* Sub points */
+/* SUB POINTS */
 .points {
-    margin-top: 20px;
+    margin-top: 25px;
     color: #444;
     font-size: 16px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .points span {
     margin: 0 10px;
 }
 
-/* CTA Button */
+/* CTA BUTTON */
 .cta-btn {
-    margin-top: 35px;
+    position: relative;
+    margin-top: 40px;
     display: inline-block;
     background: linear-gradient(135deg, #0b635b, #0f8f84);
     color: white;
-    padding: 16px 32px;
-    border-radius: 10px;
+    padding: 16px 34px;
+    border-radius: 12px;
     font-size: 18px;
     font-weight: 600;
     text-decoration: none;
-    box-shadow: 0 10px 25px rgba(11,99,91,0.3);
+    overflow: hidden;
+
+    box-shadow: 
+        0 10px 25px rgba(11,99,91,0.3),
+        inset 0 2px 5px rgba(255,255,255,0.3),
+        inset 0 -3px 8px rgba(0,0,0,0.2);
+
     transition: 0.3s;
 }
 
+/* SHINE EFFECT */
+.cta-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        rgba(255,255,255,0) 0%,
+        rgba(255,255,255,0.6) 50%,
+        rgba(255,255,255,0) 100%
+    );
+    transform: skewX(-25deg);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% { left: -100%; }
+    50% { left: 120%; }
+    100% { left: 120%; }
+}
+
+/* HOVER */
 .cta-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 15px 30px rgba(11,99,91,0.4);
+    transform: translateY(-3px);
+    box-shadow: 
+        0 15px 35px rgba(11,99,91,0.4),
+        inset 0 2px 5px rgba(255,255,255,0.4),
+        inset 0 -3px 10px rgba(0,0,0,0.25);
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width: 600px){
+    .hero h1 {
+        font-size: 32px;
+    }
+    .points {
+        font-size: 14px;
+    }
 }
 </style>
 
@@ -79,19 +127,19 @@ body {
 
 <section class="hero">
 
-    <!-- Badge -->
+    <!-- TOP BADGE -->
     <div class="badge">
         ⭐ 100+ लोगों ने भरोसा किया | बेहतर बोलने का अनुभव
     </div>
 
-    <!-- Heading -->
+    <!-- MAIN HEADING -->
     <h1>
         हकलाने / तुतलाने की समस्या से परेशान हैं,<br>
         तो अब इंतजार न करें —<br>
         आज ही शुरुआत करें।
     </h1>
 
-    <!-- Points -->
+    <!-- POINTS -->
     <div class="points">
         ✔ बोलने से पहले घबराहट कम करे 
         <span>|</span>
@@ -102,8 +150,8 @@ body {
         ✔ 100% आयुर्वेदिक समाधान
     </div>
 
-    <!-- CTA -->
-    <a href="#" class="cta-btn">
+    <!-- CTA BUTTON -->
+    <a href="https://wa.me/919251237984" class="cta-btn">
         📲 WhatsApp पर पूरी जानकारी लें
     </a>
 
