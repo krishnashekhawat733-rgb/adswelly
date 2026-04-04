@@ -1,179 +1,126 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Vaanishuddha</title>
+<title>Vaani Shuddha</title>
 
 <style>
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #ffffff;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7f6;
 }
 
-/* HERO */
+/* HERO SECTION */
 .hero {
-    text-align: center;
-    padding: 90px 20px;
+  text-align: center;
+  padding: 80px 20px;
 }
 
-/* BADGE (DARK PREMIUM GREEN) */
+/* TOP BADGE */
 .badge {
-    position: relative;
-    display: inline-block;
-    background: linear-gradient(145deg, #064e48, #0b635b);
-    color: #fff;
-    font-weight: 700;
-    padding: 10px 26px;
-    border-radius: 30px;
-    font-size: 14px;
-    margin-bottom: 25px;
-    overflow: hidden;
-
-    box-shadow: 
-        inset 0 2px 4px rgba(255,255,255,0.25),
-        inset 0 -4px 8px rgba(0,0,0,0.4);
+  display: inline-block;
+  background: linear-gradient(145deg, #0f766e, #065f46);
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* HEADING */
+/* MAIN HEADING (SHINE EFFECT) */
 .hero h1 {
-    font-size: 48px;
-    font-weight: 900;
-    line-height: 1.4;
-    max-width: 900px;
-    margin: auto;
-
-    background: linear-gradient(135deg, #0b635b, #0f8f84, #053f3a);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    text-shadow: 0 2px 10px rgba(11, 99, 91, 0.15);
+  font-size: 42px;
+  margin: 20px 0;
+  font-weight: bold;
+  background: linear-gradient(90deg, #0f766e, #14b8a6, #0f766e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* HIGHLIGHTS */
-.highlight {
-    background: linear-gradient(135deg, #0b635b, #0f8f84);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.highlight2 {
-    color: #000;
-    font-weight: 900;
+/* SUB TEXT */
+.subtext {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 30px;
 }
 
 /* POINTS */
 .points {
-    margin-top: 25px;
-    color: #444;
-    font-size: 16px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+  margin: 20px 0;
+  font-size: 16px;
+  color: #444;
 }
 
 .points span {
-    margin: 0 10px;
+  margin: 0 10px;
 }
 
-/* CTA BUTTON (DARK PREMIUM SAME AS IMAGE) */
+/* 3D BUTTON */
 .cta-btn {
-    position: relative;
-    margin-top: 40px;
-    display: inline-block;
-    background: linear-gradient(145deg, #064e48, #0b635b);
-    color: white;
-    font-weight: 700;
-    padding: 16px 36px;
-    border-radius: 12px;
-    font-size: 18px;
-    text-decoration: none;
-    overflow: hidden;
+  display: inline-block;
+  background: linear-gradient(145deg, #0f766e, #065f46);
+  color: #fff;
+  padding: 16px 32px;
+  border-radius: 14px;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  
+  box-shadow: 
+    0 5px 0 #064e3b,
+    0 10px 25px rgba(0,0,0,0.3),
+    0 0 15px rgba(16,185,129,0.4);
 
-    box-shadow: 
-        inset 0 2px 4px rgba(255,255,255,0.25),
-        inset 0 -5px 10px rgba(0,0,0,0.5);
+  transition: all 0.2s ease;
 }
 
-/* SHINE EFFECT */
-.badge::before,
-.cta-btn::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(
-        120deg,
-        rgba(255,255,255,0) 0%,
-        rgba(255,255,255,0.5) 50%,
-        rgba(255,255,255,0) 100%
-    );
-    transform: skewX(-25deg);
-    animation: shine 3s infinite;
-}
-
-/* ANIMATION */
-@keyframes shine {
-    0% { left: -100%; }
-    50% { left: 120%; }
-    100% { left: 120%; }
-}
-
-/* HOVER */
+/* HOVER EFFECT */
 .cta-btn:hover {
-    transform: translateY(-1px);
+  transform: scale(1.05);
 }
 
-/* MOBILE */
-@media(max-width: 600px){
-    .hero h1 {
-        font-size: 32px;
-    }
-    .points {
-        font-size: 14px;
-    }
+/* CLICK EFFECT (REAL 3D) */
+.cta-btn:active {
+  transform: translateY(4px);
+  box-shadow: 
+    0 2px 0 #064e3b,
+    0 5px 15px rgba(0,0,0,0.25);
 }
 </style>
 
 </head>
-
 <body>
 
-<section class="hero">
+<div class="hero">
 
-    <!-- BADGE -->
-    <div class="badge">
-        ⭐ 100+ लोगों ने भरोसा किया | बेहतर बोलने का अनुभव
-    </div>
+  <div class="badge">⭐ 100+ लोगों ने भरोसा किया</div>
 
-    <!-- HEADING -->
-    <h1>
-        <span class="highlight">हकलाने / तुतलाने</span> की समस्या से परेशान हैं,<br>
-        तो अब इंतजार न करें —<br>
-        <span class="highlight2">आज ही शुरुआत करें।</span>
-    </h1>
+  <h1>
+    हकलाने / तुतलाने की समस्या से परेशान हैं,<br>
+    तो अब इंतजार न करें —<br>
+    आज ही शुरुआत करें।
+  </h1>
 
-    <!-- POINTS -->
-    <div class="points">
-        ✔ बोलने से पहले घबराहट कम करे 
-        <span>|</span>
-        ✔ सांस और शब्दों का बेहतर तालमेल 
-        <span>|</span>
-        ✔ आत्मविश्वास बढ़ाए 
-        <span>|</span>
-        ✔ 100% आयुर्वेदिक समाधान
-    </div>
+  <div class="points">
+    ✓ बोलने से पहले घबराहट कम करें  
+    <span>|</span>
+    ✓ सांस और शब्दों का बेहतर तालमेल  
+    <span>|</span>
+    ✓ आत्मविश्वास बढ़ाएं  
+    <span>|</span>
+    ✓ 100% आयुर्वेदिक समाधान  
+  </div>
 
-    <!-- CTA -->
-    <a href="https://wa.me/919251237984" class="cta-btn">
-        📲 WhatsApp पर पूरी जानकारी लें
-    </a>
+  <br>
 
-</section>
+  <a href="https://wa.me/918239828901" class="cta-btn">
+    📲 WhatsApp पर पूरी जानकारी लें
+  </a>
+
+</div>
 
 </body>
 </html>
