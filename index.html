@@ -7,8 +7,6 @@
 <title>Vaanishuddha</title>
 
 <style>
-
-/* ===== GLOBAL ===== */
 body {
     margin: 0;
     font-family: "Segoe UI", Arial, sans-serif;
@@ -16,17 +14,15 @@ body {
     color: #1f2937;
 }
 
-/* ===================== */
-/* 🔥 HERO SECTION */
-/* ===================== */
-
+/* HERO */
 .hero {
-    padding: 90px 20px 50px;
+    padding: 90px 20px 60px;
     text-align: center;
     max-width: 1100px;
     margin: auto;
 }
 
+/* BADGE */
 .badge {
     position: relative;
     display: inline-flex;
@@ -38,11 +34,67 @@ body {
     font-weight: 600;
     color: #ffffff;
     overflow: hidden;
+
     background: linear-gradient(135deg, #064e48, #0b635b);
     box-shadow: 0 8px 20px rgba(6, 78, 72, 0.35);
 }
 
-.badge::before,
+/* BADGE SHINE */
+.badge::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.6),
+        transparent
+    );
+    animation: shine 2.5s infinite;
+}
+
+/* HEADING */
+.hero h1 {
+    margin-top: 26px;
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1.2;
+
+    background: linear-gradient(90deg, #064e48, #14b8a6, #064e48);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* SUB TEXT */
+.hero p {
+    margin-top: 18px;
+    font-size: 18px;
+    color: #475569;
+}
+
+/* BUTTON */
+.cta-btn {
+    position: relative;
+    display: inline-block;
+    margin-top: 36px;
+    padding: 16px 42px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 12px;
+    overflow: hidden;
+
+    background: linear-gradient(135deg, #064e48, #0b635b);
+    box-shadow: 0 12px 30px rgba(6, 78, 72, 0.45);
+
+    transition: 0.3s;
+}
+
+/* BUTTON SHINE */
 .cta-btn::before {
     content: "";
     position: absolute;
@@ -59,327 +111,66 @@ body {
     animation: shine 2.5s infinite;
 }
 
-.hero h1 {
-    margin-top: 26px;
-    font-size: 52px;
-    font-weight: 900;
-    line-height: 1.2;
-    background: linear-gradient(90deg, #064e48, #14b8a6, #064e48);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.hero p {
-    margin-top: 18px;
-    font-size: 18px;
-    color: #475569;
-}
-
-.cta-btn {
-    position: relative;
-    display: inline-block;
-    margin-top: 36px;
-    padding: 16px 42px;
-    font-size: 17px;
-    font-weight: 700;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 12px;
-    overflow: hidden;
-    background: linear-gradient(135deg, #064e48, #0b635b);
-    box-shadow: 0 12px 30px rgba(6, 78, 72, 0.45);
-    transition: 0.3s;
-}
-
-.cta-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 18px 40px rgba(6, 78, 72, 0.55);
-}
-
+/* ANIMATION */
 @keyframes shine {
     0% { left: -100%; }
     60% { left: 100%; }
     100% { left: 100%; }
 }
 
-/* ============================ */
-/* 🧠 PROBLEM SECTION */
-/* ============================ */
-
-.problem-section {
-    padding: 40px 20px 70px;
-    background: #f3f6fb; /* light bluish background */
-}
-
-/* CONTAINER */
-.container {
-    max-width: 1100px;
-    margin: auto;
-    text-align: center;
-}
-
-/* HEADING */
-.problem-section h2 {
-    font-size: 36px;
-    font-weight: 800;
-    color: #1e3a8a; /* blue tone */
-    margin-bottom: 10px;
-}
-
-/* SUBTEXT */
-.subtext {
-    color: #64748b;
-    font-size: 16px;
-    margin-bottom: 30px;
-}
-
-/* GRID */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-}
-
-/* CARD */
-.card {
-    background: #ffffff;
-    border-radius: 20px;
-    padding: 25px;
-    text-align: left;
-
-    /* SOFT SHADOW (like screenshot) */
-    box-shadow: 
-        0 10px 25px rgba(30, 58, 138, 0.08),
-        0 2px 8px rgba(0,0,0,0.05);
-}
-
-/* TITLE */
-.card h3 {
-    color: #1e3a8a;
-    margin-bottom: 15px;
-}
-
-/* LIST */
-.card ul {
-    list-style: none;
-    padding: 0;
-}
-
-.card ul li {
-    position: relative;
-    padding-left: 32px;
-    margin-bottom: 12px;
-    color: #334155;
-}
-
-/* BLUE TICK */
-.card ul li::before {
-    content: "✔";
-    position: absolute;
-    left: 0;
-    top: 2px;
-    background: #2563eb;
-    color: #fff;
-    font-size: 12px;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    /* soft glow */
-    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.4);
+/* HOVER */
+.cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 40px rgba(6, 78, 72, 0.55);
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
-    .hero h1 { font-size: 32px; }
-    .problem-section h2 { font-size: 26px; }
-}
+    .hero {
+        padding: 70px 16px 50px;
+    }
 
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+}
 </style>
+
 </head>
 
 <body>
 
-<!-- ===== 🧠 PROBLEM SECTION (PREMIUM STYLE) ===== -->
-<style>
+<!-- 🔥 HERO SECTION START -->
+<section class="hero">
 
-/* ===== SECTION ===== */
-.problem-section {
-  padding: 70px 20px;
-  background: #f6fbfa;
-}
+    <!-- BADGE -->
+    <span class="badge">
+        ⭐ 100+ लोगों ने भरोसा किया | बेहतर बोलने का अनुभव
+    </span>
 
-/* GRID */
-.problem-grid {
-  max-width: 1100px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 26px;
-}
+    <!-- HEADING -->
+    <h1>
+        हकलाने / तुतलाने की समस्या से परेशान हैं,<br>
+        तो अब इंतजार न करें —<br>
+        आज ही शुरुआत करें।
+    </h1>
 
-/* ===== PREMIUM CARD ===== */
-.problem-card {
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-
-  border-radius: 22px;
-  padding: 26px;
-
-  box-shadow:
-    0 0 0 1px rgba(11, 99, 91, 0.08),
-    0 22px 46px rgba(0, 0, 0, 0.12),
-    0 10px 26px rgba(11, 99, 91, 0.18);
-
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.problem-card:hover {
-  transform: translateY(-6px);
-  box-shadow:
-    0 0 0 1px rgba(11, 99, 91, 0.15),
-    0 30px 60px rgba(0, 0, 0, 0.18),
-    0 16px 36px rgba(11, 99, 91, 0.25);
-}
-
-/* ===== HEADING ===== */
-.problem-heading {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.problem-heading h2 {
-  font-size: 40px;
-  font-weight: 900;
-
-  background: linear-gradient(90deg, #064e48, #0b635b, #14b8a6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.problem-heading p {
-  margin-top: 10px;
-  color: #64748b;
-  font-size: 16px;
-}
-
-/* ===== CARD TITLE ===== */
-.problem-card h3 {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 16px;
-
-  background: linear-gradient(90deg, #064e48, #0b635b);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* ===== LIST ===== */
-.problem-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.problem-card ul li {
-  position: relative;
-  padding-left: 36px;
-  margin-bottom: 12px;
-  font-size: 15px;
-  color: #0f172a;
-  line-height: 1.6;
-}
-
-/* ===== PREMIUM TICK ===== */
-.problem-card ul li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  top: 2px;
-
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 13px;
-  font-weight: 700;
-  color: #ffffff;
-
-  background: linear-gradient(135deg, #064e48, #0b635b);
-  box-shadow: 0 6px 14px rgba(11, 99, 91, 0.45);
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .problem-heading h2 {
-    font-size: 28px;
-  }
-}
-
-</style>
-
-
-<section class="problem-section">
-
-  <!-- HEADING -->
-  <div class="problem-heading">
-    <h2>🧠 हमें Stammering (हकलाहट) क्यों होती है?</h2>
+    <!-- SUBTEXT -->
     <p>
-      हकलाना जुबान की समस्या नहीं है… यह शरीर और दिमाग के असंतुलन की वजह से होता है।
+        ✔ बोलने से पहले घबराहट कम करे | ✔ आत्मविश्वास बढ़ाए | ✔ 100% आयुर्वेदिक समाधान
     </p>
-  </div>
 
-  <!-- GRID -->
-  <div class="problem-grid">
-
-    <!-- CARD 1 -->
-    <div class="problem-card">
-      <h3>🫁 फेफड़े (सांस)</h3>
-      <ul>
-        <li>सांस नियंत्रित नहीं रहती</li>
-        <li>सांस फूलती है</li>
-        <li>शब्द अटकते हैं</li>
-      </ul>
-    </div>
-
-    <!-- CARD 2 -->
-    <div class="problem-card">
-      <h3>❤️ हृदय गति (दिल)</h3>
-      <ul>
-        <li>दिल तेजी से धड़कता है</li>
-        <li>डर बढ़ता है</li>
-        <li>बोलने की लय बिगड़ती है</li>
-      </ul>
-    </div>
-
-    <!-- CARD 3 -->
-    <div class="problem-card">
-      <h3>🗣️ गला (कंठ / नसें)</h3>
-      <ul>
-        <li>नसें कमजोर होती हैं</li>
-        <li>आवाज अटकती है</li>
-        <li>वोकल कंट्रोल कम होता है</li>
-      </ul>
-    </div>
-
-    <!-- CARD 4 -->
-    <div class="problem-card">
-      <h3>🧠 दिमाग (सबसे महत्वपूर्ण)</h3>
-      <ul>
-        <li>यह सबसे बड़ा कारण है</li>
-        <li>दिमाग अस्थिर हो जाता है</li>
-        <li>ब्लड सर्कुलेशन कम हो जाता है</li>
-      </ul>
-    </div>
-
-  </div>
+    <!-- BUTTON -->
+    <a href="https://wa.me/918239828901" class="cta-btn">
+        📲 WhatsApp पर पूरी जानकारी लें
+    </a>
 
 </section>
+<!-- 🔥 HERO SECTION END -->
+
+</body>
+</html>
