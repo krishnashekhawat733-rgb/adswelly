@@ -171,7 +171,7 @@ body {
 
 </section>
 <!-- 🔥 HERO SECTION END -->
-    <!-- ===== 🧠 PROBLEM SECTION START ===== -->
+   <!-- ===== 🧠 PROBLEM SECTION START ===== -->
 
 <style>
 .problem-section {
@@ -206,6 +206,7 @@ body {
   gap: 26px;
 }
 
+/* CARD */
 .problem-card {
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(8px);
@@ -216,16 +217,27 @@ body {
     0 0 0 1px rgba(11, 99, 91, 0.08),
     0 22px 46px rgba(0, 0, 0, 0.12),
     0 10px 26px rgba(11, 99, 91, 0.18);
+
+  transition: all 0.3s ease;
 }
 
+/* 🔥 HOVER ANIMATION */
+.problem-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 0 0 1px rgba(11, 99, 91, 0.15),
+    0 30px 60px rgba(0, 0, 0, 0.18),
+    0 16px 36px rgba(11, 99, 91, 0.25);
+}
+
+/* TITLE */
 .problem-card h3 {
   font-size: 20px;
   margin-bottom: 16px;
-  background: linear-gradient(90deg, #064e48, #0b635b);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #064e48; /* 👈 emoji color fix */
 }
 
+/* LIST */
 .problem-card ul {
   list-style: none;
   padding: 0;
@@ -237,6 +249,7 @@ body {
   margin-bottom: 12px;
 }
 
+/* TICK */
 .problem-card ul li::before {
   content: "✓";
   position: absolute;
@@ -255,6 +268,13 @@ body {
 
   background: linear-gradient(135deg, #064e48, #0b635b);
   box-shadow: 0 6px 14px rgba(11, 99, 91, 0.45);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .problem-heading h2{
+    font-size: 28px;
+  }
 }
 </style>
 
