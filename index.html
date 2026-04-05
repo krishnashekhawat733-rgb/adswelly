@@ -517,7 +517,7 @@ function playVideo() {
   font-size: 80px;
   font-weight: 900;
   color: #0b5a53;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 /* SLIDER */
@@ -525,29 +525,31 @@ function playVideo() {
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  gap: 28px;  /* 🔥 more gap between videos */
-  padding: 0 12%;
+  gap: 30px;  /* 🔥 spacing */
+  padding: 0 14%;  /* 🔥 side gap */
 }
 
 .review-slider::-webkit-scrollbar {
   display: none;
 }
 
-/* 🔥 CARD */
+/* CARD */
 .review-card {
-  flex: 0 0 70%;
-  max-width: 70%;
+  flex: 0 0 68%;   /* 🔥 perfect width */
+  max-width: 68%;
   margin: 0 auto;
   scroll-snap-align: center;
 
-  border-radius: 32px;  /* 🔥 more round */
+  border-radius: 36px;  /* 🔥 smooth round */
   overflow: hidden;
   border: 3px solid #0b5a53;
   background: #000;
 
   position: relative;
-  box-shadow: 0 0 20px rgba(11,90,83,0.4),
-              0 20px 40px rgba(0,0,0,0.25);
+
+  box-shadow: 
+    0 0 25px rgba(11,90,83,0.35),
+    0 25px 50px rgba(0,0,0,0.25);
 }
 
 /* VIDEO */
@@ -558,7 +560,7 @@ function playVideo() {
   object-fit: cover;
 }
 
-/* 🔥 PLAY BUTTON */
+/* PLAY BUTTON */
 .play-overlay {
   position: absolute;
   inset: 0;
@@ -569,9 +571,9 @@ function playVideo() {
 }
 
 .play-btn {
-  width: 80px;
-  height: 80px;
-  background: rgba(0,0,0,0.5);
+  width: 85px;
+  height: 85px;
+  background: rgba(0,0,0,0.55);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -581,16 +583,16 @@ function playVideo() {
 .play-btn::after {
   content: '';
   border-style: solid;
-  border-width: 15px 0 15px 22px;
+  border-width: 16px 0 16px 24px;
   border-color: transparent transparent transparent #fff;
 }
 
-/* 🔥 WHATSAPP BUTTON */
+/* WHATSAPP BUTTON */
 .whatsapp-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 40px auto 0;
+  margin: 45px auto 0;
   width: 90%;
   max-width: 400px;
   height: 65px;
@@ -641,7 +643,7 @@ function playVideo() {
 
 <section class="review-section">
 
-  <div class="review-heading">Review</div>
+  <div class="review-heading">Real Results 🔥</div>
 
   <div class="review-slider">
 
@@ -671,7 +673,7 @@ function playVideo() {
 
   </div>
 
-  <!-- 🔥 WHATSAPP CTA -->
+  <!-- WHATSAPP CTA -->
   <a href="https://wa.me/918239828901?text=Hello%20mujhe%20haklane%20ka%20problem%20hai,%20kya%20yeh%20thik%20ho%20sakta%20hai?" 
      class="whatsapp-btn">
      Chat on WhatsApp
