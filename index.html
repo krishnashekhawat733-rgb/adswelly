@@ -739,7 +739,7 @@ function closeVideo() {
   margin-top: 25px;
   font-size: 45px;
   font-weight: 900;
-  color: #0b5a53;  /* 🔥 BRAND COLOR */
+  color: #0b5a53;
 }
 
 /* SUB TEXT */
@@ -752,20 +752,26 @@ function closeVideo() {
 
 /* LIST */
 .use-list {
-  margin-top: 20px;
-  text-align: left;
-  max-width: 600px;
+  margin-top: 25px;
+  max-width: 650px;
   margin-left: auto;
   margin-right: auto;
+  text-align: left;  /* 🔥 LEFT ALIGN FIX */
 }
 
 /* ITEM */
 .use-item {
+  font-size: 30px;
+  margin-bottom: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* 🔥 LABEL (Daily Intake etc) */
+.use-item span {
+  font-weight: 800;
   font-size: 32px;
-  margin-bottom: 14px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
+  color: #0b5a53;  /* 🔥 BRAND COLOR */
 }
 </style>
 
@@ -773,7 +779,7 @@ function closeVideo() {
 
   <div class="use-card">
 
-    <!-- 🔥 IMAGE (2nd wali) -->
+    <!-- IMAGE -->
     <img src="https://res.cloudinary.com/dpqc0j5hg/image/upload/v1775388907/file_00000000e110720b897942db6aa0a55e_sqklwn.png" alt="How To Use Vaani Shuddha">
 
     <!-- HEADING -->
@@ -790,13 +796,16 @@ function closeVideo() {
     <div class="use-list">
 
       <div class="use-item">
-        <b>Daily Intake:</b>&nbsp; With 1 Scoop of Vaani Shuddha </div>
+        <span>Daily Intake:</span> With 1 Scoop of Vaani Shuddha
+      </div>
 
       <div class="use-item">
-        <b>Method:</b>&nbsp; 200ml of Milk or Water</div>
+        <span>Method:</span> Mix with 200ml of Milk or Water
+      </div>
 
       <div class="use-item">
-        <b>Frequency:</b>&nbsp; Once a day after dinner </div>
+        <span>Frequency:</span> Once a day after dinner
+      </div>
 
     </div>
 
