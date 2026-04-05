@@ -444,18 +444,28 @@ function playVideo() {
   margin: auto;
 }
 
-/* PRODUCT IMAGE */
+/* 🔥 PRODUCT IMAGE BOX (FIXED SQUARE) */
 .product-img-box {
   margin-top: 30px;
+  width: 100%;
+  max-width: 400px;   /* 🔥 size control */
+  aspect-ratio: 1 / 1; /* 🔥 perfect square */
+  margin-left: auto;
+  margin-right: auto;
+
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
 }
 
+/* IMAGE */
 .product-img-box img {
   width: 100%;
-  max-width: 350px;
-  border-radius: 16px;
+  height: 100%;
+  object-fit: contain;  /* 🔥 NO CROP / NO ZOOM */
 }
 
-/* 🔥 TRUST TEXT */
+/* TRUST TEXT */
 .trust-text {
   margin-top: 20px;
   font-size: 35px;
@@ -466,24 +476,20 @@ function playVideo() {
 
 <section class="vaani-section">
 
-  <!-- HEADING -->
   <div class="vaani-heading">
     Vaani Shuddha क्या है?
   </div>
 
-  <!-- TEXT -->
   <div class="vaani-text">
     Vaani Shuddha एक आयुर्वेदिक फॉर्मूला है, जो खास 16 जड़ी-बूटियों से बना है। 
     यह हकलाहट और तुतलाहट को कम करने, बोलते समय होने वाली घबराहट को नियंत्रित करने, 
     वोकल कॉर्ड की नसों को मजबूत करने और आवाज़ को साफ व आत्मविश्वासी बनाने में मदद करता है।
   </div>
 
-  <!-- PRODUCT IMAGE -->
   <div class="product-img-box">
     <img src="YOUR_PRODUCT_IMAGE_URL" alt="Vaani Shuddha Product">
   </div>
 
-  <!-- 🔥 TRUST LINE -->
   <div class="trust-text">
     100% Ayurvedic | No Side Effects | COD Available
   </div>
