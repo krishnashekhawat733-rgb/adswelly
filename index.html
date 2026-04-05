@@ -526,17 +526,17 @@ function playVideo() {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   gap: 16px;
-  padding: 0 10%;
+  padding: 0 12%; /* 🔥 more side space */
 }
 
 .review-slider::-webkit-scrollbar {
   display: none;
 }
 
-/* CARD */
+/* 🔥 CARD (NARROW WIDTH) */
 .review-card {
-  flex: 0 0 80%;
-  max-width: 80%;
+  flex: 0 0 70%;   /* 🔥 width aur kam */
+  max-width: 70%;
   margin: 0 auto;
   scroll-snap-align: center;
 
@@ -553,11 +553,38 @@ function playVideo() {
 .review-card video {
   width: 100%;
   height: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 4 / 5;   /* 🔥 height same */
   object-fit: cover;
 }
 
-/* 🔥 WHATSAPP BUTTON */
+/* 🔥 PLAY BUTTON OVERLAY */
+.play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none; /* click pass through */
+}
+
+.play-btn {
+  width: 80px;
+  height: 80px;
+  background: rgba(0,0,0,0.5);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-btn::after {
+  content: '';
+  border-style: solid;
+  border-width: 15px 0 15px 22px;
+  border-color: transparent transparent transparent #fff;
+}
+
+/* WHATSAPP BUTTON */
 .whatsapp-btn {
   display: flex;
   justify-content: center;
@@ -584,7 +611,7 @@ function playVideo() {
   transform: scale(1.05);
 }
 
-/* FULLSCREEN MODAL */
+/* FULLSCREEN */
 .video-modal {
   display: none;
   position: fixed;
@@ -617,25 +644,33 @@ function playVideo() {
 
   <div class="review-slider">
 
+    <!-- VIDEO 1 -->
     <div class="review-card" onclick="openVideo(this)">
       <video src="VIDEO1.mp4" autoplay muted loop playsinline></video>
+      <div class="play-overlay"><div class="play-btn"></div></div>
     </div>
 
+    <!-- VIDEO 2 -->
     <div class="review-card" onclick="openVideo(this)">
       <video src="VIDEO2.mp4" autoplay muted loop playsinline></video>
+      <div class="play-overlay"><div class="play-btn"></div></div>
     </div>
 
+    <!-- VIDEO 3 -->
     <div class="review-card" onclick="openVideo(this)">
       <video src="VIDEO3.mp4" autoplay muted loop playsinline></video>
+      <div class="play-overlay"><div class="play-btn"></div></div>
     </div>
 
+    <!-- VIDEO 4 -->
     <div class="review-card" onclick="openVideo(this)">
       <video src="VIDEO4.mp4" autoplay muted loop playsinline></video>
+      <div class="play-overlay"><div class="play-btn"></div></div>
     </div>
 
   </div>
 
-  <!-- 🔥 WHATSAPP CTA -->
+  <!-- WHATSAPP -->
   <a href="https://wa.me/918239828901?text=Hello%20mujhe%20haklane%20ka%20problem%20hai,%20kya%20yeh%20thik%20ho%20sakta%20hai?" 
      class="whatsapp-btn">
      Chat on WhatsApp
