@@ -91,17 +91,19 @@ body {
   color: #0f172a;
 }
 
-/* 🔥 VIDEO CARD (BIGGER NOW) */
+/* 🔥 VIDEO CARD */
 .video-container {
   position: relative;
   width: 100%;
-  max-width: 800px;   /* 🔥 Bigger card */
+  max-width: 800px;
   margin: 20px auto;
 
   aspect-ratio: 4 / 5;
   background: #000;
   border-radius: 16px;
   overflow: hidden;
+
+  border: 4px solid #0b5a53;  /* 🔥 BRAND BORDER */
   box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
@@ -156,18 +158,38 @@ body {
   margin-top: 6px;
 }
 
-/* ⭐ RATING */
+/* ⭐ RATING WITH GOOGLE */
 .rating {
-  margin-top: 10px;
-  font-size: 35px;   /* 🔥 Bigger */
+  margin-top: 15px;
+  font-size: 32px;
   font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* GOOGLE ICON */
+.google-icon {
+  width: 28px;
+  height: 28px;
 }
 
 /* REVIEWS */
 .reviews {
   margin-top: 10px;
-  font-size: 35px;
+  font-size: 32px;
   font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* VERIFIED TICK */
+.verified {
+  color: green;
+  font-size: 28px;
 }
 
 /* 🔥 WHATSAPP BUTTON */
@@ -182,12 +204,12 @@ body {
 
   background: #0b5a53;
   color: #fff;
-  font-size: 35px;
+  font-size: 22px;
   font-weight: 800;
   border-radius: 40px;
   text-decoration: none;
 
-  border: 3px solid #ffffff;   /* 🔥 WHITE BORDER */
+  border: 3px solid #ffffff;
   box-shadow: 0 6px 18px rgba(0,0,0,0.3);
 }
 </style>
@@ -212,11 +234,16 @@ body {
   <div class="brand-name">VAANI SHUDDHA</div>
   <div class="sub-text">Complete Speech Improvement Formula</div>
 
-  <!-- RATING -->
-  <div class="rating">⭐ 4.9 ★★★★★</div>
+  <!-- GOOGLE RATING -->
+  <div class="rating">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="google-icon">
+    4.9 Rating
+  </div>
 
   <!-- REVIEWS -->
-  <div class="reviews">✔ 4634+ Reviews</div>
+  <div class="reviews">
+    4634+ Reviews <span class="verified">✔</span>
+  </div>
 
   <!-- CTA -->
   <a href="https://wa.me/918239828901?text=Hello%20mujhe%20haklane%20ka%20problem%20hai,%20kya%20yeh%20thik%20ho%20sakta%20hai?" 
