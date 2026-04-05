@@ -74,3 +74,121 @@ body {
 </div>
 
 <!-- ===== 🔰 HEADER SECTION END ===== -->
+<!-- ===== 🎥 VIDEO SECTION START ===== -->
+
+<style>
+.video-section {
+  padding: 20px 12px;
+  background: #ffffff;
+  text-align: center;
+}
+
+/* HEADING */
+.video-heading {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+/* VIDEO CARD */
+.video-card {
+  position: relative;
+  max-width: 380px;
+  margin: auto;
+  border: 3px solid #0b5a53;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+/* VIDEO */
+.video-card video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain; /* 🔥 IMPORTANT (no crop) */
+  background: #000;
+}
+
+/* THUMBNAIL OVERLAY */
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('YOUR-THUMBNAIL-LINK-HERE') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* PLAY BUTTON */
+.play-btn {
+  width: 70px;
+  height: 70px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-btn::after {
+  content: '';
+  border-style: solid;
+  border-width: 12px 0 12px 18px;
+  border-color: transparent transparent transparent #fff;
+}
+
+/* RED TEXT OVERLAY */
+.video-text {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  width: 100%;
+  color: red;
+  font-size: 22px;
+  font-weight: 900;
+  text-align: center;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+</style>
+
+<section class="video-section">
+
+  <div class="video-heading">
+    क्या आप भी हकलाने से परेशान हैं? ये वीडियो जरूर देखें
+  </div>
+
+  <div class="video-card">
+
+    <!-- VIDEO -->
+    <video id="myVideo" playsinline>
+      <source src="YOUR-VIDEO-LINK-HERE.mp4" type="video/mp4">
+    </video>
+
+    <!-- THUMBNAIL -->
+    <div class="video-overlay" onclick="playVideo()">
+      <div class="play-btn"></div>
+    </div>
+
+    <!-- TEXT OVER VIDEO -->
+    <div class="video-text">
+      हकलाना ठीक करने का आसान तरीका
+    </div>
+
+  </div>
+
+</section>
+
+<script>
+function playVideo() {
+  var video = document.getElementById("myVideo");
+  video.play();
+  document.querySelector(".video-overlay").style.display = "none";
+}
+</script>
+
+<!-- ===== 🎥 VIDEO SECTION END ===== -->
