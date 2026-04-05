@@ -78,39 +78,37 @@ body {
 
 <style>
 .video-section {
-  padding: 20px 12px;
+  width: 100%;
   background: #ffffff;
-  text-align: center;
+  padding: 20px 0;
 }
 
 /* HEADING */
 .video-heading {
-  font-size: 20px;
-  font-weight: 800;
+  font-size: 22px;
+  font-weight: 900;
+  text-align: center;
+  padding: 0 12px;
   margin-bottom: 15px;
 }
 
-/* VIDEO CARD */
-.video-card {
+/* FULL WIDTH VIDEO CONTAINER */
+.video-container {
   position: relative;
-  max-width: 380px;
-  margin: auto;
-  border: 3px solid #0b5a53;
-  border-radius: 10px;
+  width: 100%;
+  background: #000;
   overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
 }
 
-/* VIDEO */
-.video-card video {
+/* VIDEO (🔥 FULL WIDTH + NO CROP) */
+.video-container video {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: contain; /* 🔥 IMPORTANT (no crop) */
-  background: #000;
+  object-fit: contain; /* 🔥 NO CUT */
 }
 
-/* THUMBNAIL OVERLAY */
+/* THUMBNAIL */
 .video-overlay {
   position: absolute;
   top: 0;
@@ -126,8 +124,8 @@ body {
 
 /* PLAY BUTTON */
 .play-btn {
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   background: rgba(0,0,0,0.6);
   border-radius: 50%;
   display: flex;
@@ -138,21 +136,20 @@ body {
 .play-btn::after {
   content: '';
   border-style: solid;
-  border-width: 12px 0 12px 18px;
+  border-width: 14px 0 14px 22px;
   border-color: transparent transparent transparent #fff;
 }
 
-/* RED TEXT OVERLAY */
+/* TEXT ON VIDEO */
 .video-text {
   position: absolute;
-  bottom: 15px;
-  left: 0;
+  bottom: 20px;
   width: 100%;
-  color: red;
-  font-size: 22px;
-  font-weight: 900;
   text-align: center;
-  text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  font-size: 24px;
+  font-weight: 900;
+  color: red;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 </style>
 
@@ -162,7 +159,7 @@ body {
     क्या आप भी हकलाने से परेशान हैं? ये वीडियो जरूर देखें
   </div>
 
-  <div class="video-card">
+  <div class="video-container">
 
     <!-- VIDEO -->
     <video id="myVideo" playsinline>
@@ -174,7 +171,7 @@ body {
       <div class="play-btn"></div>
     </div>
 
-    <!-- TEXT OVER VIDEO -->
+    <!-- RED TEXT -->
     <div class="video-text">
       हकलाना ठीक करने का आसान तरीका
     </div>
