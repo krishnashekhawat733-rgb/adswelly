@@ -77,78 +77,81 @@ body {
 <!-- ===== 🎥 VIDEO SECTION START ===== -->
 
 <style>
-/* MOBILE FIRST RESET */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-}
-
-/* SECTION */
 .video-section {
-  width: 100%;
-  background: #fff;
+  padding: 40px 12px;
+  background: #ffffff;
 }
 
-/* HEADING (🔥 BIG FOR MOBILE) */
+/* 🔥 BIG HEADING (same as gallery) */
 .video-heading {
-  font-size: 24px;        /* 🔥 BIG TEXT */
-  font-weight: 900;
+  font-size: 34px;   /* 🔥 BIG */
+  font-weight: 800;
   text-align: center;
-  padding: 15px 12px;
-  line-height: 1.4;
+  color: #0f172a;
+  line-height: 1.3;
 }
 
-/* FULL WIDTH VIDEO */
+/* SUBTEXT */
+.video-subtext {
+  text-align: center;
+  font-size: 18px;
+  color: #475569;
+  margin-top: 8px;
+}
+
+/* VIDEO FULL WIDTH */
 .video-container {
   position: relative;
   width: 100%;
+  margin-top: 25px;
   background: #000;
+  border-radius: 14px;
+  overflow: hidden;
 }
 
-/* VIDEO SIZE */
+/* VIDEO */
 .video-container video {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: contain; /* no crop */
+  object-fit: contain; /* 🔥 NO CROP */
 }
 
 /* THUMBNAIL */
 .video-overlay {
   position: absolute;
   inset: 0;
-  background: url('YOUR-THUMBNAIL-LINK') center/cover no-repeat;
+  background: url('YOUR-THUMBNAIL') center/cover no-repeat;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
-/* PLAY BUTTON (🔥 BIG) */
+/* 🔥 BIG PLAY BUTTON */
 .play-btn {
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
   background: rgba(0,0,0,0.6);
   border-radius: 50%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .play-btn::after {
   content: '';
   border-style: solid;
-  border-width: 18px 0 18px 28px;
+  border-width: 20px 0 20px 30px;
   border-color: transparent transparent transparent #fff;
 }
 
-/* RED TEXT (🔥 BIG LIKE AD) */
+/* 🔥 BIG RED TEXT */
 .video-text {
   position: absolute;
   bottom: 25px;
   width: 100%;
   text-align: center;
-  font-size: 26px;   /* 🔥 BIG */
+  font-size: 28px;
   font-weight: 900;
   color: red;
   padding: 0 10px;
@@ -158,7 +161,11 @@ body {
 <section class="video-section">
 
   <div class="video-heading">
-    क्या आप भी हकलाने से परेशान हैं? ये वीडियो जरूर देखें
+    क्या आप भी हकलाने से परेशान हैं?
+  </div>
+
+  <div class="video-subtext">
+    यह वीडियो आपकी जिंदगी बदल सकता है
   </div>
 
   <div class="video-container">
