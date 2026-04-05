@@ -503,3 +503,156 @@ function playVideo() {
 </section>
 
 <!-- ===== 🌿 VAANI SHUDDHA INFO SECTION END ===== -->
+<!-- ===== 🎥 REVIEW VIDEO SECTION START ===== -->
+
+<style>
+.review-section {
+  padding: 50px 16px;
+  background: #f8fafc;
+  text-align: center;
+}
+
+/* HEADING */
+.review-heading {
+  font-size: 50px;
+  font-weight: 900;
+  color: #0b5a53;
+  margin-bottom: 30px;
+}
+
+/* VIDEO GRID */
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* VIDEO CARD */
+.review-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 3px solid #0b5a53;
+  background: #000;
+}
+
+/* VIDEO */
+.review-card video {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+/* PLAY OVERLAY */
+.play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.play-btn {
+  width: 70px;
+  height: 70px;
+  background: rgba(0,0,0,0.5);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-btn::after {
+  content: '';
+  border-style: solid;
+  border-width: 12px 0 12px 18px;
+  border-color: transparent transparent transparent #fff;
+}
+
+/* FULLSCREEN MODAL */
+.video-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-modal video {
+  width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+</style>
+
+<section class="review-section">
+
+  <div class="review-heading">Review</div>
+
+  <div class="review-grid">
+
+    <!-- VIDEO 1 -->
+    <div class="review-card" onclick="openVideo(this)">
+      <video src="VIDEO1.mp4" autoplay muted loop playsinline></video>
+    </div>
+
+    <!-- VIDEO 2 -->
+    <div class="review-card" onclick="openVideo(this)">
+      <video src="VIDEO2.mp4" autoplay muted loop playsinline></video>
+    </div>
+
+    <!-- VIDEO 3 -->
+    <div class="review-card" onclick="openVideo(this)">
+      <video src="VIDEO3.mp4" autoplay muted loop playsinline></video>
+    </div>
+
+    <!-- VIDEO 4 -->
+    <div class="review-card" onclick="openVideo(this)">
+      <video src="VIDEO4.mp4" autoplay muted loop playsinline></video>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FULLSCREEN MODAL -->
+<div class="video-modal" id="videoModal">
+  <span class="close-btn" onclick="closeVideo()">✕</span>
+  <video id="modalVideo" controls autoplay></video>
+</div>
+
+<script>
+function openVideo(card) {
+  const videoSrc = card.querySelector("video").src;
+  const modal = document.getElementById("videoModal");
+  const modalVideo = document.getElementById("modalVideo");
+
+  modal.style.display = "flex";
+  modalVideo.src = videoSrc;
+}
+
+function closeVideo() {
+  const modal = document.getElementById("videoModal");
+  const modalVideo = document.getElementById("modalVideo");
+
+  modal.style.display = "none";
+  modalVideo.pause();
+}
+</script>
+
+<!-- ===== 🎥 REVIEW VIDEO SECTION END ===== -->
