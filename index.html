@@ -77,79 +77,81 @@ body {
 <!-- ===== 🎥 VIDEO SECTION START ===== -->
 
 <style>
+/* MOBILE FIRST RESET */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* SECTION */
 .video-section {
   width: 100%;
-  background: #ffffff;
-  padding: 20px 0;
+  background: #fff;
 }
 
-/* HEADING */
+/* HEADING (🔥 BIG FOR MOBILE) */
 .video-heading {
-  font-size: 22px;
+  font-size: 24px;        /* 🔥 BIG TEXT */
   font-weight: 900;
   text-align: center;
-  padding: 0 12px;
-  margin-bottom: 15px;
+  padding: 15px 12px;
+  line-height: 1.4;
 }
 
-/* FULL WIDTH VIDEO CONTAINER */
+/* FULL WIDTH VIDEO */
 .video-container {
   position: relative;
   width: 100%;
   background: #000;
-  overflow: hidden;
 }
 
-/* VIDEO (🔥 FULL WIDTH + NO CROP) */
+/* VIDEO SIZE */
 .video-container video {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: contain; /* 🔥 NO CUT */
+  object-fit: contain; /* no crop */
 }
 
 /* THUMBNAIL */
 .video-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('YOUR-THUMBNAIL-LINK-HERE') center/cover no-repeat;
+  inset: 0;
+  background: url('YOUR-THUMBNAIL-LINK') center/cover no-repeat;
   display: flex;
-  align-items: center;
   justify-content: center;
-  cursor: pointer;
+  align-items: center;
 }
 
-/* PLAY BUTTON */
+/* PLAY BUTTON (🔥 BIG) */
 .play-btn {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   background: rgba(0,0,0,0.6);
   border-radius: 50%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .play-btn::after {
   content: '';
   border-style: solid;
-  border-width: 14px 0 14px 22px;
+  border-width: 18px 0 18px 28px;
   border-color: transparent transparent transparent #fff;
 }
 
-/* TEXT ON VIDEO */
+/* RED TEXT (🔥 BIG LIKE AD) */
 .video-text {
   position: absolute;
-  bottom: 20px;
+  bottom: 25px;
   width: 100%;
   text-align: center;
-  font-size: 24px;
+  font-size: 26px;   /* 🔥 BIG */
   font-weight: 900;
   color: red;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  padding: 0 10px;
 }
 </style>
 
@@ -161,17 +163,14 @@ body {
 
   <div class="video-container">
 
-    <!-- VIDEO -->
-    <video id="myVideo" playsinline>
-      <source src="YOUR-VIDEO-LINK-HERE.mp4" type="video/mp4">
+    <video id="video" playsinline>
+      <source src="YOUR-VIDEO.mp4" type="video/mp4">
     </video>
 
-    <!-- THUMBNAIL -->
     <div class="video-overlay" onclick="playVideo()">
       <div class="play-btn"></div>
     </div>
 
-    <!-- RED TEXT -->
     <div class="video-text">
       हकलाना ठीक करने का आसान तरीका
     </div>
@@ -182,8 +181,7 @@ body {
 
 <script>
 function playVideo() {
-  var video = document.getElementById("myVideo");
-  video.play();
+  document.getElementById("video").play();
   document.querySelector(".video-overlay").style.display = "none";
 }
 </script>
