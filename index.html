@@ -74,58 +74,105 @@ body {
 </div>
 
 <!-- ===== 🔰 HEADER SECTION END ===== -->
-<!-- VIDEO FRAME START -->
+<!-- VIDEO SECTION -->
 <style>
+.video-section {
+  text-align: center;
+  padding: 30px 15px;
+  background: #ffffff;
+}
+
+/* HEADING */
+.video-heading {
+  font-size: 26px;
+  font-weight: 900;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.video-subtext {
+  font-size: 15px;
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+/* VIDEO FRAME */
 .video-frame {
   width: 100%;
   max-width: 420px;
-  margin: 20px auto;
-  position: relative;
-  border-radius: 14px;
+  aspect-ratio: 16/9;
+  margin: auto;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  position: relative;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
 }
 
 .video-frame img {
   width: 100%;
-  display: block;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Play Button */
+/* PLAY BUTTON */
 .play-btn {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70px;
-  height: 70px;
-  background: rgba(255,255,255,0.85);
+  width: 75px;
+  height: 75px;
+  background: rgba(255,255,255,0.9);
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
 }
 
 .play-btn::before {
   content: '';
-  border-left: 20px solid #000;
-  border-top: 12px solid transparent;
-  border-bottom: 12px solid transparent;
-  margin-left: 5px;
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  border-left: 22px solid #000;
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent;
+}
+
+/* CTA BUTTON */
+.video-btn {
+  margin-top: 20px;
+  padding: 14px 25px;
+  background: linear-gradient(135deg, #064e48, #14b8a6);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 30px;
+  display: inline-block;
+  text-decoration: none;
 }
 </style>
 
-<div class="video-frame" onclick="playVideo()">
-  <img src="YOUR-THUMBNAIL-URL.jpg" alt="video">
-  
-  <div class="play-btn"></div>
+<div class="video-section">
+
+  <div class="video-heading">
+    चश्मा हटाने का आसान उपाय 👇
+  </div>
+
+  <div class="video-subtext">
+    30 दिन में फर्क देखें – बिना सर्जरी
+  </div>
+
+  <div class="video-frame" onclick="playVideo()">
+    <img src="YOUR-THUMBNAIL.jpg" alt="video">
+    <div class="play-btn"></div>
+  </div>
+
+  <a href="https://wa.me/91XXXXXXXXXX" class="video-btn">
+    📞 Free Consultation
+  </a>
+
 </div>
 
 <script>
-function playVideo() {
-  window.location.href = "https://wa.me/919999999999"; 
-  // ya youtube link daal sakta hai
+function playVideo(){
+  window.location.href = "https://wa.me/91XXXXXXXXXX";
 }
 </script>
-<!-- VIDEO FRAME END -->
