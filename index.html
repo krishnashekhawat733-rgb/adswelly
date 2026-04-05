@@ -275,3 +275,188 @@ function playVideo() {
 </script>
 
 <!-- ===== 🎥 VIDEO + RATING SECTION END ===== -->
+<!-- ===== 🧠 PROBLEM SECTION PREMIUM FINAL START ===== -->
+
+<style>
+.problem-section {
+  padding: 70px 20px;
+  background: #f4f8f7;
+}
+
+/* HEADING */
+.problem-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.problem-heading h2 {
+  font-size: 40px;
+  font-weight: 900;
+  color: #0b5a53; /* 🔥 BRAND COLOR */
+}
+
+.problem-heading p {
+  margin-top: 10px;
+  color: #6b7280;
+}
+
+/* GRID */
+.problem-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* CARD */
+.problem-card {
+  background: linear-gradient(145deg, #f7fbfa, #eef6f4);
+  border-radius: 24px;
+  padding: 30px 20px;
+  text-align: center;
+
+  border: 2px solid #0b635b33;
+
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.problem-card:hover {
+  transform: translateY(-8px);
+}
+
+/* IMAGE BOX */
+.card-img-box {
+  width: 180px;
+  height: 180px;
+  margin: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 20px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* TITLE */
+.problem-card h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #0b5a53; /* 🔥 BRAND COLOR */
+}
+
+/* LIST */
+.problem-card ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.problem-card ul li {
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* TICK */
+.problem-card ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 2px;
+
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #0b5a53; /* 🔥 BRAND COLOR */
+  color: #fff;
+  font-size: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media(max-width:768px){
+  .problem-heading h2 {
+    font-size: 28px;
+  }
+}
+</style>
+
+
+<section class="problem-section">
+
+  <div class="problem-heading">
+    <h2>🧠 हमें Stammering (हकलाहट) क्यों होती है?</h2>
+    <p>
+      हकलाना जुबान की समस्या नहीं है… यह शरीर और दिमाग के असंतुलन की वजह से होता है।
+    </p>
+  </div>
+
+  <div class="problem-grid">
+
+    <!-- CARD 1 -->
+    <div class="problem-card">
+      <div class="card-img-box">
+        <img src="https://res.cloudinary.com/dpqc0j5hg/image/upload/v1775306763/ChatGPT_Image_Apr_4_2026_06_10_57_PM_tkezhh.png">
+      </div>
+      <h3>फेफड़े (सांस)</h3>
+      <ul>
+        <li>सांस नियंत्रित नहीं रहती</li>
+        <li>सांस फूलती है</li>
+        <li>शब्द अटकते हैं</li>
+      </ul>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="problem-card">
+      <div class="card-img-box">
+        <img src="https://res.cloudinary.com/dpqc0j5hg/image/upload/q_auto/f_auto/v1775307720/heart-disease-myths_swywqo.webp">
+      </div>
+      <h3>हृदय</h3>
+      <ul>
+        <li>दिल तेजी से धड़कता है</li>
+        <li>डर बढ़ता है</li>
+        <li>बोलने की लय बिगड़ती है</li>
+      </ul>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="problem-card">
+      <div class="card-img-box">
+        <img src="YOUR_IMAGE_URL">
+      </div>
+      <h3>गला</h3>
+      <ul>
+        <li>नसें कमजोर होती हैं</li>
+        <li>आवाज अटकती है</li>
+        <li>कंट्रोल कम होता है</li>
+      </ul>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="problem-card">
+      <div class="card-img-box">
+        <img src="YOUR_IMAGE_URL">
+      </div>
+      <h3>दिमाग</h3>
+      <ul>
+        <li>सबसे बड़ा कारण</li>
+        <li>अस्थिरता का असर</li>
+        <li>ब्लड सर्कुलेशन कम</li>
+      </ul>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ===== 🧠 PROBLEM SECTION PREMIUM FINAL END ===== -->
