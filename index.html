@@ -503,11 +503,11 @@ function playVideo() {
 </section>
 
 <!-- ===== 🌿 VAANI SHUDDHA INFO SECTION END ===== -->
-<!-- ===== 🎥 REVIEW VIDEO SECTION START ===== -->
+<!-- ===== 🎥 REVIEW REEL SLIDER START ===== -->
 
 <style>
 .review-section {
-  padding: 50px 16px;
+  padding: 50px 0;
   background: #f8fafc;
   text-align: center;
 }
@@ -517,60 +517,43 @@ function playVideo() {
   font-size: 50px;
   font-weight: 900;
   color: #0b5a53;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
-/* VIDEO GRID */
-.review-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+/* SLIDER */
+.review-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
   gap: 16px;
-  max-width: 800px;
-  margin: auto;
+  padding: 0 16px;
 }
 
-/* VIDEO CARD */
+/* HIDE SCROLLBAR */
+.review-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* CARD (🔥 FULL SCREEN FEEL) */
 .review-card {
-  position: relative;
+  flex: 0 0 100%;
+  max-width: 100%;
+  scroll-snap-align: center;
+
   border-radius: 20px;
   overflow: hidden;
   border: 3px solid #0b5a53;
   background: #000;
+
+  position: relative;
 }
 
 /* VIDEO */
 .review-card video {
   width: 100%;
   height: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 4 / 5;   /* 🔥 REEL SIZE */
   object-fit: cover;
-}
-
-/* PLAY OVERLAY */
-.play-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.play-btn {
-  width: 70px;
-  height: 70px;
-  background: rgba(0,0,0,0.5);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.play-btn::after {
-  content: '';
-  border-style: solid;
-  border-width: 12px 0 12px 18px;
-  border-color: transparent transparent transparent #fff;
 }
 
 /* FULLSCREEN MODAL */
@@ -585,8 +568,8 @@ function playVideo() {
 }
 
 .video-modal video {
-  width: 90%;
-  max-height: 80%;
+  width: 95%;
+  max-height: 90%;
   border-radius: 10px;
 }
 
@@ -604,7 +587,7 @@ function playVideo() {
 
   <div class="review-heading">Review</div>
 
-  <div class="review-grid">
+  <div class="review-slider">
 
     <!-- VIDEO 1 -->
     <div class="review-card" onclick="openVideo(this)">
@@ -630,7 +613,7 @@ function playVideo() {
 
 </section>
 
-<!-- FULLSCREEN MODAL -->
+<!-- FULLSCREEN -->
 <div class="video-modal" id="videoModal">
   <span class="close-btn" onclick="closeVideo()">✕</span>
   <video id="modalVideo" controls autoplay></video>
@@ -655,4 +638,4 @@ function closeVideo() {
 }
 </script>
 
-<!-- ===== 🎥 REVIEW VIDEO SECTION END ===== -->
+<!-- ===== 🎥 REVIEW REEL SLIDER END ===== -->
