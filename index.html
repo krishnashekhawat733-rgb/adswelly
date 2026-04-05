@@ -995,68 +995,68 @@ document.querySelectorAll(".faq-item").forEach(item => {
 </script>
 
 <!-- ===== ❓ FAQ SECTION END ===== -->
-<!-- ===== FLOATING WHATSAPP BUTTON FINAL ===== -->
+<!-- ===== FLOATING WHATSAPP BUTTON FINAL (SAFE VERSION) ===== -->
 
 <style>
 .whatsapp-float {
   position: fixed;
-  bottom: 18px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 9999;
 }
 
-/* BUTTON */
-.whatsapp-btn {
+/* 🔥 NEW UNIQUE CLASS (NO CONFLICT) */
+.whatsapp-float-btn {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
 
   background: #0b5a53;
   color: #fff;
-  padding: 10px 16px;   /* 🔥 SMALL SIZE */
-  border-radius: 40px;
+  padding: 16px 26px;   /* 🔥 BIG SIZE */
+  border-radius: 50px;
   text-decoration: none;
 
-  font-size: 15px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 800;
 
-  border: 2px solid #ffffff;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  border: 3px solid #ffffff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 
   overflow: hidden;
 }
 
 /* ICON */
-.whatsapp-btn svg {
-  width: 18px;
-  height: 18px;
+.whatsapp-float-btn svg {
+  width: 24px;
+  height: 24px;
 }
 
-/* 🔥 LIGHT PULSE */
-.whatsapp-btn {
+/* 🔥 SMOOTH PULSE */
+.whatsapp-float-btn {
   animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
   0% { transform: scale(1); }
-  50% { transform: scale(1.03); }
+  50% { transform: scale(1.04); }
   100% { transform: scale(1); }
 }
 
-/* ✨ AUTO SHINE (SUBTLE) */
-.whatsapp-btn::before {
+/* ✨ SHINE */
+.whatsapp-float-btn::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -70%;
-  width: 40%;
+  left: -75%;
+  width: 45%;
   height: 100%;
   background: linear-gradient(
     120deg,
     rgba(255,255,255,0) 0%,
-    rgba(255,255,255,0.4) 50%,
+    rgba(255,255,255,0.5) 50%,
     rgba(255,255,255,0) 100%
   );
   transform: skewX(-20deg);
@@ -1064,16 +1064,15 @@ document.querySelectorAll(".faq-item").forEach(item => {
 }
 
 @keyframes shine {
-  0% { left: -70%; }
+  0% { left: -75%; }
   100% { left: 130%; }
 }
 </style>
 
 <div class="whatsapp-float">
   <a href="https://wa.me/918239828901?text=Namaste%20🙏%0AMujhe%20Vaani%20Shuddha%20ke%20baare%20me%20detail%20chahiye%0AMujhe%20haklane%20ki%20problem%20hai%0AKya%20yeh%20permanently%20thik%20ho%20sakta%20hai?" 
-     target="_blank" class="whatsapp-btn">
+     target="_blank" class="whatsapp-float-btn">
 
-    <!-- ICON -->
     <svg viewBox="0 0 32 32" fill="white">
       <path d="M16 .4C7.2.4 0 7.6 0 16.4c0 2.9.8 5.7 2.3 8.1L0 32l7.7-2.2c2.3 1.3 4.9 2 7.6 2 8.8 0 16-7.2 16-16S24.8.4 16 .4zm0 29.2c-2.4 0-4.7-.6-6.7-1.8l-.5-.3-4.6 1.3 1.2-4.4-.3-.5c-1.3-2-2-4.3-2-6.8 0-7 5.7-12.7 12.7-12.7S28.7 9.4 28.7 16.4 23 29.6 16 29.6z"/>
     </svg>
