@@ -525,46 +525,47 @@ function playVideo() {
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  gap: 16px;
-  padding: 0 12%; /* 🔥 more side space */
+  gap: 28px;  /* 🔥 more gap between videos */
+  padding: 0 12%;
 }
 
 .review-slider::-webkit-scrollbar {
   display: none;
 }
 
-/* 🔥 CARD (NARROW WIDTH) */
+/* 🔥 CARD */
 .review-card {
-  flex: 0 0 70%;   /* 🔥 width aur kam */
+  flex: 0 0 70%;
   max-width: 70%;
   margin: 0 auto;
   scroll-snap-align: center;
 
-  border-radius: 20px;
+  border-radius: 32px;  /* 🔥 more round */
   overflow: hidden;
   border: 3px solid #0b5a53;
   background: #000;
 
   position: relative;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  box-shadow: 0 0 20px rgba(11,90,83,0.4),
+              0 20px 40px rgba(0,0,0,0.25);
 }
 
 /* VIDEO */
 .review-card video {
   width: 100%;
   height: 100%;
-  aspect-ratio: 4 / 5;   /* 🔥 height same */
+  aspect-ratio: 4 / 5;
   object-fit: cover;
 }
 
-/* 🔥 PLAY BUTTON OVERLAY */
+/* 🔥 PLAY BUTTON */
 .play-overlay {
   position: absolute;
   inset: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  pointer-events: none; /* click pass through */
+  pointer-events: none;
 }
 
 .play-btn {
@@ -584,12 +585,12 @@ function playVideo() {
   border-color: transparent transparent transparent #fff;
 }
 
-/* WHATSAPP BUTTON */
+/* 🔥 WHATSAPP BUTTON */
 .whatsapp-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 35px auto 0;
+  margin: 40px auto 0;
   width: 90%;
   max-width: 400px;
   height: 65px;
@@ -616,7 +617,7 @@ function playVideo() {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.9);
+  background: rgba(0,0,0,0.95);
   z-index: 9999;
   justify-content: center;
   align-items: center;
@@ -625,14 +626,14 @@ function playVideo() {
 .video-modal video {
   width: 95%;
   max-height: 90%;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 .close-btn {
   position: absolute;
   top: 20px;
   right: 25px;
-  font-size: 30px;
+  font-size: 32px;
   color: #fff;
   cursor: pointer;
 }
@@ -670,7 +671,7 @@ function playVideo() {
 
   </div>
 
-  <!-- WHATSAPP -->
+  <!-- 🔥 WHATSAPP CTA -->
   <a href="https://wa.me/918239828901?text=Hello%20mujhe%20haklane%20ka%20problem%20hai,%20kya%20yeh%20thik%20ho%20sakta%20hai?" 
      class="whatsapp-btn">
      Chat on WhatsApp
