@@ -279,18 +279,18 @@ function playVideo() {
 
 <style>
 .problem-section {
-  padding: 80px 20px;   /* 🔥 More height */
-  background: #ffffff;  /* 🔥 White background */
+  padding: 80px 16px;
+  background: #ffffff;
 }
 
 /* HEADING */
 .problem-heading {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 .problem-heading h2 {
-  font-size: 44px;   /* 🔥 Bigger */
+  font-size: 38px;
   font-weight: 900;
   color: #0b5a53;
 }
@@ -298,45 +298,40 @@ function playVideo() {
 .problem-heading p {
   margin-top: 12px;
   font-size: 18px;
-  font-weight: 600;   /* 🔥 Bold subtext */
+  font-weight: 600;
   color: #374151;
 }
 
-/* GRID (🔥 SIDE BY SIDE FIXED) */
+/* 🔥 GRID FIX (SINGLE COLUMN ALWAYS) */
 .problem-grid {
-  max-width: 1100px;
+  max-width: 600px;   /* 🔥 centered narrow layout */
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 🔥 2 cards per row */
-  gap: 30px;
+  grid-template-columns: 1fr;  /* 🔥 ek ke niche ek */
+  gap: 25px;
 }
 
-/* CARD */
+/* 🔥 CARD */
 .problem-card {
-  background: linear-gradient(145deg, #f7fbfa, #eef6f4);
-  border-radius: 24px;
-  padding: 30px 20px;
+  background: #ffffff;  /* 🔥 white card */
+  border-radius: 20px;
+  padding: 28px 20px;
   text-align: center;
 
-  border: 2px solid #0b635b33;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-  transition: 0.3s;
-}
-
-.problem-card:hover {
-  transform: translateY(-8px);
+  border: 3px solid #0b5a53;  /* 🔥 BRAND BORDER */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
 /* IMAGE */
 .card-img-box {
-  width: 180px;
-  height: 180px;
+  width: 160px;
+  height: 160px;
   margin: auto;
-  border-radius: 20px;
+  border-radius: 16px;
   overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
 .card-img-box img {
@@ -349,7 +344,7 @@ function playVideo() {
 .problem-card h3 {
   font-size: 22px;
   font-weight: 800;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
   color: #0b5a53;
 }
 
@@ -362,8 +357,8 @@ function playVideo() {
 
 .problem-card ul li {
   position: relative;
-  padding-left: 32px;
-  margin-bottom: 12px;
+  padding-left: 30px;
+  margin-bottom: 10px;
   font-size: 15px;
 }
 
@@ -384,17 +379,6 @@ function playVideo() {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-/* MOBILE FIX */
-@media(max-width:768px){
-  .problem-grid {
-    grid-template-columns: 1fr;  /* 🔥 Mobile pe 1 column */
-  }
-
-  .problem-heading h2 {
-    font-size: 30px;
-  }
 }
 </style>
 
