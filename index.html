@@ -12,50 +12,53 @@ body {
   background: #0b5a53;
   color: #ffffff;
   text-align: center;
-  padding: 16px 12px;
+  padding: 14px 12px;
   position: sticky;
   top: 0;
   z-index: 9999;
 }
 
-/* HEADING */
+/* HEADING (🔥 BIG + FULL WIDTH USE) */
 .top-header h1 {
   margin: 0;
-  font-size: 22px;   /* 🔥 Bigger Text */
+  font-size: 24px;   /* 🔥 Bigger */
   font-weight: 900;
   line-height: 1.4;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
+  word-break: break-word; /* 🔥 Auto 2 line */
 }
 
 /* WHATSAPP BUTTON */
 .whatsapp-btn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin: 12px auto 0;
+  margin-top: 10px;
   background: #25D366;
   color: #fff;
-  padding: 14px 20px;
-  width: 90%;              /* 🔥 Full Width Feel */
-  max-width: 420px;
-  border-radius: 40px;
-  font-weight: 800;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-weight: 700;
   text-decoration: none;
-  font-size: 17px;         /* 🔥 Bigger Button Text */
-  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-  transition: 0.3s;
+  font-size: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+  /* 🔥 Animation */
+  animation: zoomPulse 1.5s infinite;
 }
 
-/* HOVER */
-.whatsapp-btn:hover {
-  transform: scale(1.03);
+/* ZOOM IN OUT EFFECT */
+@keyframes zoomPulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.08); }
+  100% { transform: scale(1); }
 }
 
 /* ICON */
 .whatsapp-icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
 }
 </style>
 
