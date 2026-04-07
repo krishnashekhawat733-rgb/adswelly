@@ -230,7 +230,7 @@ body {
   </div>
 
   <div class="video-container">
-    <video id="video" playsinline>
+    <video id="video" controls playsinline>
       <source src="https://res.cloudinary.com/dpqc0j5hg/video/upload/q_auto/f_auto/v1775539520/VN20260407_093734_pbxton.mp4" type="video/mp4">
     </video>
 
@@ -269,7 +269,9 @@ body {
 
 <script>
 function playVideo() {
-  document.getElementById("video").play();
+  const vid = document.getElementById("video");
+  vid.play();
+  vid.controls = true;
   document.querySelector(".video-overlay").style.display = "none";
 }
 </script>
