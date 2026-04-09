@@ -1090,3 +1090,122 @@ document.querySelectorAll(".faq-item").forEach(item => {
 </div>
 
 <!-- ===== END ===== -->
+<!-- ===== 🛒 ORDER FORM SECTION START ===== -->
+
+<style>
+.order-section {
+  padding: 40px 16px;
+  background: #f8fafc;
+  text-align: center;
+}
+
+/* FORM BOX */
+.order-box {
+  max-width: 500px;
+  margin: auto;
+  background: #fff;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* HEADING */
+.order-heading {
+  font-size: 32px;
+  font-weight: 900;
+  color: #0b5a53;
+  margin-bottom: 15px;
+}
+
+/* INPUT */
+.order-box input,
+.order-box textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 2px solid #e5e7eb;
+  font-size: 16px;
+}
+
+/* BUTTON */
+.order-btn {
+  width: 100%;
+  height: 55px;
+  background: #0b5a53;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+}
+
+/* PAYMENT */
+.payment-icons {
+  margin-top: 20px;
+}
+
+.payment-icons img {
+  height: 28px;
+  margin: 5px;
+}
+
+/* TIMER */
+.timer {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+/* TRACK BAR */
+.track-box {
+  margin-top: 20px;
+  background: #f1f5f9;
+  padding: 15px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+</style>
+
+<section class="order-section">
+
+  <div class="order-box">
+
+    <div class="order-heading">Place Your Order</div>
+
+    <!-- FORM -->
+    <input type="text" placeholder="Full Name">
+    <input type="tel" placeholder="Mobile Number">
+    <textarea placeholder="Full Address"></textarea>
+    <input type="text" placeholder="Pincode">
+
+    <button class="order-btn">Order Now</button>
+
+    <!-- PAYMENT -->
+    <div class="payment-icons">
+      <p><b>100% Secure Checkout</b></p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Google_Pay_Logo.svg">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/PhonePe_Logo.svg">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Paytm_logo.png">
+    </div>
+
+    <!-- TIMER -->
+    <div class="timer">
+      ⏰ Order today, delivery in 3-4 days
+    </div>
+
+    <!-- TRACK -->
+    <div class="track-box">
+      <div>📦 Purchased</div>
+      <div>🚚 Processing</div>
+      <div>📍 Delivered</div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ===== 🛒 ORDER FORM SECTION END ===== -->
