@@ -1069,15 +1069,49 @@ setInterval(() => {
 </script>
 
 <!-- ===== 💸 DISCOUNT + PRICE SECTION END ===== -->
-<!-- ===== 🛒 ORDER FORM + WHATSAPP START ===== -->
+<!-- ===== 🛒 ORDER FORM CARD STYLE START ===== -->
 
 <style>
 .order-section {
   padding: 50px 16px;
-  background: #0b5a53; /* 🔥 ONLY BRAND COLOR */
+  background: #ffffff;
   text-align: center;
 }
 
+/* 🔥 MAIN CARD (LIKE DISCOUNT) */
+.order-card {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px 20px;
+
+  border-radius: 30px;
+  color: #fff;
+
+  background: linear-gradient(135deg, #0b5a53, #0f766e);
+  position: relative;
+  overflow: hidden;
+
+  box-shadow: 0 20px 50px rgba(11,90,83,0.5);
+}
+
+/* GLOSS EFFECT */
+.order-card::before {
+  content: "";
+  position: absolute;
+  top: -60%;
+  left: -60%;
+  width: 220%;
+  height: 220%;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0.25),
+    rgba(255,255,255,0.05),
+    rgba(255,255,255,0.25)
+  );
+  transform: rotate(25deg);
+}
+
+/* HEADING */
 .order-heading-small {
   color: #d1d5db;
   letter-spacing: 3px;
@@ -1087,25 +1121,28 @@ setInterval(() => {
 .order-heading {
   font-size: 36px;
   font-weight: 900;
-  color: #fff;
   margin-top: 10px;
 }
 
+/* 🔥 INNER FORM BOX */
 .order-box {
   max-width: 500px;
-  margin: 30px auto 0;
+  margin: 25px auto 0;
   background: #f1f5f9;
   border-radius: 25px;
   padding: 25px;
+  color: #000;
 }
 
+/* LABEL */
 .order-box label {
   display: block;
   text-align: left;
-  font-weight: 700;
+  font-weight: 600;
   margin: 12px 5px;
 }
 
+/* INPUT */
 .order-box input,
 .order-box textarea {
   width: 100%;
@@ -1116,11 +1153,11 @@ setInterval(() => {
   font-size: 16px;
 }
 
-/* 🔥 PLACEHOLDER TEXT STYLE */
+/* PLACEHOLDER */
 .order-box input::placeholder,
 .order-box textarea::placeholder {
   color: #000;
-  font-weight: 400; /* normal (not bold) */
+  font-weight: 400;
 }
 
 /* BUTTON */
@@ -1131,7 +1168,7 @@ setInterval(() => {
   border-radius: 40px;
   border: none;
 
-  background: #0b5a53; /* 🔥 BRAND COLOR */
+  background: #0b5a53;
   color: #fff;
 
   font-size: 22px;
@@ -1163,30 +1200,34 @@ setInterval(() => {
 
 <section class="order-section">
 
-  <div class="order-heading-small">🛒 ORDER NOW</div>
-  <div class="order-heading">अभी Order करें — Fast Delivery</div>
+  <div class="order-card">
 
-  <div class="order-box">
+    <div class="order-heading-small">🛒 ORDER NOW</div>
+    <div class="order-heading">अभी Order करें — Fast Delivery</div>
 
-    <form id="orderForm">
+    <div class="order-box">
 
-      <label>👤 आपका नाम *</label>
-      <input type="text" id="name" placeholder="यहाँ अपना नाम लिखें" required>
+      <form id="orderForm">
 
-      <label>📱 Mobile Number *</label>
-      <input type="tel" id="mobile" placeholder="10 अंकों का मोबाइल नंबर" required>
+        <label>👤 आपका नाम *</label>
+        <input type="text" id="name" placeholder="यहाँ अपना नाम लिखें" required>
 
-      <label>🏠 Full Address *</label>
-      <textarea id="address" placeholder="अपना पूरा पता लिखें" required></textarea>
+        <label>📱 Mobile Number *</label>
+        <input type="tel" id="mobile" placeholder="10 अंकों का मोबाइल नंबर" required>
 
-      <label>📍 Pincode *</label>
-      <input type="text" id="pincode" placeholder="पिन कोड लिखें" required>
+        <label>🏠 Full Address *</label>
+        <textarea id="address" placeholder="अपना पूरा पता लिखें" required></textarea>
 
-      <button type="submit" class="order-btn">
-        🛒 अभी Order करें — FREE Delivery
-      </button>
+        <label>📍 Pincode *</label>
+        <input type="text" id="pincode" placeholder="पिन कोड लिखें" required>
 
-    </form>
+        <button type="submit" class="order-btn">
+          🛒 अभी Order करें — FREE Delivery
+        </button>
+
+      </form>
+
+    </div>
 
   </div>
 
@@ -1217,7 +1258,7 @@ Mera order confirm kare aur jaldi delivery kare
 });
 </script>
 
-<!-- ===== 🛒 ORDER FORM + WHATSAPP END ===== -->
+<!-- ===== 🛒 ORDER FORM CARD STYLE END ===== -->
 <!-- ===== ❓ FAQ SECTION START ===== -->
 
 <style>
