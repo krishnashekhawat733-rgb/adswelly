@@ -1069,6 +1069,143 @@ setInterval(() => {
 </script>
 
 <!-- ===== 💸 DISCOUNT + PRICE SECTION END ===== -->
+<!-- ===== 🛒 ORDER FORM + WHATSAPP START ===== -->
+
+<style>
+/* SAME CSS (no change) */
+.order-section {
+  padding: 50px 16px;
+  background: linear-gradient(135deg, #0b5a53, #1e3a5f);
+  text-align: center;
+}
+
+.order-heading-small {
+  color: #cbd5e1;
+  letter-spacing: 3px;
+  font-size: 14px;
+}
+
+.order-heading {
+  font-size: 36px;
+  font-weight: 900;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.order-box {
+  max-width: 500px;
+  margin: 30px auto 0;
+  background: #f1f5f9;
+  border-radius: 25px;
+  padding: 25px;
+}
+
+.order-box label {
+  display: block;
+  text-align: left;
+  font-weight: 700;
+  margin: 12px 5px;
+}
+
+.order-box input,
+.order-box textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  border: 2px solid #cbd5e1;
+  margin-bottom: 10px;
+}
+
+.order-btn {
+  position: relative;
+  width: 100%;
+  padding: 16px;
+  border-radius: 40px;
+  border: none;
+  background: linear-gradient(135deg, #0b5a53, #256d85);
+  color: #fff;
+  font-size: 22px;
+  font-weight: 900;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* SHINE */
+.order-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -80%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
+  transform: skewX(-20deg);
+  animation: shine 2.5s infinite;
+}
+
+@keyframes shine {
+  0% { left: -80%; }
+  100% { left: 130%; }
+}
+</style>
+
+<section class="order-section">
+
+  <div class="order-heading-small">🛒 ORDER NOW</div>
+  <div class="order-heading">अभी Order करें — Fast Delivery</div>
+
+  <div class="order-box">
+
+    <form id="orderForm">
+
+      <label>👤 आपका नाम *</label>
+      <input type="text" id="name" required>
+
+      <label>📱 Mobile Number *</label>
+      <input type="tel" id="mobile" required>
+
+      <label>🏠 Full Address *</label>
+      <textarea id="address" required></textarea>
+
+      <label>📍 Pincode *</label>
+      <input type="text" id="pincode" required>
+
+      <button type="submit" class="order-btn">
+        🛒 अभी Order करें — FREE Delivery
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+<script>
+document.getElementById("orderForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  let name = document.getElementById("name").value;
+  let mobile = document.getElementById("mobile").value;
+  let address = document.getElementById("address").value;
+  let pincode = document.getElementById("pincode").value;
+
+  let message = `Namaste 🙏
+mera order accept karke confirm kare
+
+👤 Name: ${name}
+📱 Mobile: ${mobile}
+🏠 Address: ${address}
+📍 Pincode: ${pincode}`;
+
+  let url = "https://wa.me/918239828901?text=" + encodeURIComponent(message);
+
+  window.open(url, "_blank");
+
+  this.reset();
+});
+</script>
+
+<!-- ===== 🛒 ORDER FORM + WHATSAPP END ===== -->
 <!-- ===== ❓ FAQ SECTION START ===== -->
 
 <style>
