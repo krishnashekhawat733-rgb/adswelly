@@ -922,6 +922,153 @@ function closeVideo() {
 </section>
 
 <!-- ===== 🎁 BENEFITS SECTION END ===== -->
+<!-- ===== 💸 DISCOUNT + PRICE SECTION START ===== -->
+
+<style>
+.discount-section {
+  padding: 30px 16px;
+}
+
+/* CARD */
+.discount-card {
+  max-width: 800px;
+  margin: auto;
+  padding: 45px 20px;
+
+  border-radius: 30px;
+  text-align: center;
+  color: #fff;
+
+  background: linear-gradient(135deg, #0b5a53, #0f766e);
+  position: relative;
+  overflow: hidden;
+
+  box-shadow: 0 20px 50px rgba(11,90,83,0.5);
+}
+
+/* GLOSS */
+.discount-card::before {
+  content: "";
+  position: absolute;
+  top: -60%;
+  left: -60%;
+  width: 220%;
+  height: 220%;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0.25),
+    rgba(255,255,255,0.05),
+    rgba(255,255,255,0.25)
+  );
+  transform: rotate(25deg);
+}
+
+/* TITLE */
+.discount-title {
+  font-size: 75px;
+  font-weight: 900;
+}
+
+/* SUB */
+.discount-sub {
+  font-size: 28px;
+  margin-top: 10px;
+}
+
+/* SMALL */
+.discount-small {
+  margin-top: 12px;
+  font-size: 20px;
+  opacity: 0.9;
+}
+
+/* 🔥 PRICE BOX */
+.price-box {
+  margin-top: 25px;
+}
+
+/* OLD PRICE */
+.old-price {
+  text-decoration: line-through;
+  font-size: 30px;
+  opacity: 0.8;
+}
+
+/* NEW PRICE */
+.new-price {
+  font-size: 55px;
+  font-weight: 900;
+  margin-left: 10px;
+}
+
+/* URGENCY */
+.urgency {
+  margin-top: 10px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffdf5d;
+}
+
+/* TIMER */
+.timer {
+  margin-top: 10px;
+  font-size: 18px;
+}
+</style>
+
+<section class="discount-section">
+
+  <div class="discount-card">
+
+    <!-- DISCOUNT -->
+    <div class="discount-title">10% OFF</div>
+
+    <div class="discount-sub">
+      🎉 आज के Orders पर 10% Special Discount
+    </div>
+
+    <div class="discount-small">
+      ⚡ Limited Time — जल्दी करो
+    </div>
+
+    <!-- PRICE -->
+    <div class="price-box">
+      <span class="old-price">₹1799</span>
+      <span class="new-price">₹1349</span>
+    </div>
+
+    <!-- URGENCY -->
+    <div class="urgency">
+      🔥 Only Today Offer
+    </div>
+
+    <!-- TIMER -->
+    <div class="timer" id="countdown">
+      ⏳ Offer ends in 05:00
+    </div>
+
+  </div>
+
+</section>
+
+<script>
+// 🔥 SIMPLE COUNTDOWN
+let time = 300; // 5 min
+
+setInterval(() => {
+  let min = Math.floor(time / 60);
+  let sec = time % 60;
+
+  document.getElementById("countdown").innerHTML =
+    "⏳ Offer ends in " +
+    String(min).padStart(2, '0') + ":" +
+    String(sec).padStart(2, '0');
+
+  if(time > 0) time--;
+}, 1000);
+</script>
+
+<!-- ===== 💸 DISCOUNT + PRICE SECTION END ===== -->
 <!-- ===== ❓ FAQ SECTION START ===== -->
 
 <style>
